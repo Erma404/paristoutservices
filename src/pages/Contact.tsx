@@ -1,0 +1,160 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ChevronRight, Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { useToast } from '@/hooks/use-toast';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
+import SchemaMarkup from '@/components/SchemaMarkup';
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    toast({
+      title: "Demande envoyée !",
+      description: "Nous vous recontacterons sous 24h.",
+    });
+    setIsSubmitting(false);
+    (e.target as HTMLFormElement).reset();
+  };
+
+  return (
+    <>
+      <SEOHead 
+        title="Devis Gratuit Plomberie & Gaz IDF | Contact Paris Tout Services"
+        description="Demandez votre devis gratuit pour vos travaux de plomberie, gaz ou ventilation en Île-de-France. Réponse sous 24h. Paris Tout Services."
+        canonical="/contact"
+      />
+      <SchemaMarkup type="localBusiness" />
+      
+      <Header />
+      
+      <main>
+        {/* Hero */}
+        <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
+          <div className="container-custom relative z-10">
+            <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
+              <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
+              <ChevronRight className="w-4 h-4" />
+              <span className="text-white">Contact</span>
+            </nav>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+            >
+              Contactez <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">Paris Tout Services</span>
+            </motion.h1>
+          </div>
+        </section>
+
+        {/* Form & Info */}
+        <section className="section-padding bg-slate-50">
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Form */}
+              <div className="lg:col-span-2">
+                <div className="bg-white rounded-3xl p-8 shadow-card">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-6">Demander un devis gratuit</h2>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div><Label htmlFor="name">Nom / Prénom *</Label><Input id="name" required className="mt-2" /></div>
+                      <div><Label htmlFor="company">Entreprise *</Label><Input id="company" required className="mt-2" /></div>
+                      <div>
+                        <Label>Fonction</Label>
+                        <Select><SelectTrigger className="mt-2"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="chef">Chef de travaux</SelectItem>
+                            <SelectItem value="promoteur">Promoteur</SelectItem>
+                            <SelectItem value="responsable">Responsable secteur</SelectItem>
+                            <SelectItem value="autre">Autre</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div><Label htmlFor="email">Email *</Label><Input id="email" type="email" required className="mt-2" /></div>
+                      <div><Label htmlFor="phone">Téléphone *</Label><Input id="phone" type="tel" required className="mt-2" /></div>
+                      <div>
+                        <Label>Type de projet *</Label>
+                        <Select required><SelectTrigger className="mt-2"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="plomberie">Plomberie</SelectItem>
+                            <SelectItem value="gaz">Gaz</SelectItem>
+                            <SelectItem value="ventilation">Ventilation</SelectItem>
+                            <SelectItem value="pmr">PMR</SelectItem>
+                            <SelectItem value="chauffe-eau">Chauffe-eau</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+                    <div><Label htmlFor="message">Message *</Label><Textarea id="message" required rows={4} className="mt-2" /></div>
+                    <div className="flex items-start gap-3">
+                      <Checkbox id="rgpd" required />
+                      <Label htmlFor="rgpd" className="text-sm text-slate-600">J'accepte que mes données soient traitées conformément à la politique de confidentialité *</Label>
+                    </div>
+                    <Button type="submit" variant="hero" size="lg" disabled={isSubmitting}>
+                      {isSubmitting ? 'Envoi...' : 'Envoyer ma demande'}<Send className="w-5 h-5" />
+                    </Button>
+                  </form>
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-6">
+                <div className="bg-white rounded-3xl p-8 shadow-card">
+                  <h3 className="font-bold text-slate-900 text-xl mb-6">Nos Coordonnées</h3>
+                  <div className="space-y-4">
+                    <a href="tel:+33123456789" className="flex items-center gap-4 text-slate-600 hover:text-blue-600">
+                      <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center"><Phone className="w-5 h-5 text-blue-600" /></div>
+                      <div><div className="text-sm text-slate-500">Téléphone</div><div className="font-semibold text-slate-900">01 23 45 67 89</div></div>
+                    </a>
+                    <a href="mailto:contact@paristoutservices.fr" className="flex items-center gap-4 text-slate-600 hover:text-blue-600">
+                      <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center"><Mail className="w-5 h-5 text-orange-600" /></div>
+                      <div><div className="text-sm text-slate-500">Email</div><div className="font-semibold text-slate-900">contact@paristoutservices.fr</div></div>
+                    </a>
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center"><MapPin className="w-5 h-5 text-green-600" /></div>
+                      <div><div className="text-sm text-slate-500">Adresse</div><div className="font-semibold text-slate-900">15 Rue de la République<br/>93100 Montreuil</div></div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center"><Clock className="w-5 h-5 text-purple-600" /></div>
+                      <div><div className="text-sm text-slate-500">Horaires</div><div className="font-semibold text-slate-900">Lun - Ven : 8h - 18h</div></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white">
+                  <h3 className="font-bold text-xl mb-2">Réponse sous 24h</h3>
+                  <p className="text-white/80">Notre équipe s'engage à vous recontacter rapidement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map */}
+        <section className="h-96 bg-slate-200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937604!2d2.4388!3d48.8534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUxJzEyLjIiTiAywrAyNicxOS43IkU!5e0!3m2!1sfr!2sfr!4v1234567890"
+            width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
+            title="Paris Tout Services - Localisation"
+          />
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+};
+
+export default Contact;
