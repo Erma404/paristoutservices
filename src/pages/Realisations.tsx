@@ -13,7 +13,7 @@ const categories = [
   { id: 'all', label: 'Tous les projets' },
   { id: 'plomberie', label: 'Plomberie' },
   { id: 'gaz', label: 'Gaz' },
-  { id: 'pmr', label: 'PMR' },
+  { id: 'salle-de-bain', label: 'Salle de bain' },
   { id: 'ventilation', label: 'Ventilation' },
 ];
 
@@ -38,8 +38,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Adaptation PMR - EHPAD",
-    category: "pmr",
+    title: "Rénovation salles de bain - EHPAD",
+    category: "salle-de-bain",
     location: "Créteil (94)",
     client: "Acorus",
     duration: "6 semaines",
@@ -88,7 +88,7 @@ const testimonials = [
     company: "Groupe ERI"
   },
   {
-    quote: "Les équipes de Paris Tout Services maîtrisent parfaitement les normes PMR. Leurs réalisations pour nos EHPAD sont toujours impeccables.",
+    quote: "Les équipes de Paris Tout Services maîtrisent parfaitement les rénovations de salles de bain aux normes PMR. Leurs réalisations pour nos EHPAD sont toujours impeccables.",
     author: "Pierre Lefebvre",
     role: "Directeur de projets",
     company: "Acorus"

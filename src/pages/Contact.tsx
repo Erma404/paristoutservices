@@ -92,7 +92,7 @@ const Contact = () => {
                             <SelectItem value="plomberie">Plomberie</SelectItem>
                             <SelectItem value="gaz">Gaz</SelectItem>
                             <SelectItem value="ventilation">Ventilation</SelectItem>
-                            <SelectItem value="pmr">PMR</SelectItem>
+                            <SelectItem value="salle-de-bain">Salle de bain</SelectItem>
                             <SelectItem value="chauffe-eau">Chauffe-eau</SelectItem>
                           </SelectContent>
                         </Select>

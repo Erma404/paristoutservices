@@ -44,22 +44,22 @@ const services = [
     ]
   },
   {
-    id: "pmr",
+    id: "salle-de-bain",
     icon: Accessibility,
-    title: "Rénovation Salle de Bain PMR",
-    shortDesc: "Aménagement adapté aux personnes à mobilité réduite.",
-    description: "Nous sommes spécialisés dans l'adaptation des salles de bain pour les personnes à mobilité réduite (PMR). Nos installations respectent les normes d'accessibilité en vigueur et permettent de maintenir l'autonomie des utilisateurs.",
+    title: "Rénovation Salle de Bain",
+    shortDesc: "Rénovation complète de salles de bain aux normes PMR.",
+    description: "Nous réalisons des rénovations complètes de salles de bain pour les professionnels. Nos installations peuvent être adaptées aux normes PMR d'accessibilité pour les personnes à mobilité réduite.",
     benefits: [
-      "Conformité aux normes PMR",
-      "Solutions ergonomiques et sécurisées",
-      "Large choix d'équipements adaptés",
+      "Rénovation complète clé en main",
+      "Conformité aux normes PMR sur demande",
+      "Large choix d'équipements et finitions",
       "Accompagnement dans les démarches d'aides"
     ],
     process: [
-      { step: "1", title: "Évaluation", desc: "Analyse des besoins spécifiques" },
+      { step: "1", title: "Évaluation", desc: "Analyse des besoins et contraintes" },
       { step: "2", title: "Conception", desc: "Plan d'aménagement sur mesure" },
       { step: "3", title: "Travaux", desc: "Rénovation complète de la salle de bain" },
-      { step: "4", title: "Finitions", desc: "Installation des équipements PMR" }
+      { step: "4", title: "Finitions", desc: "Installation des équipements et accessoires" }
     ]
   },
   {
@@ -150,7 +150,7 @@ const Services = () => {
     <>
       <SEOHead 
         title="Services Plomberie, Gaz, Ventilation pour Pros | Paris Tout Services IDF"
-        description="Installation plomberie, rénovation PMR, gaz, ventilation, chauffe-eau en Île-de-France. Sous-traitance pour promoteurs et gestionnaires d'habitat."
+        description="Installation plomberie, rénovation salle de bain, gaz, ventilation, chauffe-eau en Île-de-France. Sous-traitance pour promoteurs et gestionnaires d'habitat."
         canonical="/services"
       />
       <SchemaMarkup type="localBusiness" />
