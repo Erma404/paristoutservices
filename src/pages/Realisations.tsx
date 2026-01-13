@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronRight, MapPin, Calendar, Building } from 'lucide-react';
+import { ChevronRight, MapPin, Calendar, Building, Eye } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import TestimonialCard from '@/components/TestimonialCard';
 import CTASection from '@/components/CTASection';
+import ProjectDetailModal, { Project } from '@/components/ProjectDetailModal';
 
 const categories = [
   { id: 'all', label: 'Tous les projets' },
@@ -17,7 +18,7 @@ const categories = [
   { id: 'ventilation', label: 'Ventilation' },
 ];
 
-const projects = [
+const projects: Project[] = [
   {
     id: 1,
     title: "Rénovation plomberie immeuble 45 logements",
@@ -25,16 +26,48 @@ const projects = [
     location: "Paris 12ème",
     client: "GECop",
     duration: "3 mois",
-    description: "Remplacement complet des colonnes montantes et descentes d'eau usées."
+    description: "Remplacement complet des colonnes montantes et descentes d'eau usées.",
+    fullDescription: "Ce projet d'envergure consistait à rénover l'ensemble du réseau de plomberie d'un immeuble haussmannien de 45 logements. L'intervention a nécessité une coordination minutieuse avec les résidents pour minimiser les nuisances tout en respectant les délais stricts imposés par le maître d'ouvrage.",
+    challenges: [
+      "Intervention en site occupé avec maintien du service d'eau",
+      "Contraintes architecturales liées au bâtiment ancien",
+      "Coordination avec les autres corps de métier"
+    ],
+    solutions: [
+      "Mise en place d'un planning d'intervention par colonne avec coupures programmées",
+      "Utilisation de techniques de rénovation adaptées au bâti ancien",
+      "Installation de colonnes en cuivre et PER multicouche haute qualité"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800", caption: "Vue d'ensemble des colonnes montantes rénovées" },
+      { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800", caption: "Détail des raccordements en cuivre" },
+      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800", caption: "Installation des vannes d'arrêt" }
+    ]
   },
   {
     id: 2,
     title: "Installation gaz résidence neuve",
     category: "gaz",
-    location: "Montreuil (93)",
+    location: "Drancy (93)",
     client: "Groupe ERI",
     duration: "2 mois",
-    description: "Mise en place du réseau gaz pour 28 logements avec certification PG."
+    description: "Mise en place du réseau gaz pour 28 logements avec certification PG.",
+    fullDescription: "Installation complète du réseau de distribution gaz pour une résidence neuve de 28 logements. Le projet incluait la pose des colonnes montantes, des compteurs individuels et des raccordements aux équipements de chaque appartement, le tout en conformité avec les normes PG.",
+    challenges: [
+      "Respect des normes strictes de sécurité gaz",
+      "Coordination avec le planning général du chantier neuf",
+      "Obtention des certifications dans les délais"
+    ],
+    solutions: [
+      "Équipe dédiée composée de techniciens certifiés PG",
+      "Contrôles qualité à chaque étape de l'installation",
+      "Livraison avec certificat de conformité gaz"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", caption: "Installation des colonnes gaz" },
+      { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800", caption: "Compteurs gaz individuels" },
+      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", caption: "Raccordement aux équipements" }
+    ]
   },
   {
     id: 3,
@@ -43,7 +76,23 @@ const projects = [
     location: "Créteil (94)",
     client: "Acorus",
     duration: "6 semaines",
-    description: "Rénovation de 15 salles de bain adaptées aux personnes à mobilité réduite."
+    description: "Rénovation de 15 salles de bain adaptées aux personnes à mobilité réduite.",
+    fullDescription: "Rénovation complète de 15 salles de bain dans un EHPAD, avec adaptation aux normes d'accessibilité PMR. Chaque salle de bain a été repensée pour garantir la sécurité et l'autonomie des résidents, avec des équipements spécifiques et des matériaux adaptés à un usage intensif.",
+    challenges: [
+      "Intervention sans perturber le quotidien des résidents",
+      "Respect strict des normes PMR d'accessibilité",
+      "Délais serrés pour limiter la durée des travaux"
+    ],
+    solutions: [
+      "Travaux réalisés salle par salle avec relogement temporaire",
+      "Installation de douches à l'italienne avec sièges rabattables",
+      "Pose de barres d'appui et équipements anti-glisse"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800", caption: "Salle de bain PMR terminée" },
+      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800", caption: "Douche à l'italienne accessible" },
+      { url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800", caption: "Équipements de sécurité installés" }
+    ]
   },
   {
     id: 4,
@@ -52,7 +101,23 @@ const projects = [
     location: "La Défense (92)",
     client: "GECop",
     duration: "1 mois",
-    description: "Installation système VMC double flux haute performance énergétique."
+    description: "Installation système VMC double flux haute performance énergétique.",
+    fullDescription: "Installation d'un système de ventilation mécanique contrôlée double flux dans un bâtiment de bureaux de 2000m². Ce système permet une récupération de chaleur optimale et une qualité d'air intérieur exemplaire, contribuant au bien-être des occupants et aux économies d'énergie.",
+    challenges: [
+      "Installation dans un espace technique contraint",
+      "Performance énergétique exigée par la RT2012",
+      "Équilibrage précis des débits d'air"
+    ],
+    solutions: [
+      "Centrale VMC haute performance avec récupérateur thermique",
+      "Réseau de gaines isolées pour limiter les déperditions",
+      "Mesures aérauliques et réglages fins pour un confort optimal"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800", caption: "Centrale VMC double flux installée" },
+      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", caption: "Réseau de gaines en toiture technique" },
+      { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800", caption: "Bouches de soufflage dans les bureaux" }
+    ]
   },
   {
     id: 5,
@@ -61,7 +126,23 @@ const projects = [
     location: "Paris 8ème",
     client: "Groupe ERI",
     duration: "4 mois",
-    description: "Rénovation complète des réseaux d'eau pour un hôtel 4 étoiles."
+    description: "Rénovation complète des réseaux d'eau pour un hôtel 4 étoiles.",
+    fullDescription: "Réhabilitation totale des réseaux d'eau chaude et froide d'un hôtel 4 étoiles de 80 chambres. Le projet incluait également le remplacement de l'ensemble des équipements sanitaires des chambres et des parties communes, avec des finitions haut de gamme.",
+    challenges: [
+      "Maintien partiel de l'activité hôtelière pendant les travaux",
+      "Exigences de qualité élevées pour un établissement 4 étoiles",
+      "Délais stricts pour la réouverture complète"
+    ],
+    solutions: [
+      "Phasage des travaux par étage avec planning rotatif",
+      "Sélection de matériaux et équipements premium",
+      "Équipe dédiée travaillant en horaires décalés"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800", caption: "Salle de bain rénovée d'une suite" },
+      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800", caption: "Robinetterie haut de gamme installée" },
+      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", caption: "Local technique rénové" }
+    ]
   },
   {
     id: 6,
@@ -70,7 +151,23 @@ const projects = [
     location: "Versailles (78)",
     client: "Acorus",
     duration: "2 mois",
-    description: "Remplacement des colonnes gaz et mise en conformité de 32 logements."
+    description: "Remplacement des colonnes gaz et mise en conformité de 32 logements.",
+    fullDescription: "Suite à un diagnostic de sécurité, cette copropriété de 32 logements nécessitait une mise en conformité urgente de son réseau gaz. L'intervention a porté sur le remplacement des colonnes vétustes et la mise aux normes de chaque installation individuelle.",
+    challenges: [
+      "Urgence de la mise en conformité pour la sécurité des résidents",
+      "Coordination avec GRDF pour les coupures de gaz",
+      "Interventions dans les parties privatives"
+    ],
+    solutions: [
+      "Planning d'intervention optimisé pour réduire les coupures",
+      "Remplacement intégral des colonnes en acier galvanisé",
+      "Délivrance des certificats de conformité pour chaque logement"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", caption: "Nouvelles colonnes gaz installées" },
+      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800", caption: "Détail des raccordements conformes" },
+      { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800", caption: "Compteur gaz après intervention" }
+    ]
   },
 ];
 
@@ -97,6 +194,7 @@ const testimonials = [
 
 const Realisations = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = activeCategory === 'all' 
     ? projects 
@@ -106,6 +204,16 @@ const Realisations = () => {
     { name: 'Accueil', url: '/' },
     { name: 'Réalisations', url: '/realisations' }
   ];
+
+  const getCategoryLabel = (category: string) => {
+    const labels: Record<string, string> = {
+      'plomberie': 'Plomberie',
+      'gaz': 'Gaz',
+      'salle-de-bain': 'Salle de bain',
+      'ventilation': 'Ventilation',
+    };
+    return labels[category] || category;
+  };
 
   return (
     <>
@@ -188,43 +296,59 @@ const Realisations = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-card border border-slate-100 hover:shadow-card-hover transition-shadow"
+                    onClick={() => setSelectedProject(project)}
+                    className="bg-white rounded-2xl overflow-hidden shadow-card border border-slate-100 hover:shadow-card-hover transition-all cursor-pointer group"
                   >
-                    {/* Image placeholder */}
-                    <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-white/20 text-6xl font-bold">
-                          {project.id}
-                        </span>
+                    {/* Image */}
+                    <div className="h-48 relative overflow-hidden">
+                      {project.images && project.images.length > 0 ? (
+                        <img 
+                          src={project.images[0].url} 
+                          alt={project.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                          <span className="text-white/20 text-6xl font-bold">{project.id}</span>
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                            <Eye className="w-5 h-5 text-slate-700" />
+                          </div>
+                        </div>
                       </div>
                       <div className="absolute top-4 right-4">
-                        <span className="px-3 py-1 rounded-lg bg-white/20 backdrop-blur-sm text-white text-xs font-medium capitalize">
-                          {project.category}
+                        <span className="px-3 py-1 rounded-lg bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium">
+                          {getCategoryLabel(project.category)}
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <h3 className="font-bold text-slate-900 text-lg mb-3">
+                      <h3 className="font-bold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-slate-600 text-sm mb-4">
+                      <p className="text-slate-600 text-sm mb-4 line-clamp-2">
                         {project.description}
                       </p>
 
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center gap-2 text-slate-500">
+                      <div className="flex flex-wrap gap-4 text-sm">
+                        <div className="flex items-center gap-1.5 text-slate-500">
                           <MapPin className="w-4 h-4" />
                           <span>{project.location}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-slate-500">
+                        <div className="flex items-center gap-1.5 text-slate-500">
                           <Building className="w-4 h-4" />
                           <span>{project.client}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-slate-500">
-                          <Calendar className="w-4 h-4" />
-                          <span>{project.duration}</span>
-                        </div>
+                      </div>
+
+                      <div className="mt-4 pt-4 border-t border-slate-100">
+                        <span className="text-sm font-semibold text-blue-600 group-hover:underline">
+                          Voir les détails →
+                        </span>
                       </div>
                     </div>
                   </motion.div>
@@ -273,6 +397,13 @@ const Realisations = () => {
       </main>
 
       <Footer />
+
+      {/* Project Detail Modal */}
+      <ProjectDetailModal 
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </>
   );
 };
