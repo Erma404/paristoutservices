@@ -83,13 +83,13 @@ const Header = () => {
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
               <a 
-                href="tel:+33123456789" 
+                href="tel:+33601167240"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
                   isScrolled ? 'text-navy' : 'text-white'
                 }`}
               >
                 <Phone className="w-4 h-4" />
-                01 23 45 67 89
+                06 01 16 72 40
               </a>
               <Link to="/contact">
                 <Button variant={isScrolled ? "hero" : "glass"} size="default">
@@ -137,11 +137,11 @@ const Header = () => {
               ))}
               <div className="mt-4 pt-4 border-t border-muted">
                 <a 
-                  href="tel:+33123456789" 
+                  href="tel:+33601167240"
                   className="flex items-center gap-2 px-4 py-3 text-navy font-medium"
                 >
                   <Phone className="w-5 h-5 text-secondary" />
-                  01 23 45 67 89
+                  06 01 16 72 40
                 </a>
                 <Link to="/contact" className="block mt-2">
                   <Button variant="hero" size="lg" className="w-full">
