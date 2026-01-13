@@ -4,20 +4,20 @@ const localBusinessSchema = {
   "name": "Paris Tout Services",
   "@id": "https://paristoutservices.fr",
   "url": "https://paristoutservices.fr",
-  "telephone": "+33-1-23-45-67-89",
+  "telephone": "+33-6-01-16-72-40",
   "email": "contact@paristoutservices.fr",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "15 Rue de la République",
-    "addressLocality": "Montreuil",
-    "postalCode": "93100",
+    "streetAddress": "25 Rue Henri Rouanet",
+    "addressLocality": "Drancy",
+    "postalCode": "93700",
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 48.8534,
-    "longitude": 2.4488
+    "latitude": 48.9272,
+    "longitude": 2.4519
   },
   "openingHoursSpecification": [
     {
