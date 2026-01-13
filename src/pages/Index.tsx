@@ -39,9 +39,9 @@ const services = [
   },
   {
     icon: Accessibility,
-    title: "Rénovation salle de bain PMR",
-    description: "Aménagement adapté aux personnes à mobilité réduite, conforme aux normes d'accessibilité en vigueur.",
-    href: "/services#pmr"
+    title: "Rénovation salle de bain",
+    description: "Rénovation complète de salles de bain, conformes aux normes PMR et d'accessibilité en vigueur.",
+    href: "/services#salle-de-bain"
   },
   {
     icon: Flame,
@@ -294,8 +294,8 @@ const Index = () => {
                 },
                 {
                   icon: Accessibility,
-                  title: "Normes PMR & RT2012",
-                  description: "Expertise spécifique dans l'adaptation des locaux aux normes d'accessibilité et de performance énergétique."
+                  title: "Normes Accessibilité & RT2012",
+                  description: "Expertise spécifique dans l'adaptation des locaux aux normes d'accessibilité PMR et de performance énergétique."
                 }
               ].map((item, index) => (
                 <motion.div

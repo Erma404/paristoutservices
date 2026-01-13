@@ -12,7 +12,7 @@ const Footer = () => {
 
   const services = [
     { name: 'Plomberie bâtiments', href: '/services#plomberie' },
-    { name: 'Rénovation PMR', href: '/services#pmr' },
+    { name: 'Rénovation salle de bain', href: '/services#salle-de-bain' },
     { name: 'Installation gaz', href: '/services#gaz' },
     { name: 'Ventilation', href: '/services#ventilation' },
     { name: 'Chauffe-eau', href: '/services#chauffe-eau' },
