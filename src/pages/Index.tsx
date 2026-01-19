@@ -506,7 +506,7 @@ const Index = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { value: "+500", label: "Projets réalisés", icon: TrendingUp },
+                { value: "+300", label: "Projets réalisés", icon: TrendingUp },
                 { value: "+10", label: "Années d'expertise", icon: Award },
                 { value: "48h", label: "Délai d'intervention", icon: Clock },
                 { value: "98%", label: "Clients satisfaits", icon: ThumbsUp },

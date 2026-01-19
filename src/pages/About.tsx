@@ -54,7 +54,7 @@ const timeline = [
   { year: "2018", event: "Obtention des certifications RGE et PG" },
   { year: "2020", event: "Croissance et nouveaux partenariats" },
   { year: "2022", event: "Certification Qualipac" },
-  { year: "2024", event: "Plus de 500 projets réalisés" }
+  { year: "2024", event: "Plus de 300 projets réalisés" }
 ];
 
 const About = () => {
