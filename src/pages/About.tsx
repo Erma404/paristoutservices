@@ -52,9 +52,9 @@ const certifications = [
 const timeline = [
   { year: "2016", event: "Création de Paris Tout Services" },
   { year: "2018", event: "Obtention des certifications RGE et PG" },
-  { year: "2020", event: "Expansion de l'équipe à 6 personnes" },
+  { year: "2020", event: "Croissance et nouveaux partenariats" },
   { year: "2022", event: "Certification Qualipac" },
-  { year: "2024", event: "9 collaborateurs et 500+ projets réalisés" }
+  { year: "2024", event: "Plus de 500 projets réalisés" }
 ];
 
 const About = () => {
@@ -67,7 +67,7 @@ const About = () => {
     <>
       <SEOHead 
         title="Entreprise de Plomberie & Gaz Île-de-France | À Propos - Paris Tout Services"
-        description="Paris Tout Services : 8 ans d'expertise en plomberie et gaz pour professionnels. Équipe de 9 personnes certifiées RGE, PG, Qualipac en Île-de-France."
+        description="Paris Tout Services : 8 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, Qualipac en Île-de-France."
         canonical="/a-propos"
       />
       <SchemaMarkup type="localBusiness" />
@@ -99,7 +99,7 @@ const About = () => {
                 <span className="italic text-blue-600">plomberie</span>
               </h1>
               <p className="text-xl text-slate-500 leading-relaxed">
-                Une équipe de 9 professionnels passionnés au service des promoteurs et gestionnaires d'habitat en Île-de-France.
+                Une équipe de techniciens passionnés au service des promoteurs et gestionnaires d'habitat en Île-de-France.
               </p>
             </motion.div>
           </div>
@@ -183,8 +183,8 @@ const About = () => {
                 Notre Équipe
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
-                <span className="font-extralight">Une équipe de</span>{' '}
-                <span className="italic text-blue-600">9 professionnels</span>
+                <span className="font-extralight">Une équipe</span>{' '}
+                <span className="italic text-blue-600">d'experts</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-2xl mx-auto">
                 Des techniciens expérimentés et certifiés, formés aux dernières normes.
