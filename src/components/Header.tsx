@@ -36,24 +36,18 @@ const Header = () => {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-lg py-3' 
-            : 'bg-transparent py-5'
+            ? 'bg-white/95 backdrop-blur-xl shadow-sm py-4' 
+            : 'bg-transparent py-6'
         }`}
       >
         <div className="container-custom">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg transition-all duration-300 ${
-                isScrolled ? 'bg-secondary text-white' : 'bg-white text-secondary'
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className={`transition-colors duration-300 ${
+                isScrolled ? 'text-slate-900' : 'text-slate-900'
               }`}>
-                PTS
-              </div>
-              <div className={`hidden sm:block transition-colors duration-300 ${
-                isScrolled ? 'text-navy' : 'text-white'
-              }`}>
-                <div className="font-bold text-lg leading-tight">Paris Tout</div>
-                <div className="text-sm font-medium opacity-80">Services</div>
+                <div className="font-display text-xl font-normal tracking-tight">Paris Tout Services</div>
               </div>
             </Link>
 
@@ -63,17 +57,15 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`relative text-sm font-medium transition-colors duration-300 hover:opacity-100 ${
-                    isScrolled ? 'text-navy/70 hover:text-navy' : 'text-white/80 hover:text-white'
-                  } ${location.pathname === item.href ? 'opacity-100' : ''}`}
+                  className={`relative text-sm font-medium transition-colors duration-300 ${
+                    isScrolled ? 'text-slate-600 hover:text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                  } ${location.pathname === item.href ? 'text-slate-900' : ''}`}
                 >
                   {item.name}
                   {location.pathname === item.href && (
                     <motion.div
                       layoutId="activeNav"
-                      className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${
-                        isScrolled ? 'bg-secondary' : 'bg-white'
-                      }`}
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-[#2E7D32]"
                     />
                   )}
                 </Link>
@@ -84,17 +76,14 @@ const Header = () => {
             <div className="hidden lg:flex items-center gap-4">
               <a 
                 href="tel:+33601167240"
-                className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
-                  isScrolled ? 'text-navy' : 'text-white'
-                }`}
+                className="flex items-center gap-2 text-sm font-medium text-slate-600"
               >
                 <Phone className="w-4 h-4" />
                 06 01 16 72 40
               </a>
               <Link to="/contact">
-                <Button variant={isScrolled ? "hero" : "glass"} size="default">
+                <Button className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-6 text-sm">
                   Devis gratuit
-                  <ChevronRight className="w-4 h-4" />
                 </Button>
               </Link>
             </div>
