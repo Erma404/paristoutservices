@@ -65,7 +65,7 @@ const Header = () => {
                   {location.pathname === item.href && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-blue-600"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-[#2E7D32]"
                     />
                   )}
                 </Link>
