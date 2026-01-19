@@ -11,7 +11,6 @@ import {
   Wind,
   Droplets,
   Accessibility,
-  MapPin,
   Building2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -22,6 +21,13 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 import ServiceCard from '@/components/ServiceCard';
 import CTASection from '@/components/CTASection';
 import heroImage from '@/assets/hero-plumber.jpg';
+
+// Partner logos
+import logoLNC from '@/assets/partners/lnc.png';
+import logoBouygues from '@/assets/partners/bouygues.png';
+import logoERI from '@/assets/partners/eri.png';
+import logoAcorus from '@/assets/partners/acorus.png';
+import logoGecop from '@/assets/partners/gecop.png';
 
 const reassuranceItems = [
   { icon: Award, label: "8 ans d'expérience", value: "2016" },
@@ -64,9 +70,11 @@ const services = [
 ];
 
 const partners = [
-  { name: "GECop", logo: "GC" },
-  { name: "Acorus", logo: "AC" },
-  { name: "Groupe ERI", logo: "ERI" },
+  { name: "Les Nouveaux Constructeurs", logo: logoLNC },
+  { name: "Bouygues Immobilier", logo: logoBouygues },
+  { name: "Groupe ERI", logo: logoERI },
+  { name: "Acorus", logo: logoAcorus },
+  { name: "Gecop", logo: logoGecop },
 ];
 
 const departments = [
@@ -276,7 +284,7 @@ const Index = () => {
                 {
                   icon: Building2,
                   title: "Expertise Technique",
-                  description: "Une équipe de 9 professionnels qualifiés avec plus de 8 ans d'expérience."
+                  description: "Une équipe de techniciens qualifiés avec plus de 8 ans d'expérience."
                 },
                 {
                   icon: Shield,
@@ -308,8 +316,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Partners */}
-        <section className="py-16 bg-slate-900">
+        {/* Partners - Infinite Scroll */}
+        <section className="py-16 bg-slate-900 overflow-hidden">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -322,20 +330,23 @@ const Index = () => {
               </h2>
               <p className="text-white/50 text-sm">Nos partenaires de longue date</p>
             </motion.div>
+          </div>
 
-            <div className="flex flex-wrap justify-center gap-8">
-              {partners.map((partner, index) => (
-                <motion.div
-                  key={partner.name}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="w-32 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center"
+          {/* Infinite scroll container */}
+          <div className="relative">
+            <div className="flex animate-scroll">
+              {/* First set of logos */}
+              {[...partners, ...partners].map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 mx-8 w-40 h-24 rounded-2xl bg-white flex items-center justify-center p-4"
                 >
-                  <span className="text-white/70 font-medium text-xl">{partner.logo}</span>
-                </motion.div>
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               ))}
             </div>
           </div>
