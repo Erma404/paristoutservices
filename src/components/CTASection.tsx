@@ -21,14 +21,13 @@ const CTASection = ({
   children 
 }: CTASectionProps) => {
   return (
-    <section className="bg-slate-900 relative overflow-hidden">
-      {/* Subtle Background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-      </div>
+    <section className="relative overflow-hidden animated-gradient-dark">
+      {/* Animated Blobs */}
+      <div className="blob blob-blue w-[400px] h-[400px] -top-20 -left-20 opacity-40" style={{ animationDelay: '0s' }} />
+      <div className="blob blob-cyan w-[300px] h-[300px] bottom-0 right-10 opacity-30" style={{ animationDelay: '-5s' }} />
+      <div className="blob blob-orange w-[250px] h-[250px] top-1/2 right-1/3 opacity-20" style={{ animationDelay: '-10s' }} />
 
-      <div className="container-custom py-20 lg:py-28 relative">
+      <div className="container-custom py-20 lg:py-28 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,10 +46,10 @@ const CTASection = ({
           {children}
           <Link to={ctaLink}>
             <Button 
-              className="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-sm font-medium"
+              className="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-10 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {ctaText}
-              <ChevronRight className="w-4 h-4 ml-1" />
+              <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
         </motion.div>
