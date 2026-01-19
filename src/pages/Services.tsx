@@ -29,7 +29,7 @@ const services = [
     icon: Droplets,
     title: "Installation de Plomberie pour Grands Bâtiments",
     shortDesc: "Pose et raccordement de canalisations pour immeubles et établissements.",
-    description: "Nous intervenons sur tous types de projets de plomberie pour les grands bâtiments : immeubles résidentiels, hôtels, établissements de santé, bâtiments tertiaires. Notre expertise couvre l'ensemble des travaux de canalisations, de l'alimentation en eau à l'évacuation.",
+    description: "Nous intervenons sur tous types de projets de plomberie pour les grands bâtiments : immeubles résidentiels, hôtels, établissements de santé, bâtiments tertiaires.",
     benefits: [
       "Étude technique personnalisée",
       "Matériaux haute qualité (cuivre, PER, multicouche)",
@@ -48,7 +48,7 @@ const services = [
     icon: Accessibility,
     title: "Rénovation Salle de Bain",
     shortDesc: "Rénovation complète de salles de bain aux normes PMR.",
-    description: "Nous réalisons des rénovations complètes de salles de bain pour les professionnels. Nos installations peuvent être adaptées aux normes PMR d'accessibilité pour les personnes à mobilité réduite.",
+    description: "Nous réalisons des rénovations complètes de salles de bain pour les professionnels. Nos installations peuvent être adaptées aux normes PMR.",
     benefits: [
       "Rénovation complète clé en main",
       "Conformité aux normes PMR sur demande",
@@ -67,7 +67,7 @@ const services = [
     icon: Flame,
     title: "Installation Gaz Certifiée PG",
     shortDesc: "Mise en conformité et installations gaz par techniciens certifiés.",
-    description: "En tant que professionnels certifiés PG, nous assurons toutes les installations et mises en conformité gaz. Nos techniciens sont formés aux dernières normes de sécurité et utilisent du matériel agréé.",
+    description: "En tant que professionnels certifiés PG, nous assurons toutes les installations et mises en conformité gaz.",
     benefits: [
       "Certification PG garantie",
       "Conformité aux normes NF DTU 61.1",
@@ -86,7 +86,7 @@ const services = [
     icon: Wind,
     title: "Systèmes de Ventilation",
     shortDesc: "VMC simple et double flux, gaines et extraction.",
-    description: "L'installation d'une ventilation performante est essentielle pour la qualité de l'air intérieur. Nous proposons des solutions de VMC simple flux, double flux et systèmes d'extraction adaptés à tous types de bâtiments.",
+    description: "L'installation d'une ventilation performante est essentielle pour la qualité de l'air intérieur.",
     benefits: [
       "Amélioration de la qualité de l'air",
       "Économies d'énergie (double flux)",
@@ -105,7 +105,7 @@ const services = [
     icon: Wrench,
     title: "Remplacement Ballons et Chauffe-eau",
     shortDesc: "Installation et remplacement de systèmes de production d'eau chaude.",
-    description: "Nous assurons le remplacement et l'installation de tous types de systèmes de production d'eau chaude : ballons électriques, chauffe-eau gaz, chauffe-eau thermodynamiques. Nos interventions sont rapides et garantissent une continuité de service.",
+    description: "Nous assurons le remplacement et l'installation de tous types de systèmes de production d'eau chaude.",
     benefits: [
       "Large gamme de marques disponibles",
       "Solutions économes en énergie",
@@ -124,19 +124,19 @@ const services = [
 const faqs = [
   {
     question: "Intervenez-vous sur des chantiers neufs ou uniquement en rénovation ?",
-    answer: "Nous intervenons aussi bien sur des chantiers neufs que sur des projets de rénovation. Notre expérience avec les promoteurs et gestionnaires d'habitat nous permet de nous adapter à tous types de projets."
+    answer: "Nous intervenons aussi bien sur des chantiers neufs que sur des projets de rénovation."
   },
   {
     question: "Quels sont vos délais d'intervention ?",
-    answer: "Pour les urgences, nous intervenons sous 48h. Pour les projets planifiés, les délais sont définis lors de l'établissement du devis en fonction de l'ampleur des travaux."
+    answer: "Pour les urgences, nous intervenons sous 48h. Pour les projets planifiés, les délais sont définis lors de l'établissement du devis."
   },
   {
     question: "Proposez-vous des contrats de maintenance ?",
-    answer: "Oui, nous proposons des contrats de maintenance pour le suivi régulier de vos installations de plomberie, gaz et ventilation. Contactez-nous pour un devis personnalisé."
+    answer: "Oui, nous proposons des contrats de maintenance pour le suivi régulier de vos installations."
   },
   {
     question: "Travaillez-vous uniquement en sous-traitance ?",
-    answer: "Nous travaillons principalement avec des professionnels (promoteurs, gestionnaires d'habitat) mais pouvons également intervenir en direct pour certains projets spécifiques."
+    answer: "Nous travaillons principalement avec des professionnels mais pouvons également intervenir en direct pour certains projets."
   }
 ];
 
@@ -150,7 +150,7 @@ const Services = () => {
     <>
       <SEOHead 
         title="Services Plomberie, Gaz, Ventilation pour Pros | Paris Tout Services IDF"
-        description="Installation plomberie, rénovation salle de bain, gaz, ventilation, chauffe-eau en Île-de-France. Sous-traitance pour promoteurs et gestionnaires d'habitat."
+        description="Installation plomberie, rénovation salle de bain, gaz, ventilation, chauffe-eau en Île-de-France."
         canonical="/services"
       />
       <SchemaMarkup type="localBusiness" />
@@ -160,16 +160,12 @@ const Services = () => {
       
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500 rounded-full blur-3xl" />
-          </div>
-
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4] overflow-hidden">
           <div className="container-custom relative z-10">
-            <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
-              <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+              <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">Nos services</span>
+              <span className="text-slate-900">Nos services</span>
             </nav>
 
             <motion.div
@@ -177,14 +173,14 @@ const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Nos Services de{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                  Plomberie et Installation Gaz
-                </span>{' '}
-                en Île-de-France
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight mb-6">
+                <span className="font-extralight">Nos services de</span>
+                <br />
+                <span className="italic text-blue-600">plomberie</span>{' '}
+                <span className="font-extralight">et</span>{' '}
+                <span className="italic text-orange-500">gaz</span>
               </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-xl text-slate-500 leading-relaxed">
                 Des prestations complètes pour répondre à tous vos besoins en plomberie, gaz, ventilation et accessibilité.
               </p>
             </motion.div>
@@ -196,7 +192,7 @@ const Services = () => {
           <section 
             key={service.id} 
             id={service.id}
-            className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
+            className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-[#F8F7F4]'}`}
           >
             <div className="container-custom">
               <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -206,13 +202,13 @@ const Services = () => {
                   viewport={{ once: true }}
                   className={index % 2 === 1 ? 'lg:order-2' : ''}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mb-6 shadow-lg">
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                  <h2 className="text-3xl md:text-4xl text-slate-900 mb-4 font-light">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                  <p className="text-lg text-slate-500 leading-relaxed mb-6">
                     {service.description}
                   </p>
 
@@ -220,16 +216,16 @@ const Services = () => {
                   <div className="space-y-3 mb-8">
                     {service.benefits.map((benefit) => (
                       <div key={benefit} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-slate-700">{benefit}</span>
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-slate-600">{benefit}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link to="/contact">
-                    <Button variant="hero" size="lg">
+                    <Button className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 py-6 text-sm font-medium">
                       Demander un devis
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </Button>
                   </Link>
                 </motion.div>
@@ -241,7 +237,7 @@ const Services = () => {
                   viewport={{ once: true }}
                   className={`bg-slate-100 rounded-3xl p-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}
                 >
-                  <h3 className="font-bold text-slate-900 text-xl mb-6">Notre Processus</h3>
+                  <h3 className="font-semibold text-slate-900 text-xl mb-6">Notre Processus</h3>
                   <div className="space-y-6">
                     {service.process.map((step, stepIndex) => (
                       <motion.div
@@ -252,12 +248,12 @@ const Services = () => {
                         transition={{ delay: stepIndex * 0.1 }}
                         className="flex gap-4"
                       >
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
                           {step.step}
                         </div>
                         <div>
                           <div className="font-semibold text-slate-900">{step.title}</div>
-                          <div className="text-slate-600 text-sm">{step.desc}</div>
+                          <div className="text-slate-500 text-sm">{step.desc}</div>
                         </div>
                       </motion.div>
                     ))}
@@ -277,8 +273,9 @@ const Services = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Questions Fréquentes
+              <h2 className="text-3xl md:text-4xl text-slate-900 mb-4">
+                <span className="font-extralight">Questions</span>{' '}
+                <span className="italic text-blue-600">fréquentes</span>
               </h2>
             </motion.div>
 
@@ -288,12 +285,12 @@ const Services = () => {
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="bg-slate-50 rounded-2xl border-none px-6"
+                    className="bg-[#F8F7F4] rounded-2xl border-none px-6"
                   >
                     <AccordionTrigger className="text-left font-semibold text-slate-900 hover:no-underline py-5">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-slate-600 pb-5">
+                    <AccordionContent className="text-slate-500 pb-5">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -305,11 +302,10 @@ const Services = () => {
 
         {/* CTA */}
         <CTASection
-          title="Un Projet en Vue ?"
+          title="Un projet en vue ?"
           subtitle="Contactez-nous pour une étude personnalisée de vos besoins."
           ctaText="Obtenir un devis gratuit"
           ctaLink="/contact"
-          variant="blue"
         />
       </main>
 

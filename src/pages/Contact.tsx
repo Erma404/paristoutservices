@@ -34,7 +34,7 @@ const Contact = () => {
     <>
       <SEOHead 
         title="Devis Gratuit Plomberie & Gaz IDF | Contact Paris Tout Services"
-        description="Demandez votre devis gratuit pour vos travaux de plomberie, gaz ou ventilation en Île-de-France. Réponse sous 24h. Paris Tout Services."
+        description="Demandez votre devis gratuit pour vos travaux de plomberie, gaz ou ventilation en Île-de-France."
         canonical="/contact"
       />
       <SchemaMarkup type="localBusiness" />
@@ -43,38 +43,39 @@ const Contact = () => {
       
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4]">
           <div className="container-custom relative z-10">
-            <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
-              <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+              <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">Contact</span>
+              <span className="text-slate-900">Contact</span>
             </nav>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+              className="text-4xl md:text-5xl lg:text-6xl text-slate-900"
             >
-              Contactez <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">Paris Tout Services</span>
+              <span className="font-extralight">Contactez</span>{' '}
+              <span className="italic text-blue-600">Paris Tout Services</span>
             </motion.h1>
           </div>
         </section>
 
         {/* Form & Info */}
-        <section className="section-padding bg-slate-50">
+        <section className="section-padding bg-white">
           <div className="container-custom">
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Form */}
               <div className="lg:col-span-2">
-                <div className="bg-white rounded-3xl p-8 shadow-card">
-                  <h2 className="text-2xl font-bold text-slate-900 mb-6">Demander un devis gratuit</h2>
+                <div className="bg-[#F8F7F4] rounded-3xl p-8">
+                  <h2 className="text-2xl font-semibold text-slate-900 mb-6">Demander un devis gratuit</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
-                      <div><Label htmlFor="name">Nom / Prénom *</Label><Input id="name" required className="mt-2" /></div>
-                      <div><Label htmlFor="company">Entreprise *</Label><Input id="company" required className="mt-2" /></div>
+                      <div><Label htmlFor="name">Nom / Prénom *</Label><Input id="name" required className="mt-2 bg-white" /></div>
+                      <div><Label htmlFor="company">Entreprise *</Label><Input id="company" required className="mt-2 bg-white" /></div>
                       <div>
                         <Label>Fonction</Label>
-                        <Select><SelectTrigger className="mt-2"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                        <Select><SelectTrigger className="mt-2 bg-white"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="chef">Chef de travaux</SelectItem>
                             <SelectItem value="promoteur">Promoteur</SelectItem>
@@ -83,11 +84,11 @@ const Contact = () => {
                           </SelectContent>
                         </Select>
                       </div>
-                      <div><Label htmlFor="email">Email *</Label><Input id="email" type="email" required className="mt-2" /></div>
-                      <div><Label htmlFor="phone">Téléphone *</Label><Input id="phone" type="tel" required className="mt-2" /></div>
+                      <div><Label htmlFor="email">Email *</Label><Input id="email" type="email" required className="mt-2 bg-white" /></div>
+                      <div><Label htmlFor="phone">Téléphone *</Label><Input id="phone" type="tel" required className="mt-2 bg-white" /></div>
                       <div>
                         <Label>Type de projet *</Label>
-                        <Select required><SelectTrigger className="mt-2"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
+                        <Select required><SelectTrigger className="mt-2 bg-white"><SelectValue placeholder="Sélectionner" /></SelectTrigger>
                           <SelectContent>
                             <SelectItem value="plomberie">Plomberie</SelectItem>
                             <SelectItem value="gaz">Gaz</SelectItem>
@@ -98,13 +99,13 @@ const Contact = () => {
                         </Select>
                       </div>
                     </div>
-                    <div><Label htmlFor="message">Message *</Label><Textarea id="message" required rows={4} className="mt-2" /></div>
+                    <div><Label htmlFor="message">Message *</Label><Textarea id="message" required rows={4} className="mt-2 bg-white" /></div>
                     <div className="flex items-start gap-3">
                       <Checkbox id="rgpd" required />
-                      <Label htmlFor="rgpd" className="text-sm text-slate-600">J'accepte que mes données soient traitées conformément à la politique de confidentialité *</Label>
+                      <Label htmlFor="rgpd" className="text-sm text-slate-500">J'accepte que mes données soient traitées conformément à la politique de confidentialité *</Label>
                     </div>
-                    <Button type="submit" variant="hero" size="lg" disabled={isSubmitting}>
-                      {isSubmitting ? 'Envoi...' : 'Envoyer ma demande'}<Send className="w-5 h-5" />
+                    <Button type="submit" className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 py-6 text-sm font-medium" disabled={isSubmitting}>
+                      {isSubmitting ? 'Envoi...' : 'Envoyer ma demande'}<Send className="w-4 h-4 ml-2" />
                     </Button>
                   </form>
                 </div>
@@ -112,11 +113,11 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-6">
-                <div className="bg-white rounded-3xl p-8 shadow-card">
-                  <h3 className="font-bold text-slate-900 text-xl mb-6">Nos Coordonnées</h3>
+                <div className="bg-[#F8F7F4] rounded-3xl p-8">
+                  <h3 className="font-semibold text-slate-900 text-xl mb-6">Nos Coordonnées</h3>
                   <div className="space-y-4">
                     <a href="tel:+33601167240" className="flex items-center gap-4 text-slate-600 hover:text-blue-600">
-                      <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center"><Phone className="w-5 h-5 text-blue-600" /></div>
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center"><Phone className="w-5 h-5 text-blue-600" /></div>
                       <div><div className="text-sm text-slate-500">Téléphone</div><div className="font-semibold text-slate-900">06 01 16 72 40</div></div>
                     </a>
                     <a href="mailto:contact@paristoutservices.fr" className="flex items-center gap-4 text-slate-600 hover:text-blue-600">
@@ -124,17 +125,17 @@ const Contact = () => {
                       <div><div className="text-sm text-slate-500">Email</div><div className="font-semibold text-slate-900">contact@paristoutservices.fr</div></div>
                     </a>
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center"><MapPin className="w-5 h-5 text-green-600" /></div>
+                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center"><MapPin className="w-5 h-5 text-slate-600" /></div>
                       <div><div className="text-sm text-slate-500">Adresse</div><div className="font-semibold text-slate-900">25 Rue Henri Rouanet<br/>93700 Drancy</div></div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center"><Clock className="w-5 h-5 text-purple-600" /></div>
+                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center"><Clock className="w-5 h-5 text-slate-600" /></div>
                       <div><div className="text-sm text-slate-500">Horaires</div><div className="font-semibold text-slate-900">Lun - Ven : 8h - 18h</div></div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white">
-                  <h3 className="font-bold text-xl mb-2">Réponse sous 24h</h3>
+                <div className="bg-blue-600 rounded-3xl p-8 text-white">
+                  <h3 className="font-semibold text-xl mb-2">Réponse sous 24h</h3>
                   <p className="text-white/80">Notre équipe s'engage à vous recontacter rapidement.</p>
                 </div>
               </div>

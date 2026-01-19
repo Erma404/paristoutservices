@@ -94,7 +94,7 @@ const Index = () => {
       
       <main>
         {/* Hero Section - Editorial Design */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F5F4F0]">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F7F4]">
           <div className="container-custom relative z-10 pt-32 pb-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left Content */}
@@ -104,14 +104,14 @@ const Index = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-xl"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E8F5E9] text-[#2E7D32] mb-8">
-                  <span className="w-2 h-2 rounded-full bg-[#4CAF50]" />
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 mb-8">
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
                   <span className="text-sm font-medium">Île-de-France</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-6 text-slate-900">
                   <span className="font-extralight">L'expertise</span>{' '}
-                  <span className="font-normal italic text-[#2E7D32]">plomberie</span>
+                  <span className="font-normal italic text-blue-600">plomberie</span>
                   <br />
                   <span className="font-extralight">à chaque</span>{' '}
                   <span className="font-normal">intervention</span>
@@ -171,8 +171,8 @@ const Index = () => {
                     className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#E8F5E9] flex items-center justify-center">
-                        <Shield className="w-5 h-5 text-[#2E7D32]" />
+                      <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-orange-600" />
                       </div>
                       <div>
                         <div className="text-xs text-slate-500">Intervention sous</div>
@@ -186,9 +186,9 @@ const Index = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
-                    className="absolute top-6 left-6 bg-[#E8F5E9] rounded-full px-4 py-2"
+                    className="absolute top-6 left-6 bg-blue-600 rounded-full px-4 py-2"
                   >
-                    <span className="text-sm font-medium text-[#2E7D32]">Certifié RGE</span>
+                    <span className="text-sm font-medium text-white">Certifié RGE</span>
                   </motion.div>
                 </div>
               </motion.div>
@@ -209,8 +209,8 @@ const Index = () => {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#E8F5E9] flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-[#2E7D32]" />
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900 text-sm">{item.label}</div>
@@ -223,7 +223,7 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section className="section-padding bg-[#F5F4F0]">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -235,7 +235,7 @@ const Index = () => {
                 <span className="font-extralight">Gamme complète de solutions pour</span>
                 <br />
                 <span className="font-extralight">améliorer votre</span>{' '}
-                <span className="italic text-[#2E7D32]">confort</span>
+                <span className="italic text-blue-600">confort</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-xl mx-auto mt-6">
                 Des prestations certifiées adaptées aux professionnels du bâtiment.
@@ -267,7 +267,7 @@ const Index = () => {
                 <span className="font-extralight">Pourquoi les professionnels</span>
                 <br />
                 <span className="font-extralight">nous font</span>{' '}
-                <span className="italic text-[#2E7D32]">confiance</span>
+                <span className="italic text-orange-500">confiance</span>
               </h2>
             </motion.div>
 
@@ -295,10 +295,10 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="p-8 rounded-3xl bg-[#F5F4F0] border border-slate-100"
+                  className="p-8 rounded-3xl bg-[#F8F7F4] border border-slate-100"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#E8F5E9] flex items-center justify-center mb-6">
-                    <item.icon className="w-6 h-6 text-[#2E7D32]" />
+                  <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+                    <item.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-3">{item.title}</h3>
                   <p className="text-slate-500 leading-relaxed">{item.description}</p>
@@ -342,7 +342,7 @@ const Index = () => {
         </section>
 
         {/* Zones d'intervention */}
-        <section className="section-padding bg-[#F5F4F0]">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -352,7 +352,7 @@ const Index = () => {
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
                 <span className="font-extralight">Nous intervenons dans</span>{' '}
-                <span className="italic text-[#2E7D32]">toute l'Île-de-France</span>
+                <span className="italic text-blue-600">toute l'Île-de-France</span>
               </h2>
             </motion.div>
 
@@ -364,9 +364,9 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="p-5 rounded-2xl bg-white border border-slate-100 hover:border-[#A5D6A7] hover:bg-[#E8F5E9] transition-colors text-center group"
+                  className="p-5 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors text-center group"
                 >
-                  <div className="text-2xl font-semibold text-[#2E7D32] mb-1 group-hover:scale-110 transition-transform">
+                  <div className="text-2xl font-semibold text-blue-600 mb-1 group-hover:scale-110 transition-transform">
                     {dept.code}
                   </div>
                   <div className="text-sm text-slate-600">{dept.name}</div>
