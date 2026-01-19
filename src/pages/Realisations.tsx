@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronRight, MapPin, Calendar, Building, Eye } from 'lucide-react';
+import { ChevronRight, MapPin, Building, Eye } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -27,7 +27,7 @@ const projects: Project[] = [
     client: "GECop",
     duration: "3 mois",
     description: "Remplacement complet des colonnes montantes et descentes d'eau usées.",
-    fullDescription: "Ce projet d'envergure consistait à rénover l'ensemble du réseau de plomberie d'un immeuble haussmannien de 45 logements. L'intervention a nécessité une coordination minutieuse avec les résidents pour minimiser les nuisances tout en respectant les délais stricts imposés par le maître d'ouvrage.",
+    fullDescription: "Ce projet d'envergure consistait à rénover l'ensemble du réseau de plomberie d'un immeuble haussmannien de 45 logements.",
     challenges: [
       "Intervention en site occupé avec maintien du service d'eau",
       "Contraintes architecturales liées au bâtiment ancien",
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "Installation de colonnes en cuivre et PER multicouche haute qualité"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800", caption: "Vue d'ensemble des colonnes montantes rénovées" },
+      { url: "https://images.unsplash.com/photo-504328345606-18bbc8c9d7d1?w=800", caption: "Vue d'ensemble des colonnes montantes rénovées" },
       { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800", caption: "Détail des raccordements en cuivre" },
       { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800", caption: "Installation des vannes d'arrêt" }
     ]
@@ -52,7 +52,7 @@ const projects: Project[] = [
     client: "Groupe ERI",
     duration: "2 mois",
     description: "Mise en place du réseau gaz pour 28 logements avec certification PG.",
-    fullDescription: "Installation complète du réseau de distribution gaz pour une résidence neuve de 28 logements. Le projet incluait la pose des colonnes montantes, des compteurs individuels et des raccordements aux équipements de chaque appartement, le tout en conformité avec les normes PG.",
+    fullDescription: "Installation complète du réseau de distribution gaz pour une résidence neuve de 28 logements.",
     challenges: [
       "Respect des normes strictes de sécurité gaz",
       "Coordination avec le planning général du chantier neuf",
@@ -77,7 +77,7 @@ const projects: Project[] = [
     client: "Acorus",
     duration: "6 semaines",
     description: "Rénovation de 15 salles de bain adaptées aux personnes à mobilité réduite.",
-    fullDescription: "Rénovation complète de 15 salles de bain dans un EHPAD, avec adaptation aux normes d'accessibilité PMR. Chaque salle de bain a été repensée pour garantir la sécurité et l'autonomie des résidents, avec des équipements spécifiques et des matériaux adaptés à un usage intensif.",
+    fullDescription: "Rénovation complète de 15 salles de bain dans un EHPAD, avec adaptation aux normes d'accessibilité PMR.",
     challenges: [
       "Intervention sans perturber le quotidien des résidents",
       "Respect strict des normes PMR d'accessibilité",
@@ -102,7 +102,7 @@ const projects: Project[] = [
     client: "GECop",
     duration: "1 mois",
     description: "Installation système VMC double flux haute performance énergétique.",
-    fullDescription: "Installation d'un système de ventilation mécanique contrôlée double flux dans un bâtiment de bureaux de 2000m². Ce système permet une récupération de chaleur optimale et une qualité d'air intérieur exemplaire, contribuant au bien-être des occupants et aux économies d'énergie.",
+    fullDescription: "Installation d'un système de ventilation mécanique contrôlée double flux dans un bâtiment de bureaux de 2000m².",
     challenges: [
       "Installation dans un espace technique contraint",
       "Performance énergétique exigée par la RT2012",
@@ -127,7 +127,7 @@ const projects: Project[] = [
     client: "Groupe ERI",
     duration: "4 mois",
     description: "Rénovation complète des réseaux d'eau pour un hôtel 4 étoiles.",
-    fullDescription: "Réhabilitation totale des réseaux d'eau chaude et froide d'un hôtel 4 étoiles de 80 chambres. Le projet incluait également le remplacement de l'ensemble des équipements sanitaires des chambres et des parties communes, avec des finitions haut de gamme.",
+    fullDescription: "Réhabilitation totale des réseaux d'eau chaude et froide d'un hôtel 4 étoiles de 80 chambres.",
     challenges: [
       "Maintien partiel de l'activité hôtelière pendant les travaux",
       "Exigences de qualité élevées pour un établissement 4 étoiles",
@@ -152,7 +152,7 @@ const projects: Project[] = [
     client: "Acorus",
     duration: "2 mois",
     description: "Remplacement des colonnes gaz et mise en conformité de 32 logements.",
-    fullDescription: "Suite à un diagnostic de sécurité, cette copropriété de 32 logements nécessitait une mise en conformité urgente de son réseau gaz. L'intervention a porté sur le remplacement des colonnes vétustes et la mise aux normes de chaque installation individuelle.",
+    fullDescription: "Suite à un diagnostic de sécurité, cette copropriété de 32 logements nécessitait une mise en conformité urgente.",
     challenges: [
       "Urgence de la mise en conformité pour la sécurité des résidents",
       "Coordination avec GRDF pour les coupures de gaz",
@@ -173,19 +173,19 @@ const projects: Project[] = [
 
 const testimonials = [
   {
-    quote: "Paris Tout Services a su répondre à nos exigences de qualité et de délais. Leur équipe est professionnelle et réactive. Un partenaire de confiance pour nos projets.",
+    quote: "Paris Tout Services a su répondre à nos exigences de qualité et de délais. Leur équipe est professionnelle et réactive.",
     author: "Jean-Marc Dupont",
     role: "Chef de travaux",
     company: "GECop"
   },
   {
-    quote: "Nous travaillons avec PTS depuis 3 ans. Leur expertise en installation gaz et leur certification PG sont des atouts majeurs pour nos chantiers.",
+    quote: "Nous travaillons avec PTS depuis 3 ans. Leur expertise en installation gaz et leur certification PG sont des atouts majeurs.",
     author: "Sophie Martin",
     role: "Responsable technique",
     company: "Groupe ERI"
   },
   {
-    quote: "Les équipes de Paris Tout Services maîtrisent parfaitement les rénovations de salles de bain aux normes PMR. Leurs réalisations pour nos EHPAD sont toujours impeccables.",
+    quote: "Les équipes de Paris Tout Services maîtrisent parfaitement les rénovations de salles de bain aux normes PMR.",
     author: "Pierre Lefebvre",
     role: "Directeur de projets",
     company: "Acorus"
@@ -219,7 +219,7 @@ const Realisations = () => {
     <>
       <SEOHead 
         title="Réalisations Plomberie & Gaz Professionnels IDF | Paris Tout Services"
-        description="Découvrez nos projets de plomberie, gaz et ventilation pour promoteurs et gestionnaires en Île-de-France. Références GECop, Acorus, Groupe ERI."
+        description="Découvrez nos projets de plomberie, gaz et ventilation pour promoteurs et gestionnaires en Île-de-France."
         canonical="/realisations"
       />
       <SchemaMarkup type="localBusiness" />
@@ -229,16 +229,12 @@ const Realisations = () => {
       
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500 rounded-full blur-3xl" />
-          </div>
-
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4] overflow-hidden">
           <div className="container-custom relative z-10">
-            <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
-              <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+              <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">Réalisations</span>
+              <span className="text-slate-900">Réalisations</span>
             </nav>
 
             <motion.div
@@ -246,13 +242,11 @@ const Realisations = () => {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Nos Réalisations en{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                  Plomberie et Installation Gaz
-                </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight mb-6">
+                <span className="font-extralight">Nos</span>{' '}
+                <span className="italic text-blue-600">réalisations</span>
               </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-xl text-slate-500 leading-relaxed">
                 Plus de 500 projets réalisés pour les professionnels du bâtiment en Île-de-France.
               </p>
             </motion.div>
@@ -267,9 +261,9 @@ const Realisations = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeCategory === cat.id
-                      ? 'bg-blue-600 text-white shadow-lg'
+                      ? 'bg-blue-600 text-white'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
@@ -281,7 +275,7 @@ const Realisations = () => {
         </section>
 
         {/* Projects Grid */}
-        <section className="section-padding bg-slate-50">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div 
               layout
@@ -297,7 +291,7 @@ const Realisations = () => {
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     onClick={() => setSelectedProject(project)}
-                    className="bg-white rounded-2xl overflow-hidden shadow-card border border-slate-100 hover:shadow-card-hover transition-all cursor-pointer group"
+                    className="bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all cursor-pointer group"
                   >
                     {/* Image */}
                     <div className="h-48 relative overflow-hidden">
@@ -320,17 +314,17 @@ const Realisations = () => {
                         </div>
                       </div>
                       <div className="absolute top-4 right-4">
-                        <span className="px-3 py-1 rounded-lg bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium">
+                        <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium">
                           {getCategoryLabel(project.category)}
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <h3 className="font-bold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">
+                      <h3 className="font-semibold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-slate-600 text-sm mb-4 line-clamp-2">
+                      <p className="text-slate-500 text-sm mb-4 line-clamp-2">
                         {project.description}
                       </p>
 
@@ -346,7 +340,7 @@ const Realisations = () => {
                       </div>
 
                       <div className="mt-4 pt-4 border-t border-slate-100">
-                        <span className="text-sm font-semibold text-blue-600 group-hover:underline">
+                        <span className="text-sm font-medium text-blue-600 group-hover:underline">
                           Voir les détails →
                         </span>
                       </div>
@@ -367,20 +361,22 @@ const Realisations = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-medium mb-6">
                 Témoignages
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                Ils Recommandent{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
-                  Paris Tout Services
-                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Ce que disent</span>{' '}
+                <span className="italic text-blue-600">nos clients</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <TestimonialCard key={index} {...testimonial} delay={index * 0.1} />
+                <TestimonialCard 
+                  key={testimonial.author} 
+                  {...testimonial} 
+                  delay={index * 0.1}
+                />
               ))}
             </div>
           </div>
@@ -388,11 +384,10 @@ const Realisations = () => {
 
         {/* CTA */}
         <CTASection
-          title="Un Projet Similaire ? Parlons-en"
-          subtitle="Contactez-nous pour discuter de votre projet et obtenir un devis gratuit."
+          title="Un projet similaire ?"
+          subtitle="Discutons de vos besoins et trouvons la meilleure solution."
           ctaText="Demander un devis"
           ctaLink="/contact"
-          variant="dark"
         />
       </main>
 
@@ -400,10 +395,15 @@ const Realisations = () => {
 
       {/* Project Detail Modal */}
       <ProjectDetailModal 
-        project={selectedProject}
+        project={selectedProject} 
         isOpen={!!selectedProject}
-        onClose={() => setSelectedProject(null)}
+        onClose={() => setSelectedProject(null)} 
       />
+    </>
+  );
+};
+
+export default Realisations;
     </>
   );
 };

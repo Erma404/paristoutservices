@@ -9,7 +9,6 @@ import {
   Calendar,
   Building
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -78,18 +77,13 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-500 rounded-full blur-3xl" />
-          </div>
-
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4] overflow-hidden">
           <div className="container-custom relative z-10">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-white/60 mb-8">
-              <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
+            <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+              <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">Qui sommes-nous</span>
+              <span className="text-slate-900">Qui sommes-nous</span>
             </nav>
 
             <motion.div
@@ -98,14 +92,13 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Paris Tout Services, Votre Partenaire{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                  Plomberie et Gaz
-                </span>{' '}
-                depuis 2016
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight mb-6">
+                <span className="font-extralight">Paris Tout Services,</span>
+                <br />
+                <span className="font-extralight">votre partenaire</span>{' '}
+                <span className="italic text-blue-600">plomberie</span>
               </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-xl text-slate-500 leading-relaxed">
                 Une équipe de 9 professionnels passionnés au service des promoteurs et gestionnaires d'habitat en Île-de-France.
               </p>
             </motion.div>
@@ -121,22 +114,23 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
-                  <Calendar className="w-4 h-4 inline mr-1" />
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6">
+                  <Calendar className="w-4 h-4" />
                   Notre Histoire
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                  8 Années d'Expertise au Service des Professionnels
+                </div>
+                <h2 className="text-3xl md:text-4xl text-slate-900 mb-6">
+                  <span className="font-extralight">8 années d'</span>
+                  <span className="italic text-blue-600">expertise</span>
                 </h2>
-                <div className="space-y-4 text-slate-600 leading-relaxed">
+                <div className="space-y-4 text-slate-500 leading-relaxed">
                   <p>
                     Fondée en 2016, Paris Tout Services est née de la volonté de proposer aux professionnels du bâtiment en Île-de-France un partenaire fiable et réactif pour tous leurs travaux de plomberie et d'installation gaz.
                   </p>
                   <p>
-                    Depuis notre création, nous avons développé une expertise reconnue auprès des promoteurs immobiliers, des chefs de travaux et des gestionnaires d'habitat social. Notre croissance constante nous a permis de constituer une équipe de 9 techniciens qualifiés.
+                    Depuis notre création, nous avons développé une expertise reconnue auprès des promoteurs immobiliers, des chefs de travaux et des gestionnaires d'habitat social.
                   </p>
                   <p>
-                    Nos certifications RGE, PG et Qualipac témoignent de notre engagement envers la qualité et le respect des normes les plus exigeantes du secteur.
+                    Nos certifications RGE, PG et Qualipac témoignent de notre engagement envers la qualité.
                   </p>
                 </div>
               </motion.div>
@@ -147,8 +141,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-slate-50 rounded-3xl p-8">
-                  <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <div className="bg-[#F8F7F4] rounded-3xl p-8">
+                  <h3 className="font-semibold text-slate-900 mb-6 flex items-center gap-2">
                     <Building className="w-5 h-5 text-blue-600" />
                     Notre Parcours
                   </h3>
@@ -162,7 +156,7 @@ const About = () => {
                         transition={{ delay: index * 0.1 }}
                         className="flex gap-4"
                       >
-                        <div className="w-16 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        <div className="w-16 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
                           {item.year}
                         </div>
                         <p className="text-slate-600 pt-1">{item.event}</p>
@@ -176,7 +170,7 @@ const About = () => {
         </section>
 
         {/* Notre Équipe */}
-        <section className="section-padding bg-slate-50">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -184,18 +178,16 @@ const About = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-4">
-                <Users className="w-4 h-4 inline mr-1" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-medium mb-6">
+                <Users className="w-4 h-4" />
                 Notre Équipe
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                Une Équipe de{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
-                  9 Professionnels Qualifiés
-                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Une équipe de</span>{' '}
+                <span className="italic text-blue-600">9 professionnels</span>
               </h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Des techniciens expérimentés et certifiés, formés aux dernières normes et techniques du secteur.
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+                Des techniciens expérimentés et certifiés, formés aux dernières normes.
               </p>
             </motion.div>
 
@@ -211,13 +203,13 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-3xl p-8 text-center shadow-card border border-slate-100"
+                  className="bg-white rounded-3xl p-8 text-center border border-slate-100"
                 >
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">
+                  <div className="w-20 h-20 rounded-2xl bg-blue-600 flex items-center justify-center mx-auto mb-6 text-white text-3xl font-semibold">
                     {item.count}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{item.role}</h3>
-                  <p className="text-slate-600">{item.desc}</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-2">{item.role}</h3>
+                  <p className="text-slate-500">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -233,8 +225,9 @@ const About = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                Nos Valeurs
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Nos</span>{' '}
+                <span className="italic text-orange-500">valeurs</span>
               </h2>
             </motion.div>
 
@@ -246,13 +239,13 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
-                  className="text-center p-8 rounded-3xl bg-slate-50 border border-slate-100"
+                  className="text-center p-8 rounded-3xl bg-[#F8F7F4] border border-slate-100"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <div className="w-16 h-16 rounded-2xl bg-orange-500 flex items-center justify-center mx-auto mb-6">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{value.title}</h3>
+                  <p className="text-slate-500 leading-relaxed">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -260,7 +253,7 @@ const About = () => {
         </section>
 
         {/* Certifications */}
-        <section className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
+        <section className="section-padding bg-slate-900">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -268,15 +261,13 @@ const About = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-white/10 text-white text-sm font-semibold mb-4">
-                <Award className="w-4 h-4 inline mr-1" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium mb-6">
+                <Award className="w-4 h-4" />
                 Nos Certifications
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Des Certifications qui Garantissent la{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                  Qualité
-                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4 font-light">
+                Des certifications qui garantissent la{' '}
+                <span className="text-orange-500">qualité</span>
               </h2>
             </motion.div>
 
@@ -294,11 +285,10 @@ const About = () => {
 
         {/* CTA */}
         <CTASection
-          title="Prêt à Collaborer avec des Experts ?"
+          title="Prêt à collaborer ?"
           subtitle="Discutons de votre projet et trouvons ensemble la meilleure solution."
           ctaText="Contactez-nous"
           ctaLink="/contact"
-          variant="orange"
         />
       </main>
 

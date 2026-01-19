@@ -18,7 +18,6 @@ const CTASection = ({
   subtitle, 
   ctaText, 
   ctaLink, 
-  variant = 'blue',
   children 
 }: CTASectionProps) => {
   return (
@@ -48,7 +47,7 @@ const CTASection = ({
           {children}
           <Link to={ctaLink}>
             <Button 
-              className="mt-6 bg-white text-slate-900 hover:bg-white/90 rounded-full px-8 py-6 text-sm font-medium"
+              className="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-sm font-medium"
             >
               {ctaText}
               <ChevronRight className="w-4 h-4 ml-1" />
