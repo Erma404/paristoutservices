@@ -77,7 +77,11 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-[#F8F7F4] overflow-hidden">
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4] animated-gradient-bg overflow-hidden">
+          {/* Animated Blobs */}
+          <div className="blob blob-blue w-[400px] h-[400px] -top-20 -right-20 opacity-50" style={{ animationDelay: '0s' }} />
+          <div className="blob blob-orange w-[300px] h-[300px] bottom-0 left-20 opacity-40" style={{ animationDelay: '-7s' }} />
+          
           <div className="container-custom relative z-10">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
