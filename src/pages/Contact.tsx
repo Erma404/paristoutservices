@@ -43,7 +43,11 @@ const Contact = () => {
       
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-[#F8F7F4]">
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4] animated-gradient-bg overflow-hidden">
+          {/* Animated Blobs */}
+          <div className="blob blob-blue w-[350px] h-[350px] -top-20 right-10 opacity-50" style={{ animationDelay: '0s' }} />
+          <div className="blob blob-cyan w-[280px] h-[280px] bottom-0 -left-10 opacity-40" style={{ animationDelay: '-6s' }} />
+          
           <div className="container-custom relative z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
               <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>

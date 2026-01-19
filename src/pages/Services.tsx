@@ -160,7 +160,12 @@ const Services = () => {
       
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-[#F8F7F4] overflow-hidden">
+        <section className="relative pt-32 pb-20 bg-[#F8F7F4] animated-gradient-bg overflow-hidden">
+          {/* Animated Blobs */}
+          <div className="blob blob-blue w-[450px] h-[450px] -top-32 right-0 opacity-50" style={{ animationDelay: '0s' }} />
+          <div className="blob blob-cyan w-[350px] h-[350px] bottom-0 -left-20 opacity-40" style={{ animationDelay: '-5s' }} />
+          <div className="blob blob-orange w-[250px] h-[250px] top-20 left-1/4 opacity-30" style={{ animationDelay: '-10s' }} />
+          
           <div className="container-custom relative z-10">
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
               <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>

@@ -268,4 +268,75 @@
   .animate-scroll {
     animation: scroll 20s linear infinite;
   }
+
+  /* Animated gradient background */
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float-blob {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(20px, -30px) scale(1.05);
+    }
+    50% {
+      transform: translate(-20px, 20px) scale(0.95);
+    }
+    75% {
+      transform: translate(30px, 10px) scale(1.02);
+    }
+  }
+
+  .animated-gradient-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(221 83% 53% / 0.15) 0%,
+      hsl(199 89% 48% / 0.1) 25%,
+      hsl(38 92% 50% / 0.08) 50%,
+      hsl(221 83% 53% / 0.12) 75%,
+      hsl(199 89% 48% / 0.15) 100%
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease-in-out infinite;
+  }
+
+  .animated-gradient-dark {
+    background: linear-gradient(
+      135deg,
+      hsl(222 47% 11%) 0%,
+      hsl(221 83% 30%) 25%,
+      hsl(222 47% 15%) 50%,
+      hsl(221 83% 25%) 75%,
+      hsl(222 47% 11%) 100%
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease-in-out infinite;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float-blob 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .blob-blue {
+    background: hsl(221 83% 53% / 0.3);
+  }
+
+  .blob-orange {
+    background: hsl(38 92% 50% / 0.2);
+  }
+
+  .blob-cyan {
+    background: hsl(199 89% 48% / 0.25);
+  }
 }

@@ -102,7 +102,12 @@ const Index = () => {
       
       <main>
         {/* Hero Section - Editorial Design */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F7F4]">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F7F4] animated-gradient-bg">
+          {/* Animated Blobs */}
+          <div className="blob blob-blue w-[500px] h-[500px] top-20 -left-40 opacity-60" style={{ animationDelay: '0s' }} />
+          <div className="blob blob-orange w-[400px] h-[400px] top-40 right-10 opacity-50" style={{ animationDelay: '-5s' }} />
+          <div className="blob blob-cyan w-[300px] h-[300px] bottom-20 left-1/3 opacity-40" style={{ animationDelay: '-10s' }} />
+          
           <div className="container-custom relative z-10 pt-32 pb-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left Content */}
