@@ -12,6 +12,14 @@ import {
   Droplets,
   Accessibility,
   Building2,
+  CheckCircle2,
+  Users,
+  TrendingUp,
+  ThumbsUp,
+  Zap,
+  HardHat,
+  FileCheck,
+  MapPin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -30,7 +38,7 @@ import logoAcorus from "@/assets/partners/acorus.png";
 import logoGecop from "@/assets/partners/gecop.png";
 
 const reassuranceItems = [
-  { icon: Award, label: "8 ans d'expérience", value: "2016" },
+  { icon: Award, label: "+10 ans d'expérience", value: "Depuis 2016" },
   { icon: Shield, label: "Certifié RGE & PG", value: "Qualité" },
   { icon: Clock, label: "Interventions sous 48h", value: "Rapide" },
   { icon: BadgeCheck, label: "Garantie décennale", value: "Sécurité" },
@@ -297,7 +305,7 @@ const Index = () => {
                 {
                   icon: Building2,
                   title: "Expertise Technique",
-                  description: "Une équipe de techniciens qualifiés avec plus de 8 ans d'expérience.",
+                  description: "Une équipe de techniciens qualifiés avec plus de 10 ans d'expérience.",
                 },
                 {
                   icon: Shield,
@@ -391,6 +399,323 @@ const Index = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Expertise Section - SEO Rich Content */}
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Plomberie professionnelle</span>{" "}
+                <span className="italic text-blue-600">Île-de-France</span>
+              </h2>
+              <p className="text-lg text-slate-500 max-w-3xl mx-auto mt-6">
+                Spécialistes en installation plomberie, gaz et ventilation pour le secteur du bâtiment : 
+                promoteurs immobiliers, bailleurs sociaux, gestionnaires de patrimoine et entreprises générales.
+              </p>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-semibold text-slate-900">
+                  Un partenaire de confiance pour vos chantiers
+                </h3>
+                <p className="text-slate-500 leading-relaxed">
+                  Depuis 2016, Paris Tout Services accompagne les professionnels du bâtiment dans leurs projets 
+                  de plomberie sanitaire, d'installation gaz et de systèmes de ventilation. Notre expertise 
+                  s'étend de la conception technique à la mise en service, en passant par le respect des délais 
+                  et des normes en vigueur.
+                </p>
+                <p className="text-slate-500 leading-relaxed">
+                  Nous intervenons sur tous types de chantiers en Île-de-France : immeubles résidentiels, 
+                  hôtels, bureaux, établissements recevant du public (ERP), et logements sociaux. 
+                  Nos équipes certifiées garantissent des installations conformes RT2012/RE2020 et accessibles PMR.
+                </p>
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  {[
+                    { icon: CheckCircle2, text: "Devis gratuit sous 24h" },
+                    { icon: FileCheck, text: "Travaux garantis 10 ans" },
+                    { icon: HardHat, text: "Équipes certifiées" },
+                    { icon: Zap, text: "Intervention rapide" },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-center gap-3">
+                      <item.icon className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <span className="text-sm text-slate-700">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="bg-[#F8F7F4] rounded-3xl p-8"
+              >
+                <h4 className="text-xl font-semibold text-slate-900 mb-6">Nos domaines d'intervention</h4>
+                <ul className="space-y-4">
+                  {[
+                    "Installation et rénovation de réseaux de plomberie sanitaire",
+                    "Pose et raccordement de colonnes montantes et descendantes",
+                    "Installation gaz certifiée PG pour logements et locaux professionnels",
+                    "Systèmes de ventilation VMC simple et double flux",
+                    "Remplacement de chauffe-eau et ballons thermodynamiques",
+                    "Rénovation de salles de bain accessibles PMR",
+                    "Mise en conformité des installations existantes",
+                    "Maintenance préventive et curative",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Statistics Section */}
+        <section className="py-16 bg-blue-600 animated-gradient-dark overflow-hidden relative">
+          <div className="blob blob-cyan w-[400px] h-[400px] -top-20 -left-20 opacity-30" style={{ animationDelay: "-3s" }} />
+          <div className="blob blob-blue w-[300px] h-[300px] bottom-0 right-0 opacity-20" style={{ animationDelay: "-8s" }} />
+          
+          <div className="container-custom relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-2">
+                Paris Tout Services en chiffres
+              </h2>
+              <p className="text-white/70">Des résultats qui témoignent de notre engagement</p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { value: "+500", label: "Projets réalisés", icon: TrendingUp },
+                { value: "+10", label: "Années d'expertise", icon: Award },
+                { value: "48h", label: "Délai d'intervention", icon: Clock },
+                { value: "98%", label: "Clients satisfaits", icon: ThumbsUp },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="text-4xl md:text-5xl font-semibold text-white mb-2">{stat.value}</div>
+                  <div className="text-white/70 text-sm">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="section-padding bg-[#F8F7F4]">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Comment</span>{" "}
+                <span className="italic text-orange-500">travailler ensemble</span>
+              </h2>
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-6">
+                Un processus simple et transparent pour garantir la réussite de votre projet
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-4 gap-6">
+              {[
+                {
+                  step: "01",
+                  title: "Prise de contact",
+                  description: "Appelez-nous ou remplissez le formulaire. Nous vous recontactons sous 24h pour comprendre votre besoin.",
+                },
+                {
+                  step: "02",
+                  title: "Visite technique",
+                  description: "Un technicien qualifié se déplace sur site pour évaluer les travaux et établir un devis détaillé gratuit.",
+                },
+                {
+                  step: "03",
+                  title: "Réalisation",
+                  description: "Nos équipes interviennent selon le planning convenu, dans le respect des normes et des délais.",
+                },
+                {
+                  step: "04",
+                  title: "Réception",
+                  description: "Contrôle qualité, mise en service et remise des documents de conformité. Garantie décennale incluse.",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={item.step}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative"
+                >
+                  <div className="bg-white rounded-3xl p-6 border border-slate-100 h-full">
+                    <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-semibold mb-4">
+                      {item.step}
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                  {index < 3 && (
+                    <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
+                      <ChevronRight className="w-6 h-6 text-slate-300" />
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications SEO Block */}
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Certifications</span>{" "}
+                <span className="italic text-blue-600">professionnelles</span>
+              </h2>
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-6">
+                Des qualifications reconnues qui garantissent la conformité et la qualité de nos interventions
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "RGE",
+                  fullName: "Reconnu Garant de l'Environnement",
+                  description: "Qualification délivrée par Qualibat attestant de notre compétence en matière d'efficacité énergétique. Cette certification permet à vos clients de bénéficier d'aides de l'État (MaPrimeRénov', CEE).",
+                  color: "bg-blue-600",
+                },
+                {
+                  name: "PG",
+                  fullName: "Professionnel du Gaz",
+                  description: "Certification obligatoire pour toute intervention sur les installations gaz. Elle garantit la sécurité des installations et le respect des normes DTU 61.1 et NF P45-500.",
+                  color: "bg-orange-500",
+                },
+                {
+                  name: "Qualipac",
+                  fullName: "Qualité Pompe à Chaleur",
+                  description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques. Elle assure une mise en œuvre conforme aux préconisations des fabricants.",
+                  color: "bg-slate-800",
+                },
+              ].map((cert, index) => (
+                <motion.div
+                  key={cert.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.15 }}
+                  className="bg-[#F8F7F4] rounded-3xl p-8 border border-slate-100"
+                >
+                  <div className={`w-16 h-16 rounded-2xl ${cert.color} flex items-center justify-center mb-6`}>
+                    <span className="text-xl font-bold text-white">{cert.name}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-2">{cert.fullName}</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">{cert.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section for SEO */}
+        <section className="section-padding bg-[#F8F7F4]">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Questions</span>{" "}
+                <span className="italic text-orange-500">fréquentes</span>
+              </h2>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                {
+                  question: "Dans quels départements intervenez-vous ?",
+                  answer: "Nous intervenons dans toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Seine-et-Marne (77), Yvelines (78), Essonne (91) et Val-d'Oise (95)."
+                },
+                {
+                  question: "Quels types de clients accompagnez-vous ?",
+                  answer: "Nous travaillons exclusivement avec des professionnels : promoteurs immobiliers, bailleurs sociaux, syndics de copropriété, entreprises générales du bâtiment, gestionnaires de patrimoine et hôteliers."
+                },
+                {
+                  question: "Vos travaux sont-ils garantis ?",
+                  answer: "Oui, tous nos travaux bénéficient de la garantie décennale. Nous fournissons également les certificats de conformité gaz (CCGP) et les attestations de fin de travaux."
+                },
+                {
+                  question: "Quel est le délai pour obtenir un devis ?",
+                  answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique, généralement sous 48 à 72h."
+                },
+              ].map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-2xl p-6 border border-slate-100"
+                >
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-500 leading-relaxed">{faq.answer}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mt-10"
+            >
+              <Link to="/services">
+                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
+                  Voir tous nos services
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </section>
 

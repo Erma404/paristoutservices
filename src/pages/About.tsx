@@ -67,7 +67,7 @@ const About = () => {
     <>
       <SEOHead 
         title="Entreprise de Plomberie & Gaz Île-de-France | À Propos - Paris Tout Services"
-        description="Paris Tout Services : 8 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, Qualipac en Île-de-France."
+        description="Paris Tout Services : plus de 10 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, Qualipac en Île-de-France."
         canonical="/a-propos"
       />
       <SchemaMarkup type="localBusiness" />
@@ -123,7 +123,7 @@ const About = () => {
                   Notre Histoire
                 </div>
                 <h2 className="text-3xl md:text-4xl text-slate-900 mb-6">
-                  <span className="font-extralight">8 années d'</span>
+                  <span className="font-extralight">+10 années d'</span>
                   <span className="italic text-blue-600">expertise</span>
                 </h2>
                 <div className="space-y-4 text-slate-500 leading-relaxed">
