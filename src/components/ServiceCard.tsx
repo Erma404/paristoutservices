@@ -21,21 +21,21 @@ const ServiceCard = ({ icon: Icon, title, description, href, delay = 0 }: Servic
     >
       <Link
         to={href}
-        className="group block h-full bg-white rounded-2xl p-6 lg:p-8 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-slate-100"
+        className="group block h-full bg-white rounded-2xl p-6 lg:p-8 hover:shadow-lg transition-all duration-300 border border-slate-100"
       >
-        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-7 h-7 text-white" />
+        <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-6 h-6 text-[#2E7D32]" />
         </div>
         
-        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-lg font-semibold text-slate-900 mb-3 group-hover:text-[#2E7D32] transition-colors">
           {title}
         </h3>
         
-        <p className="text-slate-600 text-sm leading-relaxed mb-4">
+        <p className="text-slate-500 text-sm leading-relaxed mb-4">
           {description}
         </p>
         
-        <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 group-hover:gap-2 transition-all">
+        <span className="inline-flex items-center gap-1 text-sm font-medium text-[#2E7D32] group-hover:gap-2 transition-all">
           En savoir plus
           <ChevronRight className="w-4 h-4" />
         </span>

@@ -93,116 +93,113 @@ const Index = () => {
       <Header />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-900">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="Expert plombier professionnel au travail en Île-de-France" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40" />
-          </div>
-
+        {/* Hero Section - Editorial Design */}
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F5F4F0]">
           <div className="container-custom relative z-10 pt-32 pb-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left Content */}
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="max-w-xl"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-white/90 text-sm font-medium">Interventions dans toute l'Île-de-France</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E8F5E9] text-[#2E7D32] mb-8">
+                  <span className="w-2 h-2 rounded-full bg-[#4CAF50]" />
+                  <span className="text-sm font-medium">Île-de-France</span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                  Expert en Plomberie et Installation Gaz pour{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                    Professionnels
-                  </span>{' '}
-                  en Île-de-France
+                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-6 text-slate-900">
+                  <span className="font-extralight">L'expertise</span>{' '}
+                  <span className="font-normal italic text-[#2E7D32]">plomberie</span>
+                  <br />
+                  <span className="font-extralight">à chaque</span>{' '}
+                  <span className="font-normal">intervention</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
-                  Depuis 2016, Paris Tout Services accompagne promoteurs, chefs de travaux et gestionnaires d'habitat avec des solutions certifiées RGE, PG et Qualipac.
+                <p className="text-lg text-slate-500 leading-relaxed mb-10 font-body">
+                  Solutions certifiées RGE pour les professionnels du bâtiment.
                 </p>
 
-                <div className="flex flex-wrap gap-4 mb-10">
+                <div className="flex flex-wrap gap-4 mb-12">
                   <Link to="/contact">
-                    <Button variant="hero" size="lg">
-                      Demander un devis gratuit
-                      <ChevronRight className="w-5 h-5" />
+                    <Button className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 py-6 text-sm font-medium">
+                      Devis gratuit
+                      <ChevronRight className="w-4 h-4 ml-1" />
                     </Button>
                   </Link>
                   <Link to="/realisations">
-                    <Button variant="heroOutline" size="lg">
+                    <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
                       Nos réalisations
                     </Button>
                   </Link>
                 </div>
 
-                {/* Certification Badges */}
-                <div className="flex flex-wrap gap-3">
-                  {['RGE', 'PG', 'Qualipac'].map((cert) => (
-                    <div 
-                      key={cert}
-                      className="px-4 py-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold text-sm"
-                    >
-                      Certifié {cert}
-                    </div>
-                  ))}
+                {/* Stats inline */}
+                <div className="flex items-center gap-8">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-10 h-10 rounded-full bg-slate-200 border-2 border-white" />
+                    ))}
+                  </div>
+                  <div>
+                    <span className="text-2xl font-semibold text-slate-900">500+</span>
+                    <span className="text-slate-500 ml-2 text-sm">projets réalisés</span>
+                  </div>
                 </div>
               </motion.div>
 
-              {/* Stats Card */}
+              {/* Right - Image Card */}
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="hidden lg:block"
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="relative"
               >
-                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center p-4">
-                      <div className="text-4xl font-bold text-white mb-2">8+</div>
-                      <div className="text-white/70 text-sm">Années d'expérience</div>
+                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                  <img 
+                    src={heroImage} 
+                    alt="Expert plombier professionnel" 
+                    className="w-full h-[500px] lg:h-[600px] object-cover"
+                  />
+                  
+                  {/* Floating Badge */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-[#E8F5E9] flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-[#2E7D32]" />
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-500">Intervention sous</div>
+                        <div className="font-semibold text-slate-900">48 heures</div>
+                      </div>
                     </div>
-                    <div className="text-center p-4">
-                      <div className="text-4xl font-bold text-white mb-2">500+</div>
-                      <div className="text-white/70 text-sm">Projets réalisés</div>
-                    </div>
-                    <div className="text-center p-4">
-                      <div className="text-4xl font-bold text-white mb-2">9</div>
-                      <div className="text-white/70 text-sm">Experts qualifiés</div>
-                    </div>
-                    <div className="text-center p-4">
-                      <div className="text-4xl font-bold text-white mb-2">48h</div>
-                      <div className="text-white/70 text-sm">Délai intervention</div>
-                    </div>
-                  </div>
+                  </motion.div>
+
+                  {/* Certification Tag */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="absolute top-6 left-6 bg-[#E8F5E9] rounded-full px-4 py-2"
+                  >
+                    <span className="text-sm font-medium text-[#2E7D32]">Certifié RGE</span>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
           </div>
-
-          {/* Scroll Indicator */}
-          <motion.div 
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
-              <div className="w-1.5 h-3 rounded-full bg-white/50" />
-            </div>
-          </motion.div>
         </section>
 
         {/* Reassurance Bar */}
         <section className="bg-white border-b border-slate-100">
-          <div className="container-custom py-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="container-custom py-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {reassuranceItems.map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -210,10 +207,10 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors"
+                  className="flex items-center gap-4"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#E8F5E9] flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-[#2E7D32]" />
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900 text-sm">{item.label}</div>
@@ -226,7 +223,7 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section className="section-padding bg-slate-50">
+        <section className="section-padding bg-[#F5F4F0]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -234,17 +231,14 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
-                Nos Expertises
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                Nos Solutions Professionnelles en{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
-                  Plomberie et Gaz
-                </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Gamme complète de solutions pour</span>
+                <br />
+                <span className="font-extralight">améliorer votre</span>{' '}
+                <span className="italic text-[#2E7D32]">confort</span>
               </h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Des prestations adaptées aux besoins des promoteurs, chefs de travaux et gestionnaires d'habitat en Île-de-France.
+              <p className="text-lg text-slate-500 max-w-xl mx-auto mt-6">
+                Des prestations certifiées adaptées aux professionnels du bâtiment.
               </p>
             </motion.div>
 
@@ -269,14 +263,11 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-4">
-                Notre Différence
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                Pourquoi les Professionnels nous font{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                  Confiance
-                </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Pourquoi les professionnels</span>
+                <br />
+                <span className="font-extralight">nous font</span>{' '}
+                <span className="italic text-[#2E7D32]">confiance</span>
               </h2>
             </motion.div>
 
@@ -285,17 +276,17 @@ const Index = () => {
                 {
                   icon: Building2,
                   title: "Expertise Technique",
-                  description: "Une équipe de 9 professionnels qualifiés avec plus de 8 ans d'expérience dans les travaux de plomberie et gaz pour le secteur professionnel."
+                  description: "Une équipe de 9 professionnels qualifiés avec plus de 8 ans d'expérience."
                 },
                 {
                   icon: Shield,
                   title: "Certifications Reconnues",
-                  description: "Titulaires des certifications RGE, PG et Qualipac, garantissant des travaux conformes aux normes les plus exigeantes."
+                  description: "Certifications RGE, PG et Qualipac garantissant des travaux conformes."
                 },
                 {
                   icon: Accessibility,
-                  title: "Normes Accessibilité & RT2012",
-                  description: "Expertise spécifique dans l'adaptation des locaux aux normes d'accessibilité PMR et de performance énergétique."
+                  title: "Normes PMR & RT2012",
+                  description: "Expertise en accessibilité et performance énergétique."
                 }
               ].map((item, index) => (
                 <motion.div
@@ -304,13 +295,13 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="text-center p-8 rounded-3xl bg-slate-50 border border-slate-100"
+                  className="p-8 rounded-3xl bg-[#F5F4F0] border border-slate-100"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <item.icon className="w-8 h-8 text-white" />
+                  <div className="w-14 h-14 rounded-2xl bg-[#E8F5E9] flex items-center justify-center mb-6">
+                    <item.icon className="w-6 h-6 text-[#2E7D32]" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-500 leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -318,7 +309,7 @@ const Index = () => {
         </section>
 
         {/* Partners */}
-        <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+        <section className="py-16 bg-slate-900">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -326,10 +317,10 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                Ils nous font Confiance
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-2">
+                Ils nous font confiance
               </h2>
-              <p className="text-white/70">Nos partenaires de longue date</p>
+              <p className="text-white/50 text-sm">Nos partenaires de longue date</p>
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-8">
@@ -341,9 +332,9 @@ const Index = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
-                  className="w-32 h-20 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center"
+                  className="w-32 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center"
                 >
-                  <span className="text-white font-bold text-xl">{partner.logo}</span>
+                  <span className="text-white/70 font-medium text-xl">{partner.logo}</span>
                 </motion.div>
               ))}
             </div>
@@ -351,7 +342,7 @@ const Index = () => {
         </section>
 
         {/* Zones d'intervention */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-[#F5F4F0]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -359,15 +350,9 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
-                <MapPin className="w-4 h-4 inline mr-1" />
-                Zones d'Intervention
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                Nous Intervenons dans toute l'{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
-                  Île-de-France
-                </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Nous intervenons dans</span>{' '}
+                <span className="italic text-[#2E7D32]">toute l'Île-de-France</span>
               </h2>
             </motion.div>
 
@@ -379,12 +364,12 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors text-center group"
+                  className="p-5 rounded-2xl bg-white border border-slate-100 hover:border-[#A5D6A7] hover:bg-[#E8F5E9] transition-colors text-center group"
                 >
-                  <div className="text-2xl font-bold text-blue-600 mb-1 group-hover:scale-110 transition-transform">
+                  <div className="text-2xl font-semibold text-[#2E7D32] mb-1 group-hover:scale-110 transition-transform">
                     {dept.code}
                   </div>
-                  <div className="text-sm text-slate-600 font-medium">{dept.name}</div>
+                  <div className="text-sm text-slate-600">{dept.name}</div>
                 </motion.div>
               ))}
             </div>
@@ -393,8 +378,8 @@ const Index = () => {
 
         {/* CTA Section */}
         <CTASection
-          title="Votre Projet Nécessite un Expert Qualifié ?"
-          subtitle="Contactez-nous pour un devis gratuit et personnalisé sous 24h."
+          title="Un projet en tête ?"
+          subtitle="Devis gratuit et personnalisé sous 24h."
           ctaText="Contactez-nous"
           ctaLink="/contact"
           variant="dark"
