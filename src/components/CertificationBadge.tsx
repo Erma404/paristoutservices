@@ -14,12 +14,12 @@ const CertificationBadge = ({ name, description, delay = 0 }: CertificationBadge
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay }}
       whileHover={{ scale: 1.05 }}
-      className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-card border border-slate-100"
+      className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-lg border border-slate-100"
     >
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mb-4 shadow-lg">
-        <span className="text-white font-bold text-lg">{name}</span>
+      <div className="w-20 h-20 rounded-2xl bg-slate-900 flex items-center justify-center mb-6 shadow-xl">
+        <span className="text-white font-bold text-xl">{name}</span>
       </div>
-      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+      <p className="text-slate-600 leading-relaxed text-sm">{description}</p>
     </motion.div>
   );
 };

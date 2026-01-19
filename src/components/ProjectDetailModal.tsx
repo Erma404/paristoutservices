@@ -206,7 +206,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
                       <ul className="space-y-2">
                         {project.solutions.map((solution, idx) => (
                           <li key={idx} className="flex items-start gap-3 text-slate-600">
-                            <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                             {solution}
                           </li>
                         ))}
