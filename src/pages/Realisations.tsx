@@ -251,7 +251,7 @@ const Realisations = () => {
                 <span className="italic text-blue-600">réalisations</span>
               </h1>
               <p className="text-xl text-slate-500 leading-relaxed">
-                Plus de 500 projets réalisés pour les professionnels du bâtiment en Île-de-France.
+                Plus de 300 projets réalisés pour les professionnels du bâtiment en Île-de-France.
               </p>
             </motion.div>
           </div>
