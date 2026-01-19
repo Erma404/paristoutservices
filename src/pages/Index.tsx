@@ -598,7 +598,7 @@ const Index = () => {
         </section>
 
         {/* Certifications SEO Block */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -621,16 +621,19 @@ const Index = () => {
                   name: "RGE",
                   fullName: "Reconnu Garant de l'Environnement",
                   description: "Qualification délivrée par Qualibat attestant de notre compétence en matière d'efficacité énergétique. Cette certification permet à vos clients de bénéficier d'aides de l'État (MaPrimeRénov', CEE).",
+                  color: "bg-blue-600",
                 },
                 {
                   name: "PG",
                   fullName: "Professionnel du Gaz",
                   description: "Certification obligatoire pour toute intervention sur les installations gaz. Elle garantit la sécurité des installations et le respect des normes DTU 61.1 et NF P45-500.",
+                  color: "bg-orange-500",
                 },
                 {
                   name: "Qualipac",
                   fullName: "Qualité Pompe à Chaleur",
                   description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques. Elle assure une mise en œuvre conforme aux préconisations des fabricants.",
+                  color: "bg-slate-700",
                 },
               ].map((cert, index) => (
                 <motion.div
@@ -639,13 +642,13 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
-                  className="bg-slate-900 rounded-3xl p-8 border border-slate-800 hover:border-blue-600/50 transition-all duration-300"
+                  className="bg-white rounded-3xl p-8 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center mb-6">
+                  <div className={`w-16 h-16 rounded-2xl ${cert.color} flex items-center justify-center mb-6`}>
                     <span className="text-xl font-bold text-white">{cert.name}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{cert.fullName}</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm">{cert.description}</p>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{cert.fullName}</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">{cert.description}</p>
                 </motion.div>
               ))}
             </div>
