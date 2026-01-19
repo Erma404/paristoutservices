@@ -39,9 +39,9 @@ const projects: Project[] = [
       "Installation de colonnes en cuivre et PER multicouche haute qualité"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-504328345606-18bbc8c9d7d1?w=800", caption: "Vue d'ensemble des colonnes montantes rénovées" },
-      { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800", caption: "Détail des raccordements en cuivre" },
-      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800", caption: "Installation des vannes d'arrêt" }
+      { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&auto=format&fit=crop", caption: "Vue d'ensemble des colonnes montantes rénovées" },
+      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop", caption: "Détail des raccordements en cuivre" },
+      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop", caption: "Installation des vannes d'arrêt" }
     ]
   },
   {
@@ -64,9 +64,9 @@ const projects: Project[] = [
       "Livraison avec certificat de conformité gaz"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", caption: "Installation des colonnes gaz" },
-      { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800", caption: "Compteurs gaz individuels" },
-      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", caption: "Raccordement aux équipements" }
+      { url: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&auto=format&fit=crop", caption: "Installation des colonnes gaz" },
+      { url: "https://images.unsplash.com/photo-1631545806609-35d4ae440431?w=800&auto=format&fit=crop", caption: "Compteurs gaz individuels" },
+      { url: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop", caption: "Raccordement aux équipements" }
     ]
   },
   {
@@ -89,9 +89,9 @@ const projects: Project[] = [
       "Pose de barres d'appui et équipements anti-glisse"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800", caption: "Salle de bain PMR terminée" },
-      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800", caption: "Douche à l'italienne accessible" },
-      { url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800", caption: "Équipements de sécurité installés" }
+      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&auto=format&fit=crop", caption: "Salle de bain PMR terminée" },
+      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop", caption: "Douche à l'italienne accessible" },
+      { url: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&auto=format&fit=crop", caption: "Équipements de sécurité installés" }
     ]
   },
   {
@@ -114,9 +114,9 @@ const projects: Project[] = [
       "Mesures aérauliques et réglages fins pour un confort optimal"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800", caption: "Centrale VMC double flux installée" },
-      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", caption: "Réseau de gaines en toiture technique" },
-      { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800", caption: "Bouches de soufflage dans les bureaux" }
+      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop", caption: "Centrale VMC double flux installée" },
+      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop", caption: "Réseau de gaines en toiture technique" },
+      { url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop", caption: "Bouches de soufflage dans les bureaux" }
     ]
   },
   {
@@ -139,9 +139,9 @@ const projects: Project[] = [
       "Équipe dédiée travaillant en horaires décalés"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800", caption: "Salle de bain rénovée d'une suite" },
-      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800", caption: "Robinetterie haut de gamme installée" },
-      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", caption: "Local technique rénové" }
+      { url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&auto=format&fit=crop", caption: "Salle de bain rénovée d'une suite" },
+      { url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop", caption: "Robinetterie haut de gamme installée" },
+      { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&auto=format&fit=crop", caption: "Local technique rénové" }
     ]
   },
   {
@@ -164,9 +164,9 @@ const projects: Project[] = [
       "Délivrance des certificats de conformité pour chaque logement"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800", caption: "Nouvelles colonnes gaz installées" },
-      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800", caption: "Détail des raccordements conformes" },
-      { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800", caption: "Compteur gaz après intervention" }
+      { url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop", caption: "Immeuble après mise en conformité" },
+      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop", caption: "Détail des raccordements conformes" },
+      { url: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop", caption: "Compteur gaz après intervention" }
     ]
   },
 ];
