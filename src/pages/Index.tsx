@@ -1,33 +1,33 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ChevronRight, 
-  Shield, 
-  Clock, 
-  Award, 
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ChevronRight,
+  Shield,
+  Clock,
+  Award,
   BadgeCheck,
   Wrench,
   Flame,
   Wind,
   Droplets,
   Accessibility,
-  Building2
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import SEOHead from '@/components/SEOHead';
-import SchemaMarkup from '@/components/SchemaMarkup';
-import ServiceCard from '@/components/ServiceCard';
-import CTASection from '@/components/CTASection';
-import heroImage from '@/assets/hero-plumber.jpg';
+  Building2,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import ServiceCard from "@/components/ServiceCard";
+import CTASection from "@/components/CTASection";
+import heroImage from "@/assets/hero-plumber.jpg";
 
 // Partner logos
-import logoLNC from '@/assets/partners/lnc.png';
-import logoBouygues from '@/assets/partners/bouygues.png';
-import logoERI from '@/assets/partners/eri.png';
-import logoAcorus from '@/assets/partners/acorus.png';
-import logoGecop from '@/assets/partners/gecop.png';
+import logoLNC from "@/assets/partners/lnc.png";
+import logoBouygues from "@/assets/partners/bouygues.png";
+import logoERI from "@/assets/partners/eri.png";
+import logoAcorus from "@/assets/partners/acorus.png";
+import logoGecop from "@/assets/partners/gecop.png";
 
 const reassuranceItems = [
   { icon: Award, label: "8 ans d'expérience", value: "2016" },
@@ -40,32 +40,33 @@ const services = [
   {
     icon: Droplets,
     title: "Installation plomberie grands bâtiments",
-    description: "Pose et raccordement de canalisations pour immeubles, hôtels et établissements publics en Île-de-France.",
-    href: "/services#plomberie"
+    description:
+      "Pose et raccordement de canalisations pour immeubles, hôtels et établissements publics en Île-de-France.",
+    href: "/services#plomberie",
   },
   {
     icon: Accessibility,
     title: "Rénovation salle de bain",
     description: "Rénovation complète de salles de bain, conformes aux normes PMR et d'accessibilité en vigueur.",
-    href: "/services#salle-de-bain"
+    href: "/services#salle-de-bain",
   },
   {
     icon: Flame,
     title: "Installation gaz certifiée",
     description: "Installation et mise en conformité gaz par des techniciens certifiés PG pour votre sécurité.",
-    href: "/services#gaz"
+    href: "/services#gaz",
   },
   {
     icon: Wind,
     title: "Systèmes de ventilation",
     description: "Installation VMC simple et double flux, gaines et bouches d'extraction pour un air sain.",
-    href: "/services#ventilation"
+    href: "/services#ventilation",
   },
   {
     icon: Wrench,
     title: "Remplacement chauffe-eau",
     description: "Installation et remplacement de ballons d'eau chaude et chauffe-eau thermodynamiques.",
-    href: "/services#chauffe-eau"
+    href: "/services#chauffe-eau",
   },
 ];
 
@@ -91,23 +92,32 @@ const departments = [
 const Index = () => {
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Plomberie & Gaz Professionnels Île-de-France | Paris Tout Services"
         description="Expert en plomberie, installation gaz et ventilation pour professionnels en Île-de-France depuis 2016. Certifié RGE, PG, Qualipac. Devis rapide."
         canonical="/"
       />
       <SchemaMarkup type="localBusiness" />
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section - Editorial Design */}
         <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F7F4] animated-gradient-bg">
           {/* Animated Blobs */}
-          <div className="blob blob-blue w-[500px] h-[500px] top-20 -left-40 opacity-60" style={{ animationDelay: '0s' }} />
-          <div className="blob blob-orange w-[400px] h-[400px] top-40 right-10 opacity-50" style={{ animationDelay: '-5s' }} />
-          <div className="blob blob-cyan w-[300px] h-[300px] bottom-20 left-1/3 opacity-40" style={{ animationDelay: '-10s' }} />
-          
+          <div
+            className="blob blob-blue w-[500px] h-[500px] top-20 -left-40 opacity-60"
+            style={{ animationDelay: "0s" }}
+          />
+          <div
+            className="blob blob-orange w-[400px] h-[400px] top-40 right-10 opacity-50"
+            style={{ animationDelay: "-5s" }}
+          />
+          <div
+            className="blob blob-cyan w-[300px] h-[300px] bottom-20 left-1/3 opacity-40"
+            style={{ animationDelay: "-10s" }}
+          />
+
           <div className="container-custom relative z-10 pt-32 pb-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left Content */}
@@ -123,11 +133,10 @@ const Index = () => {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-6 text-slate-900">
-                  <span className="font-extralight">L'expertise</span>{' '}
+                  <span className="font-extralight">L'expertise</span>{" "}
                   <span className="font-normal italic text-blue-600">plomberie</span>
                   <br />
-                  <span className="font-extralight">à chaque</span>{' '}
-                  <span className="font-normal">intervention</span>
+                  <span className="font-extralight">à chaque</span> <span className="font-normal">intervention</span>
                 </h1>
 
                 <p className="text-lg text-slate-500 leading-relaxed mb-10 font-body">
@@ -142,7 +151,10 @@ const Index = () => {
                     </Button>
                   </Link>
                   <Link to="/realisations">
-                    <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
+                    <Button
+                      variant="outline"
+                      className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100"
+                    >
                       Nos réalisations
                     </Button>
                   </Link>
@@ -156,7 +168,7 @@ const Index = () => {
                     ))}
                   </div>
                   <div>
-                    <span className="text-2xl font-semibold text-slate-900">500+</span>
+                    <span className="text-2xl font-semibold text-slate-900">300+</span>
                     <span className="text-slate-500 ml-2 text-sm">projets réalisés</span>
                   </div>
                 </div>
@@ -170,14 +182,14 @@ const Index = () => {
                 className="relative"
               >
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
-                  <img 
-                    src={heroImage} 
-                    alt="Expert plombier professionnel" 
+                  <img
+                    src={heroImage}
+                    alt="Expert plombier professionnel"
                     className="w-full h-[500px] lg:h-[600px] object-cover"
                   />
-                  
+
                   {/* Floating Badge */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -195,7 +207,7 @@ const Index = () => {
                   </motion.div>
 
                   {/* Certification Tag */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
@@ -247,7 +259,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
                 <span className="font-extralight">Gamme complète de solutions pour</span>
                 <br />
-                <span className="font-extralight">améliorer votre</span>{' '}
+                <span className="font-extralight">améliorer votre</span>{" "}
                 <span className="italic text-blue-600">confort</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-xl mx-auto mt-6">
@@ -257,11 +269,7 @@ const Index = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <ServiceCard 
-                  key={service.title} 
-                  {...service} 
-                  delay={index * 0.1}
-                />
+                <ServiceCard key={service.title} {...service} delay={index * 0.1} />
               ))}
             </div>
           </div>
@@ -279,7 +287,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
                 <span className="font-extralight">Pourquoi les professionnels</span>
                 <br />
-                <span className="font-extralight">nous font</span>{' '}
+                <span className="font-extralight">nous font</span>{" "}
                 <span className="italic text-orange-500">confiance</span>
               </h2>
             </motion.div>
@@ -289,18 +297,18 @@ const Index = () => {
                 {
                   icon: Building2,
                   title: "Expertise Technique",
-                  description: "Une équipe de techniciens qualifiés avec plus de 8 ans d'expérience."
+                  description: "Une équipe de techniciens qualifiés avec plus de 8 ans d'expérience.",
                 },
                 {
                   icon: Shield,
                   title: "Certifications Reconnues",
-                  description: "Certifications RGE, PG et Qualipac garantissant des travaux conformes."
+                  description: "Certifications RGE, PG et Qualipac garantissant des travaux conformes.",
                 },
                 {
                   icon: Accessibility,
                   title: "Normes PMR & RT2012",
-                  description: "Expertise en accessibilité et performance énergétique."
-                }
+                  description: "Expertise en accessibilité et performance énergétique.",
+                },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -330,9 +338,7 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light text-white mb-2">
-                Ils nous font confiance
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-2">Ils nous font confiance</h2>
               <p className="text-white/50 text-sm">Nos partenaires de longue date</p>
             </motion.div>
           </div>
@@ -346,11 +352,7 @@ const Index = () => {
                   key={`${partner.name}-${index}`}
                   className="flex-shrink-0 mx-8 w-40 h-24 rounded-2xl bg-white flex items-center justify-center p-4"
                 >
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
-                  />
+                  <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain" />
                 </div>
               ))}
             </div>
@@ -367,7 +369,7 @@ const Index = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
-                <span className="font-extralight">Nous intervenons dans</span>{' '}
+                <span className="font-extralight">Nous intervenons dans</span>{" "}
                 <span className="italic text-blue-600">toute l'Île-de-France</span>
               </h2>
             </motion.div>
