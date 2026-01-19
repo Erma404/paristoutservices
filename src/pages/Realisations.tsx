@@ -404,8 +404,3 @@ const Realisations = () => {
 };
 
 export default Realisations;
-    </>
-  );
-};
-
-export default Realisations;
