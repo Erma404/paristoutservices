@@ -130,8 +130,8 @@ const Contact = () => {
                       </div>
                     </a>
                     <a href="mailto:contact@paristoutservices.fr" className="flex items-start gap-4 group">
-                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-blue-600" />
+                      <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-5 h-5 text-orange-600" />
                       </div>
                       <div className="pt-1">
                         <div className="text-sm text-slate-500">Email</div>
