@@ -119,22 +119,42 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="bg-[#F8F7F4] rounded-3xl p-8">
                   <h3 className="font-semibold text-slate-900 text-xl mb-6">Nos Coordonnées</h3>
-                  <div className="space-y-4">
-                    <a href="tel:+33601167240" className="flex items-center gap-4 text-slate-600 hover:text-blue-600">
-                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center"><Phone className="w-5 h-5 text-blue-600" /></div>
-                      <div><div className="text-sm text-slate-500">Téléphone</div><div className="font-semibold text-slate-900">06 01 16 72 40</div></div>
+                  <div className="space-y-5">
+                    <a href="tel:+33601167240" className="flex items-start gap-4 group">
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div className="pt-1">
+                        <div className="text-sm text-slate-500">Téléphone</div>
+                        <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">06 01 16 72 40</div>
+                      </div>
                     </a>
-                    <a href="mailto:contact@paristoutservices.fr" className="flex items-center gap-4 text-slate-600 hover:text-blue-600">
-                      <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center"><Mail className="w-5 h-5 text-orange-600" /></div>
-                      <div><div className="text-sm text-slate-500">Email</div><div className="font-semibold text-slate-900">contact@paristoutservices.fr</div></div>
+                    <a href="mailto:contact@paristoutservices.fr" className="flex items-start gap-4 group">
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div className="pt-1">
+                        <div className="text-sm text-slate-500">Email</div>
+                        <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">contact@paristoutservices.fr</div>
+                      </div>
                     </a>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center"><MapPin className="w-5 h-5 text-slate-600" /></div>
-                      <div><div className="text-sm text-slate-500">Adresse</div><div className="font-semibold text-slate-900">25 Rue Henri Rouanet<br/>93700 Drancy</div></div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-5 h-5 text-slate-600" />
+                      </div>
+                      <div className="pt-1">
+                        <div className="text-sm text-slate-500">Adresse</div>
+                        <div className="font-semibold text-slate-900">25 Rue Henri Rouanet<br/>93700 Drancy</div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center"><Clock className="w-5 h-5 text-slate-600" /></div>
-                      <div><div className="text-sm text-slate-500">Horaires</div><div className="font-semibold text-slate-900">Lun - Ven : 8h - 18h</div></div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-5 h-5 text-slate-600" />
+                      </div>
+                      <div className="pt-1">
+                        <div className="text-sm text-slate-500">Horaires</div>
+                        <div className="font-semibold text-slate-900">Lun - Ven : 8h - 18h</div>
+                      </div>
                     </div>
                   </div>
                 </div>
