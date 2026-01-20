@@ -1,52 +1,44 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Target, 
-  Heart,
-  ChevronRight,
-  Calendar,
-  Building
-} from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import SEOHead from '@/components/SEOHead';
-import SchemaMarkup from '@/components/SchemaMarkup';
-import CertificationBadge from '@/components/CertificationBadge';
-import CTASection from '@/components/CTASection';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Users, Award, Target, Heart, ChevronRight, Calendar, Building } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import CertificationBadge from "@/components/CertificationBadge";
+import CTASection from "@/components/CTASection";
 
 const values = [
   {
     icon: Target,
     title: "Professionnalisme",
-    description: "Chaque projet est traité avec rigueur et précision, du diagnostic initial à la livraison finale."
+    description: "Chaque projet est traité avec rigueur et précision, du diagnostic initial à la livraison finale.",
   },
   {
     icon: Award,
     title: "Qualité",
-    description: "Des matériaux de premier choix et des techniques éprouvées pour des installations durables."
+    description: "Des matériaux de premier choix et des techniques éprouvées pour des installations durables.",
   },
   {
     icon: Heart,
     title: "Réactivité",
-    description: "Intervention sous 48h et suivi personnalisé tout au long de votre projet."
-  }
+    description: "Intervention sous 48h et suivi personnalisé tout au long de votre projet.",
+  },
 ];
 
 const certifications = [
   {
     name: "RGE",
-    description: "Reconnu Garant de l'Environnement - Qualification pour travaux d'efficacité énergétique"
+    description: "Reconnu Garant de l'Environnement - Qualification pour travaux d'efficacité énergétique",
   },
   {
     name: "PG",
-    description: "Professionnel du Gaz - Certification pour l'installation et la maintenance gaz"
+    description: "Professionnel du Gaz - Certification pour l'installation et la maintenance gaz",
   },
   {
     name: "Qualipac",
-    description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques"
-  }
+    description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques",
+  },
 ];
 
 const timeline = [
@@ -54,38 +46,46 @@ const timeline = [
   { year: "2018", event: "Obtention des certifications RGE et PG" },
   { year: "2020", event: "Croissance et nouveaux partenariats" },
   { year: "2022", event: "Certification Qualipac" },
-  { year: "2024", event: "Plus de 300 projets réalisés" }
+  { year: "2026", event: "Plus de 300 projets réalisés" },
 ];
 
 const About = () => {
   const breadcrumbItems = [
-    { name: 'Accueil', url: '/' },
-    { name: 'Qui sommes-nous', url: '/a-propos' }
+    { name: "Accueil", url: "/" },
+    { name: "Qui sommes-nous", url: "/a-propos" },
   ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Entreprise de Plomberie & Gaz Île-de-France | À Propos - Paris Tout Services"
         description="Paris Tout Services : plus de 10 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, Qualipac en Île-de-France."
         canonical="/a-propos"
       />
       <SchemaMarkup type="localBusiness" />
       <SchemaMarkup type="breadcrumb" breadcrumbItems={breadcrumbItems} />
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 bg-[#F8F7F4] animated-gradient-bg overflow-hidden">
           {/* Animated Blobs */}
-          <div className="blob blob-blue w-[400px] h-[400px] -top-20 -right-20 opacity-50" style={{ animationDelay: '0s' }} />
-          <div className="blob blob-orange w-[300px] h-[300px] bottom-0 left-20 opacity-40" style={{ animationDelay: '-7s' }} />
-          
+          <div
+            className="blob blob-blue w-[400px] h-[400px] -top-20 -right-20 opacity-50"
+            style={{ animationDelay: "0s" }}
+          />
+          <div
+            className="blob blob-orange w-[300px] h-[300px] bottom-0 left-20 opacity-40"
+            style={{ animationDelay: "-7s" }}
+          />
+
           <div className="container-custom relative z-10">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-              <Link to="/" className="hover:text-slate-900 transition-colors">Accueil</Link>
+              <Link to="/" className="hover:text-slate-900 transition-colors">
+                Accueil
+              </Link>
               <ChevronRight className="w-4 h-4" />
               <span className="text-slate-900">Qui sommes-nous</span>
             </nav>
@@ -99,11 +99,12 @@ const About = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight mb-6">
                 <span className="font-extralight">Paris Tout Services,</span>
                 <br />
-                <span className="font-extralight">votre partenaire</span>{' '}
+                <span className="font-extralight">votre partenaire</span>{" "}
                 <span className="italic text-blue-600">plomberie</span>
               </h1>
               <p className="text-xl text-slate-500 leading-relaxed">
-                Une équipe de techniciens passionnés au service des promoteurs et gestionnaires d'habitat en Île-de-France.
+                Une équipe de techniciens passionnés au service des promoteurs et gestionnaires d'habitat en
+                Île-de-France.
               </p>
             </motion.div>
           </div>
@@ -113,11 +114,7 @@ const About = () => {
         <section className="section-padding bg-white">
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6">
                   <Calendar className="w-4 h-4" />
                   Notre Histoire
@@ -128,14 +125,15 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-slate-500 leading-relaxed">
                   <p>
-                    Fondée en 2016, Paris Tout Services est née de la volonté de proposer aux professionnels du bâtiment en Île-de-France un partenaire fiable et réactif pour tous leurs travaux de plomberie et d'installation gaz.
+                    Fondée en 2016, Paris Tout Services est née de la volonté de proposer aux professionnels du bâtiment
+                    en Île-de-France un partenaire fiable et réactif pour tous leurs travaux de plomberie et
+                    d'installation gaz.
                   </p>
                   <p>
-                    Depuis notre création, nous avons développé une expertise reconnue auprès des promoteurs immobiliers, des chefs de travaux et des gestionnaires d'habitat social.
+                    Depuis notre création, nous avons développé une expertise reconnue auprès des promoteurs
+                    immobiliers, des chefs de travaux et des gestionnaires d'habitat social.
                   </p>
-                  <p>
-                    Nos certifications RGE, PG et Qualipac témoignent de notre engagement envers la qualité.
-                  </p>
+                  <p>Nos certifications RGE, PG et Qualipac témoignent de notre engagement envers la qualité.</p>
                 </div>
               </motion.div>
 
@@ -187,7 +185,7 @@ const About = () => {
                 Notre Équipe
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
-                <span className="font-extralight">Une équipe</span>{' '}
+                <span className="font-extralight">Une équipe</span>{" "}
                 <span className="italic text-blue-600">d'experts</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-2xl mx-auto">
@@ -199,7 +197,7 @@ const About = () => {
               {[
                 { count: "3", role: "Chefs d'équipe", desc: "Coordination des chantiers" },
                 { count: "4", role: "Techniciens plombiers", desc: "Installation et maintenance" },
-                { count: "2", role: "Spécialistes gaz", desc: "Installations certifiées PG" }
+                { count: "2", role: "Spécialistes gaz", desc: "Installations certifiées PG" },
               ].map((item, index) => (
                 <motion.div
                   key={item.role}
@@ -230,8 +228,7 @@ const About = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
-                <span className="font-extralight">Nos</span>{' '}
-                <span className="italic text-orange-500">valeurs</span>
+                <span className="font-extralight">Nos</span> <span className="italic text-orange-500">valeurs</span>
               </h2>
             </motion.div>
 
@@ -270,18 +267,13 @@ const About = () => {
                 Nos Certifications
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4 font-light">
-                Des certifications qui garantissent la{' '}
-                <span className="text-orange-500">qualité</span>
+                Des certifications qui garantissent la <span className="text-orange-500">qualité</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {certifications.map((cert, index) => (
-                <CertificationBadge 
-                  key={cert.name} 
-                  {...cert} 
-                  delay={index * 0.1}
-                />
+                <CertificationBadge key={cert.name} {...cert} delay={index * 0.1} />
               ))}
             </div>
           </div>
