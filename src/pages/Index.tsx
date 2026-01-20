@@ -531,7 +531,7 @@ const Index = () => {
         </section>
 
         {/* Process Section */}
-        <section className="section-padding bg-[#F8F7F4]">
+        <section className="section-padding bg-white">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -539,6 +539,10 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-orange-600 mb-6">
+                <span className="w-2 h-2 rounded-full bg-orange-500" />
+                <span className="text-sm font-medium">Notre processus</span>
+              </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
                 <span className="font-extralight">Comment</span>{" "}
                 <span className="italic text-orange-500">travailler ensemble</span>
@@ -579,8 +583,8 @@ const Index = () => {
                   transition={{ delay: index * 0.1 }}
                   className="relative"
                 >
-                  <div className="bg-white rounded-3xl p-6 border border-slate-100 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-semibold mb-4">
+                  <div className="bg-[#F8F7F4] rounded-3xl p-6 border border-slate-100 h-full hover:shadow-lg transition-shadow">
+                    <div className="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center font-semibold mb-4">
                       {item.step}
                     </div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
@@ -588,7 +592,7 @@ const Index = () => {
                   </div>
                   {index < 3 && (
                     <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                      <ChevronRight className="w-6 h-6 text-slate-300" />
+                      <ChevronRight className="w-6 h-6 text-orange-300" />
                     </div>
                   )}
                 </motion.div>
@@ -597,66 +601,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Certifications SEO Block */}
-        <section className="section-padding bg-[#F8F7F4]">
-          <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
-                <span className="font-extralight">Certifications</span>{" "}
-                <span className="italic text-blue-600">professionnelles</span>
-              </h2>
-              <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-6">
-                Des qualifications reconnues qui garantissent la conformité et la qualité de nos interventions
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "RGE",
-                  fullName: "Reconnu Garant de l'Environnement",
-                  description: "Qualification délivrée par Qualibat attestant de notre compétence en matière d'efficacité énergétique. Cette certification permet à vos clients de bénéficier d'aides de l'État (MaPrimeRénov', CEE).",
-                  color: "bg-blue-600",
-                },
-                {
-                  name: "PG",
-                  fullName: "Professionnel du Gaz",
-                  description: "Certification obligatoire pour toute intervention sur les installations gaz. Elle garantit la sécurité des installations et le respect des normes DTU 61.1 et NF P45-500.",
-                  color: "bg-orange-500",
-                },
-                {
-                  name: "Qualipac",
-                  fullName: "Qualité Pompe à Chaleur",
-                  description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques. Elle assure une mise en œuvre conforme aux préconisations des fabricants.",
-                  color: "bg-slate-700",
-                },
-              ].map((cert, index) => (
-                <motion.div
-                  key={cert.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.15 }}
-                  className="bg-white rounded-3xl p-8 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className={`w-16 h-16 rounded-2xl ${cert.color} flex items-center justify-center mb-6`}>
-                    <span className="text-xl font-bold text-white">{cert.name}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{cert.fullName}</h3>
-                  <p className="text-slate-500 leading-relaxed text-sm">{cert.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section for SEO */}
-        <section className="section-padding bg-[#F8F7F4]">
+        <section className="section-padding bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -664,9 +610,13 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-6">
+                <span className="w-2 h-2 rounded-full bg-blue-500" />
+                <span className="text-sm font-medium">FAQ</span>
+              </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
                 <span className="font-extralight">Questions</span>{" "}
-                <span className="italic text-orange-500">fréquentes</span>
+                <span className="italic text-blue-600">fréquentes</span>
               </h2>
             </motion.div>
 
@@ -695,7 +645,7 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 border border-slate-100"
+                  className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
                   <p className="text-slate-500 leading-relaxed">{faq.answer}</p>
@@ -710,7 +660,7 @@ const Index = () => {
               className="text-center mt-10"
             >
               <Link to="/services">
-                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
+                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-white">
                   Voir tous nos services
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
