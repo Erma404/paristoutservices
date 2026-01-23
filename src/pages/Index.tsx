@@ -205,11 +205,13 @@ const Index = () => {
                   </Link>
                 </div>
 
-                {/* Stats inline */}
+                {/* Stats inline with project images */}
                 <div className="flex items-center gap-8">
                   <div className="flex -space-x-3">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-10 h-10 rounded-full bg-slate-200 border-2 border-white" />
+                    {[realisationPlomberie, realisationSalleDeBain, realisationGaz].map((img, i) => (
+                      <div key={i} className="w-11 h-11 rounded-full border-2 border-white overflow-hidden shadow-md">
+                        <img src={img} alt="Réalisation" className="w-full h-full object-cover" />
+                      </div>
                     ))}
                   </div>
                   <div>
