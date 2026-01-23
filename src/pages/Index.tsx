@@ -37,6 +37,12 @@ import logoERI from "@/assets/partners/eri.png";
 import logoAcorus from "@/assets/partners/acorus.png";
 import logoGecop from "@/assets/partners/gecop.png";
 
+// Realisations images
+import realisationSalleDeBain from "@/assets/realisations/salle-de-bain-1.jpg";
+import realisationPlomberie from "@/assets/realisations/plomberie-1.jpg";
+import realisationGaz from "@/assets/realisations/gaz-1.jpg";
+import realisationVentilation from "@/assets/realisations/ventilation-1.jpg";
+
 const reassuranceItems = [
   { icon: Award, label: "+10 ans d'expérience", value: "Depuis 2016" },
   { icon: Shield, label: "Certifié RGE & PG", value: "Qualité" },
@@ -84,6 +90,37 @@ const partners = [
   { name: "Groupe ERI", logo: logoERI },
   { name: "Acorus", logo: logoAcorus },
   { name: "Gecop", logo: logoGecop },
+];
+
+const realisations = [
+  {
+    id: 1,
+    title: "Rénovation salle de bain PMR",
+    category: "Salle de bain",
+    location: "Paris 15e",
+    image: realisationSalleDeBain,
+  },
+  {
+    id: 2,
+    title: "Installation plomberie immeuble",
+    category: "Plomberie",
+    location: "Boulogne-Billancourt",
+    image: realisationPlomberie,
+  },
+  {
+    id: 3,
+    title: "Mise en conformité gaz",
+    category: "Gaz",
+    location: "Neuilly-sur-Seine",
+    image: realisationGaz,
+  },
+  {
+    id: 4,
+    title: "Installation VMC double flux",
+    category: "Ventilation",
+    location: "Saint-Denis",
+    image: realisationVentilation,
+  },
 ];
 
 const departments = [
@@ -399,6 +436,76 @@ const Index = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Réalisations Section */}
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 mb-6">
+                <span className="w-2 h-2 rounded-full bg-blue-500" />
+                <span className="text-sm font-medium">Portfolio</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Nos dernières</span>{" "}
+                <span className="italic text-blue-600">réalisations</span>
+              </h2>
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-6">
+                Découvrez quelques-uns de nos projets récents en Île-de-France
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {realisations.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative rounded-2xl overflow-hidden bg-slate-100 cursor-pointer"
+                >
+                  <div className="aspect-[4/3]">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <span className="inline-block px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-medium mb-2">
+                      {project.category}
+                    </span>
+                    <h3 className="text-white font-semibold text-lg mb-1">{project.title}</h3>
+                    <div className="flex items-center gap-1 text-white/70 text-sm">
+                      <MapPin className="w-3 h-3" />
+                      {project.location}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mt-10"
+            >
+              <Link to="/realisations">
+                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
+                  Voir toutes nos réalisations
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </section>
 
