@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, ChevronRight } from 'lucide-react';
+import logoPts from '@/assets/logo-pts.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,7 +34,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link to="/" className="block mb-6">
+            <Link to="/" className="flex items-center gap-3 mb-6">
+              <img src={logoPts} alt="Paris Tout Services" className="h-14 w-auto" />
               <div className="font-display text-xl font-normal tracking-tight">Paris Tout Services</div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
