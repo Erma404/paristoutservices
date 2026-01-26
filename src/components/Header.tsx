@@ -37,8 +37,8 @@ const Header = () => {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-sm py-4' 
-            : 'bg-transparent py-6'
+            ? 'bg-white/95 backdrop-blur-xl shadow-sm py-2' 
+            : 'bg-transparent py-3'
         }`}
       >
         <div className="container-custom">
