@@ -44,13 +44,8 @@ const Header = () => {
         <div className="container-custom">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <img src={logoPts} alt="Paris Tout Services" className="h-12 w-auto" />
-              <div className={`transition-colors duration-300 ${
-                isScrolled ? 'text-slate-900' : 'text-slate-900'
-              }`}>
-                <div className="font-display text-xl font-normal tracking-tight">Paris Tout Services</div>
-              </div>
+            <Link to="/" className="block">
+              <img src={logoPts} alt="Paris Tout Services" className="h-20 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
