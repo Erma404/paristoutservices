@@ -35,7 +35,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-6">
-              <img src={logoPts} alt="Paris Tout Services" className="h-24 w-auto" />
+              <img src={logoPts} alt="Paris Tout Services" className="h-40 w-auto" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Expert en plomberie et installation gaz pour professionnels en Île-de-France depuis 2016.
