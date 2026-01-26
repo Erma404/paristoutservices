@@ -37,7 +37,7 @@ const Header = () => {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-sm py-2' 
+            ? 'bg-white/95 backdrop-blur-xl shadow-sm py-1' 
             : 'bg-transparent py-3'
         }`}
       >
@@ -48,7 +48,7 @@ const Header = () => {
               <img 
                 src={logoPts} 
                 alt="Paris Tout Services" 
-                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-16' : 'h-40'}`} 
+                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-40'}`} 
               />
             </Link>
 
