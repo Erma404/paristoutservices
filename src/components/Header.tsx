@@ -45,7 +45,11 @@ const Header = () => {
           <nav className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="block">
-              <img src={logoPts} alt="Paris Tout Services" className="h-40 w-auto" />
+              <img 
+                src={logoPts} 
+                alt="Paris Tout Services" 
+                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-16' : 'h-40'}`} 
+              />
             </Link>
 
             {/* Desktop Navigation */}
