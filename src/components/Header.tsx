@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoPts from '@/assets/logo-pts.png';
 
 const navigation = [
   { name: 'Accueil', href: '/' },
@@ -44,6 +45,7 @@ const Header = () => {
           <nav className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
+              <img src={logoPts} alt="Paris Tout Services" className="h-12 w-auto" />
               <div className={`transition-colors duration-300 ${
                 isScrolled ? 'text-slate-900' : 'text-slate-900'
               }`}>
