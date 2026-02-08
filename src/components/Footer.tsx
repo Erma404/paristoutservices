@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, ChevronRight } from 'lucide-react';
-import logoPts from '@/assets/logo-pts.png';
+import logoPts from '@/assets/logo-pts-new.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

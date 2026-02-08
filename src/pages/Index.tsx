@@ -20,6 +20,7 @@ import {
   HardHat,
   FileCheck,
   MapPin,
+  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -47,39 +48,39 @@ const reassuranceItems = [
   { icon: Award, label: "+10 ans d'expérience", value: "Depuis 2016" },
   { icon: Shield, label: "Certifié RGE & PG", value: "Qualité" },
   { icon: Clock, label: "Interventions sous 48h", value: "Rapide" },
-  { icon: BadgeCheck, label: "Garantie décennale", value: "Sécurité" },
+  { icon: Users, label: "4 techniciens polyvalents", value: "Équipe dédiée" },
 ];
 
 const services = [
   {
     icon: Droplets,
-    title: "Installation plomberie grands bâtiments",
+    title: "Plomberie sanitaire & bâtiments",
     description:
-      "Pose et raccordement de canalisations pour immeubles, hôtels et établissements publics en Île-de-France.",
+      "Pose et raccordement de canalisations en PVC, fonte et tuyaux galvanisés pour immeubles, hôtels et établissements publics. Évacuation, soudage et brasage professionnels.",
     href: "/services#plomberie",
   },
   {
     icon: Accessibility,
-    title: "Rénovation salle de bain",
-    description: "Rénovation complète de salles de bain, conformes aux normes PMR et d'accessibilité en vigueur.",
+    title: "Rénovation salle de bain & carrelage",
+    description: "Rénovation complète de salles de bain incluant la pose de carrelage, conformes aux normes PMR et d'accessibilité. Réhabilitation et réflexion sur-mesure.",
     href: "/services#salle-de-bain",
   },
   {
     icon: Flame,
-    title: "Installation gaz certifiée",
-    description: "Installation et mise en conformité gaz par des techniciens certifiés PG pour votre sécurité.",
+    title: "Installation gaz certifiée PG",
+    description: "Installation et mise en conformité gaz par des techniciens certifiés PG pour votre sécurité. Brasage cuivre et raccordements professionnels.",
     href: "/services#gaz",
   },
   {
     icon: Wind,
     title: "Systèmes de ventilation",
-    description: "Installation VMC simple et double flux, gaines et bouches d'extraction pour un air sain.",
+    description: "Installation VMC simple et double flux, gaines et bouches d'extraction pour un air sain dans vos bâtiments.",
     href: "/services#ventilation",
   },
   {
     icon: Wrench,
     title: "Remplacement chauffe-eau",
-    description: "Installation et remplacement de ballons d'eau chaude et chauffe-eau thermodynamiques.",
+    description: "Installation et remplacement de ballons d'eau chaude et chauffe-eau thermodynamiques. Débouchage et maintenance.",
     href: "/services#chauffe-eau",
   },
 ];
@@ -92,24 +93,33 @@ const partners = [
   { name: "Gecop", logo: logoGecop },
 ];
 
+const certifications = [
+  { name: "Amiante", description: "Habilité au diagnostic et au retrait amiante" },
+  { name: "RGE Chauffage+", description: "Reconnu Garant de l'Environnement" },
+  { name: "Plomb", description: "Habilité diagnostic et traitement plomb" },
+  { name: "HandyBat", description: "Accessibilité et adaptation du bâti" },
+  { name: "PG Gaz", description: "Professionnel du Gaz certifié" },
+  { name: "Silver Bat", description: "Adaptation des logements seniors" },
+];
+
 const realisations = [
   {
     id: 1,
-    title: "Rénovation salle de bain PMR",
+    title: "Rénovation salle de bain avec pose de carrelage",
     category: "Salle de bain",
     location: "Paris 15e",
     image: realisationSalleDeBain,
   },
   {
     id: 2,
-    title: "Installation plomberie immeuble",
+    title: "Installation plomberie sanitaire immeuble",
     category: "Plomberie",
     location: "Boulogne-Billancourt",
     image: realisationPlomberie,
   },
   {
     id: 3,
-    title: "Mise en conformité gaz",
+    title: "Mise en conformité gaz - brasage cuivre",
     category: "Gaz",
     location: "Neuilly-sur-Seine",
     image: realisationGaz,
@@ -138,8 +148,8 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Plomberie & Gaz Professionnels Île-de-France | Paris Tout Services"
-        description="Expert en plomberie, installation gaz et ventilation pour professionnels en Île-de-France depuis 2016. Certifié RGE, PG, Qualipac. Devis rapide."
+        title="Plomberie sanitaire, Gaz & Rénovation salle de bain | Paris Tout Services"
+        description="Expert en plomberie sanitaire, installation gaz certifiée PG, rénovation salle de bain avec pose de carrelage en Île-de-France. Tuyaux galva, PVC, fonte, soudage, brasage, débouchage. Certifié RGE, Amiante, Plomb, HandyBat. Devis gratuit."
         canonical="/"
       />
       <SchemaMarkup type="localBusiness" />
@@ -147,9 +157,8 @@ const Index = () => {
       <Header />
 
       <main>
-        {/* Hero Section - Editorial Design */}
+        {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F7F4] animated-gradient-bg">
-          {/* Animated Blobs */}
           <div
             className="blob blob-blue w-[500px] h-[500px] top-20 -left-40 opacity-60"
             style={{ animationDelay: "0s" }}
@@ -165,7 +174,6 @@ const Index = () => {
 
           <div className="container-custom relative z-10 pt-32 pb-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Left Content */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -174,7 +182,7 @@ const Index = () => {
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 mb-8">
                   <span className="w-2 h-2 rounded-full bg-blue-500" />
-                  <span className="text-sm font-medium">Île-de-France</span>
+                  <span className="text-sm font-medium">Île-de-France • 4 techniciens polyvalents</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-6 text-slate-900">
@@ -185,7 +193,7 @@ const Index = () => {
                 </h1>
 
                 <p className="text-lg text-slate-500 leading-relaxed mb-10 font-body">
-                  Solutions certifiées RGE pour les professionnels du bâtiment.
+                  Plomberie sanitaire, installation gaz certifiée, rénovation de salle de bain avec pose de carrelage. Solutions certifiées RGE pour les professionnels du bâtiment.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-12">
@@ -205,12 +213,11 @@ const Index = () => {
                   </Link>
                 </div>
 
-                {/* Stats inline with project images */}
                 <div className="flex items-center gap-8">
                   <div className="flex -space-x-3">
                     {[realisationPlomberie, realisationSalleDeBain, realisationGaz].map((img, i) => (
                       <div key={i} className="w-11 h-11 rounded-full border-2 border-white overflow-hidden shadow-md">
-                        <img src={img} alt="Réalisation" className="w-full h-full object-cover" />
+                        <img src={img} alt="Réalisation plomberie" className="w-full h-full object-cover" />
                       </div>
                     ))}
                   </div>
@@ -221,7 +228,6 @@ const Index = () => {
                 </div>
               </motion.div>
 
-              {/* Right - Image Card */}
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -231,11 +237,9 @@ const Index = () => {
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                   <img
                     src={heroImage}
-                    alt="Expert plombier professionnel"
+                    alt="Expert plombier professionnel en intervention - plomberie sanitaire Île-de-France"
                     className="w-full h-[500px] lg:h-[600px] object-cover"
                   />
-
-                  {/* Floating Badge */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -252,8 +256,6 @@ const Index = () => {
                       </div>
                     </div>
                   </motion.div>
-
-                  {/* Certification Tag */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -264,6 +266,26 @@ const Index = () => {
                   </motion.div>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Carousel - Grayscale with color on hover */}
+        <section className="py-6 bg-white border-b border-slate-100 overflow-hidden">
+          <div className="relative">
+            <div className="flex animate-scroll items-center">
+              {[...partners, ...partners, ...partners].map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 mx-8 w-36 h-16 flex items-center justify-center group"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -294,8 +316,52 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Certifications Section */}
         <section className="section-padding bg-[#F8F7F4]">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 mb-6">
+                <ShieldCheck className="w-4 h-4" />
+                <span className="text-sm font-medium">Certifications & habilitations</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">
+                <span className="font-extralight">Des certifications</span>{" "}
+                <span className="italic text-blue-600">reconnues</span>
+              </h2>
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-6">
+                Paris Tout Services détient les certifications et habilitations nécessaires pour intervenir en toute sécurité sur vos chantiers.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {certifications.map((cert, index) => (
+                <motion.div
+                  key={cert.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  className="flex flex-col items-center text-center p-5 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mb-3 shadow-md">
+                    <ShieldCheck className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-slate-900 mb-1">{cert.name}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">{cert.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="section-padding bg-white">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -310,7 +376,7 @@ const Index = () => {
                 <span className="italic text-blue-600">confort</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-xl mx-auto mt-6">
-                Des prestations certifiées adaptées aux professionnels du bâtiment.
+                Des prestations certifiées adaptées aux professionnels du bâtiment : plomberie sanitaire, évacuation, soudage, brasage et débouchage.
               </p>
             </motion.div>
 
@@ -323,7 +389,7 @@ const Index = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -342,19 +408,19 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: Building2,
-                  title: "Expertise Technique",
-                  description: "Une équipe de techniciens qualifiés avec plus de 10 ans d'expérience.",
+                  icon: Users,
+                  title: "4 techniciens polyvalents",
+                  description: "Une équipe de 4 techniciens qualifiés et polyvalents, formés en plomberie sanitaire, gaz, ventilation et rénovation de salle de bain.",
                 },
                 {
                   icon: Shield,
-                  title: "Certifications Reconnues",
-                  description: "Certifications RGE, PG et Qualipac garantissant des travaux conformes.",
+                  title: "6 certifications reconnues",
+                  description: "Amiante, RGE Chauffage+, Plomb, HandyBat, PG Gaz et Silver Bat : des habilitations qui garantissent des travaux conformes et sécurisés.",
                 },
                 {
                   icon: Accessibility,
                   title: "Normes PMR & RT2012",
-                  description: "Expertise en accessibilité et performance énergétique.",
+                  description: "Expertise en accessibilité, réhabilitation et performance énergétique pour des installations conformes aux standards en vigueur.",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -363,7 +429,7 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="p-8 rounded-3xl bg-[#F8F7F4] border border-slate-100"
+                  className="p-8 rounded-3xl bg-white border border-slate-100"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
                     <item.icon className="w-6 h-6 text-blue-600" />
@@ -376,38 +442,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Partners - Infinite Scroll */}
-        <section className="py-16 bg-slate-900 overflow-hidden">
-          <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-light text-white mb-2">Ils nous font confiance</h2>
-              <p className="text-white/50 text-sm">Nos partenaires de longue date</p>
-            </motion.div>
-          </div>
-
-          {/* Infinite scroll container */}
-          <div className="relative">
-            <div className="flex animate-scroll">
-              {/* First set of logos */}
-              {[...partners, ...partners].map((partner, index) => (
-                <div
-                  key={`${partner.name}-${index}`}
-                  className="flex-shrink-0 mx-8 w-40 h-24 rounded-2xl bg-white flex items-center justify-center p-4"
-                >
-                  <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Zones d'intervention */}
-        <section className="section-padding bg-[#F8F7F4]">
+        <section className="section-padding bg-white">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -429,7 +465,7 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="p-5 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors text-center group"
+                  className="p-5 rounded-2xl bg-[#F8F7F4] border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors text-center group"
                 >
                   <div className="text-2xl font-semibold text-blue-600 mb-1 group-hover:scale-110 transition-transform">
                     {dept.code}
@@ -442,7 +478,7 @@ const Index = () => {
         </section>
 
         {/* Réalisations Section */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-[#F8F7F4]">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -459,7 +495,7 @@ const Index = () => {
                 <span className="italic text-blue-600">réalisations</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-6">
-                Découvrez quelques-uns de nos projets récents en Île-de-France
+                Découvrez quelques-uns de nos projets récents en Île-de-France : plomberie sanitaire, rénovation salle de bain, pose de carrelage et installation gaz.
               </p>
             </motion.div>
 
@@ -502,7 +538,7 @@ const Index = () => {
               className="text-center mt-10"
             >
               <Link to="/realisations">
-                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
+                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-white">
                   Voir toutes nos réalisations
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -525,7 +561,7 @@ const Index = () => {
                 <span className="italic text-blue-600">Île-de-France</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-3xl mx-auto mt-6">
-                Spécialistes en installation plomberie, gaz et ventilation pour le secteur du bâtiment : 
+                Spécialistes en plomberie sanitaire, installation gaz, ventilation et rénovation de salle de bain pour le secteur du bâtiment : 
                 promoteurs immobiliers, bailleurs sociaux, gestionnaires de patrimoine et entreprises générales.
               </p>
             </motion.div>
@@ -541,21 +577,22 @@ const Index = () => {
                   Un partenaire de confiance pour vos chantiers
                 </h3>
                 <p className="text-slate-500 leading-relaxed">
-                  Depuis 2016, Paris Tout Services accompagne les professionnels du bâtiment dans leurs projets 
+                  Depuis 2016, notre équipe de <strong>4 techniciens polyvalents</strong> accompagne les professionnels du bâtiment dans leurs projets 
                   de plomberie sanitaire, d'installation gaz et de systèmes de ventilation. Notre expertise 
-                  s'étend de la conception technique à la mise en service, en passant par le respect des délais 
-                  et des normes en vigueur.
+                  couvre le soudage, le brasage, le travail sur tuyaux galvanisés, PVC et fonte, 
+                  ainsi que l'évacuation et le débouchage professionnel.
                 </p>
                 <p className="text-slate-500 leading-relaxed">
                   Nous intervenons sur tous types de chantiers en Île-de-France : immeubles résidentiels, 
                   hôtels, bureaux, établissements recevant du public (ERP), et logements sociaux. 
-                  Nos équipes certifiées garantissent des installations conformes RT2012/RE2020 et accessibles PMR.
+                  Chaque projet fait l'objet d'une réflexion approfondie et d'une réhabilitation soignée, 
+                  garantissant des installations conformes RT2012/RE2020 et accessibles PMR.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   {[
                     { icon: CheckCircle2, text: "Devis gratuit sous 24h" },
                     { icon: FileCheck, text: "Travaux garantis 10 ans" },
-                    { icon: HardHat, text: "Équipes certifiées" },
+                    { icon: HardHat, text: "4 techniciens certifiés" },
                     { icon: Zap, text: "Intervention rapide" },
                   ].map((item) => (
                     <div key={item.text} className="flex items-center gap-3">
@@ -575,14 +612,14 @@ const Index = () => {
                 <h4 className="text-xl font-semibold text-slate-900 mb-6">Nos domaines d'intervention</h4>
                 <ul className="space-y-4">
                   {[
-                    "Installation et rénovation de réseaux de plomberie sanitaire",
+                    "Plomberie sanitaire : installation et rénovation de réseaux en PVC, fonte et tuyaux galvanisés",
                     "Pose et raccordement de colonnes montantes et descendantes",
-                    "Installation gaz certifiée PG pour logements et locaux professionnels",
+                    "Installation gaz certifiée PG : brasage cuivre et raccordements",
                     "Systèmes de ventilation VMC simple et double flux",
                     "Remplacement de chauffe-eau et ballons thermodynamiques",
-                    "Rénovation de salles de bain accessibles PMR",
-                    "Mise en conformité des installations existantes",
-                    "Maintenance préventive et curative",
+                    "Rénovation de salles de bain avec pose de carrelage, conformes PMR",
+                    "Évacuation et débouchage professionnel",
+                    "Réhabilitation et mise en conformité des installations existantes",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
@@ -617,7 +654,7 @@ const Index = () => {
               {[
                 { value: "+500", label: "Projets réalisés", icon: TrendingUp },
                 { value: "+10", label: "Années d'expertise", icon: Award },
-                { value: "48h", label: "Délai d'intervention", icon: Clock },
+                { value: "4", label: "Techniciens polyvalents", icon: Users },
                 { value: "98%", label: "Clients satisfaits", icon: ThumbsUp },
               ].map((stat, index) => (
                 <motion.div
@@ -671,7 +708,7 @@ const Index = () => {
                 {
                   step: "02",
                   title: "Visite technique",
-                  description: "Un technicien qualifié se déplace sur site pour évaluer les travaux et établir un devis détaillé gratuit.",
+                  description: "Un de nos 4 techniciens se déplace sur site pour évaluer les travaux et établir un devis détaillé gratuit.",
                 },
                 {
                   step: "03",
@@ -736,8 +773,12 @@ const Index = () => {
                   answer: "Nous intervenons dans toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Seine-et-Marne (77), Yvelines (78), Essonne (91) et Val-d'Oise (95)."
                 },
                 {
-                  question: "Quels types de clients accompagnez-vous ?",
-                  answer: "Nous travaillons exclusivement avec des professionnels : promoteurs immobiliers, bailleurs sociaux, syndics de copropriété, entreprises générales du bâtiment, gestionnaires de patrimoine et hôteliers."
+                  question: "Quels types de travaux de plomberie réalisez-vous ?",
+                  answer: "Nous réalisons tous types de travaux de plomberie sanitaire : installation et rénovation de réseaux en PVC, fonte et tuyaux galvanisés, soudage, brasage, évacuation, débouchage, et réhabilitation complète d'installations existantes."
+                },
+                {
+                  question: "Proposez-vous la pose de carrelage lors de la rénovation de salle de bain ?",
+                  answer: "Oui, dans le cadre de la rénovation de salle de bain, nous proposons la pose de carrelage ainsi que l'ensemble des travaux de plomberie associés, le tout conforme aux normes PMR et d'accessibilité."
                 },
                 {
                   question: "Vos travaux sont-ils garantis ?",
@@ -745,7 +786,7 @@ const Index = () => {
                 },
                 {
                   question: "Quel est le délai pour obtenir un devis ?",
-                  answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique, généralement sous 48 à 72h."
+                  answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique par l'un de nos 4 techniciens polyvalents, généralement sous 48 à 72h."
                 },
               ].map((faq, index) => (
                 <motion.div
@@ -781,7 +822,7 @@ const Index = () => {
         {/* CTA Section */}
         <CTASection
           title="Un projet en tête ?"
-          subtitle="Devis gratuit et personnalisé sous 24h."
+          subtitle="Devis gratuit et personnalisé sous 24h. Nos 4 techniciens polyvalents sont à votre service."
           ctaText="Contactez-nous"
           ctaLink="/contact"
           variant="dark"
