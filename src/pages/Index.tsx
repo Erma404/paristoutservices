@@ -23,6 +23,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -766,41 +767,48 @@ const Index = () => {
               </h2>
             </motion.div>
 
-            <div className="max-w-3xl mx-auto space-y-4">
-              {[
-                {
-                  question: "Dans quels départements intervenez-vous ?",
-                  answer: "Nous intervenons dans toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Seine-et-Marne (77), Yvelines (78), Essonne (91) et Val-d'Oise (95)."
-                },
-                {
-                  question: "Quels types de travaux de plomberie réalisez-vous ?",
-                  answer: "Nous réalisons tous types de travaux de plomberie sanitaire : installation et rénovation de réseaux en PVC, fonte et tuyaux galvanisés, soudage, brasage, évacuation, débouchage, et réhabilitation complète d'installations existantes."
-                },
-                {
-                  question: "Proposez-vous la pose de carrelage lors de la rénovation de salle de bain ?",
-                  answer: "Oui, dans le cadre de la rénovation de salle de bain, nous proposons la pose de carrelage ainsi que l'ensemble des travaux de plomberie associés, le tout conforme aux normes PMR et d'accessibilité."
-                },
-                {
-                  question: "Vos travaux sont-ils garantis ?",
-                  answer: "Oui, tous nos travaux bénéficient de la garantie décennale. Nous fournissons également les certificats de conformité gaz (CCGP) et les attestations de fin de travaux."
-                },
-                {
-                  question: "Quel est le délai pour obtenir un devis ?",
-                  answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique par l'un de nos 4 techniciens polyvalents, généralement sous 48 à 72h."
-                },
-              ].map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
-                  <p className="text-slate-500 leading-relaxed">{faq.answer}</p>
-                </motion.div>
-              ))}
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-3">
+                {[
+                  {
+                    question: "Dans quels départements intervenez-vous ?",
+                    answer: "Nous intervenons dans toute l'Île-de-France : Paris (75), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Seine-et-Marne (77), Yvelines (78), Essonne (91) et Val-d'Oise (95)."
+                  },
+                  {
+                    question: "Quels types de travaux de plomberie réalisez-vous ?",
+                    answer: "Nous réalisons tous types de travaux de plomberie sanitaire : installation et rénovation de réseaux en PVC, fonte et tuyaux galvanisés, soudage, brasage, évacuation, débouchage, et réhabilitation complète d'installations existantes."
+                  },
+                  {
+                    question: "Proposez-vous la pose de carrelage lors de la rénovation de salle de bain ?",
+                    answer: "Oui, dans le cadre de la rénovation de salle de bain, nous proposons la pose de carrelage ainsi que l'ensemble des travaux de plomberie associés, le tout conforme aux normes PMR et d'accessibilité."
+                  },
+                  {
+                    question: "Vos travaux sont-ils garantis ?",
+                    answer: "Oui, tous nos travaux bénéficient de la garantie décennale. Nous fournissons également les certificats de conformité gaz (CCGP) et les attestations de fin de travaux."
+                  },
+                  {
+                    question: "Quel est le délai pour obtenir un devis ?",
+                    answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique par l'un de nos 4 techniciens polyvalents, généralement sous 48 à 72h."
+                  },
+                ].map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <AccordionItem value={`faq-${index}`} className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow px-6">
+                      <AccordionTrigger className="text-lg font-semibold text-slate-900 hover:no-underline py-5">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-slate-500 leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
             </div>
 
             <motion.div

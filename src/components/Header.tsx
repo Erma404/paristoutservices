@@ -48,7 +48,7 @@ const Header = () => {
               <img 
                 src={logoPts} 
                 alt="Paris Tout Services" 
-                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-40'}`} 
+                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-10' : 'h-16'}`} 
               />
             </Link>
 
