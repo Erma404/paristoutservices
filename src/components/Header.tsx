@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoPts from '@/assets/logo-pts.png';
+import logoPts from '@/assets/logo-pts-new.png';
 
 const navigation = [
   { name: 'Accueil', href: '/' },
