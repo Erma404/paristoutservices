@@ -92,7 +92,7 @@ const certifications = [{
   name: "Plomb",
   description: "Habilité diagnostic et traitement plomb"
 }, {
-  name: "HandyBat",
+  name: "HandiBat",
   description: "Accessibilité et adaptation des logements PMR"
 }, {
   name: "PG Gaz",
