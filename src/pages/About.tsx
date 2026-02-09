@@ -36,7 +36,7 @@ const certifications = [
     description: "Professionnel du Gaz - Certification pour l'installation et la maintenance gaz",
   },
   {
-    name: "Qualipac",
+    name: "HandiBat",
     description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques",
   },
 ];
@@ -45,7 +45,7 @@ const timeline = [
   { year: "2016", event: "Création de Paris Tout Services" },
   { year: "2018", event: "Obtention des certifications RGE et PG" },
   { year: "2020", event: "Croissance et nouveaux partenariats" },
-  { year: "2022", event: "Certification Qualipac" },
+  { year: "2022", event: "Certification HandiBat" },
   { year: "2026", event: "Plus de 300 projets réalisés" },
 ];
 
@@ -59,7 +59,7 @@ const About = () => {
     <>
       <SEOHead
         title="Entreprise de Plomberie & Gaz Île-de-France | À Propos - Paris Tout Services"
-        description="Paris Tout Services : plus de 10 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, Qualipac en Île-de-France."
+        description="Paris Tout Services : plus de 10 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, HandiBat en Île-de-France."
         canonical="/a-propos"
       />
       <SchemaMarkup type="localBusiness" />
@@ -133,7 +133,7 @@ const About = () => {
                     Depuis notre création, nous avons développé une expertise reconnue auprès des promoteurs
                     immobiliers, des chefs de travaux et des gestionnaires d'habitat social.
                   </p>
-                  <p>Nos certifications RGE, PG et Qualipac témoignent de notre engagement envers la qualité.</p>
+                  <p>Nos certifications RGE, PG et HandiBat témoignent de notre engagement envers la qualité.</p>
                 </div>
               </motion.div>
 
