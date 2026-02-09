@@ -312,7 +312,7 @@ const Realisations = () => {
         </section>
 
         {/* Filters */}
-        <section className="py-8 bg-white border-b border-slate-100 sticky top-20 z-30">
+        <section className="py-8 bg-white border-b border-slate-100">
           <div className="container-custom">
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((cat) => (
