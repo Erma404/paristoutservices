@@ -12,7 +12,7 @@ import CTASection from "@/components/CTASection";
 import heroImage from "@/assets/hero-plumber.jpg";
 
 // Partner logos
-import logoLNC from "@/assets/partners/lnc.png";
+
 import logoBouygues from "@/assets/partners/bouygues.png";
 import logoERI from "@/assets/partners/eri.png";
 import logoAcorus from "@/assets/partners/acorus.png";
@@ -67,9 +67,6 @@ const services = [{
   href: "/services#chauffe-eau"
 }];
 const partners = [{
-  name: "Les Nouveaux Constructeurs",
-  logo: logoLNC
-}, {
   name: "Bouygues Immobilier",
   logo: logoBouygues
 }, {

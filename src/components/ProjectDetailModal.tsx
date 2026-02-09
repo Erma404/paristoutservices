@@ -73,7 +73,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed inset-4 md:inset-8 lg:inset-16 bg-white rounded-3xl z-50 overflow-hidden flex flex-col"
+            className="fixed inset-4 md:inset-6 lg:inset-8 bg-white rounded-3xl z-50 overflow-hidden flex flex-col"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-slate-100">
@@ -93,12 +93,12 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
 
             {/* Content */}
             <div className="flex-1 overflow-y-auto">
-              <div className="grid lg:grid-cols-2 gap-8 p-6">
+              <div className="flex flex-col gap-8 p-6">
                 {/* Image Gallery */}
                 <div>
                   {hasImages ? (
                     <div className="relative">
-                      <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100">
+                      <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-slate-100 max-h-[40vh]">
                         <img
                           src={images[currentImageIndex].url}
                           alt={images[currentImageIndex].caption}
