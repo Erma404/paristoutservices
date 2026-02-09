@@ -153,7 +153,7 @@ const departments = [{
 }];
 const Index = () => {
   return <>
-      <SEOHead title="Plomberie sanitaire, Gaz & Rénovation salle de bain | Paris Tout Services" description="Expert en plomberie sanitaire, installation gaz certifiée PG, rénovation salle de bain avec pose de carrelage en Île-de-France. Tuyaux galva, PVC, fonte, soudage, brasage, débouchage. Certifié RGE, Amiante, Plomb, HandyBat. Devis gratuit." canonical="/" />
+      <SEOHead title="Plomberie sanitaire, Gaz & Rénovation salle de bain | Paris Tout Services" description="Expert en plomberie sanitaire, installation gaz certifiée PG, rénovation salle de bain avec pose de carrelage en Île-de-France. Tuyaux galva, PVC, fonte, soudage, brasage, débouchage. Certifié RGE, Amiante, Plomb, HandiBat. Devis gratuit." canonical="/" />
       <SchemaMarkup type="localBusiness" />
 
       <Header />
@@ -399,7 +399,7 @@ const Index = () => {
             }, {
               icon: Shield,
               title: "6 certifications reconnues",
-              description: "Amiante, RGE Chauffage+, Plomb, HandyBat, PG Gaz et Silver Bat : des habilitations qui garantissent des travaux conformes et sécurisés."
+              description: "Amiante, RGE Chauffage+, Plomb, HandiBat, PG Gaz et Silver Bat : des habilitations qui garantissent des travaux conformes et sécurisés."
             }, {
               icon: Accessibility,
               title: "Normes PMR & RT2012",
