@@ -93,7 +93,7 @@ const certifications = [{
   description: "Habilité diagnostic et traitement plomb"
 }, {
   name: "HandyBat",
-  description: "Accessibilité et adaptation du bâti"
+  description: "Accessibilité et adaptation des logements PMR"
 }, {
   name: "PG Gaz",
   description: "Professionnel du Gaz certifié"
