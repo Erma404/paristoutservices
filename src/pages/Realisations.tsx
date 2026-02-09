@@ -169,6 +169,60 @@ const projects: Project[] = [
       { url: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop", caption: "Compteur gaz après intervention" }
     ]
   },
+  {
+    id: 7,
+    title: "Réhabilitation énergétique – Ventilation & chauffe-eau",
+    category: "ventilation",
+    location: "Aubergenville (78)",
+    client: "Programme de réhabilitation",
+    duration: "Plusieurs mois",
+    description: "Remplacement des chauffe-eau et mise à niveau de la ventilation dans un ensemble immobilier collectif à Aubergenville.",
+    fullDescription: "Dans le cadre d'un programme de réhabilitation énergétique et thermique, Paris Tout Services est intervenu sur un ensemble immobilier collectif situé 1 à 23 place Jacques Brel à Aubergenville (Yvelines). Le projet visait à améliorer les performances énergétiques du bâtiment tout en garantissant le confort des occupants. Les travaux ont porté sur le remplacement des chauffe-eau à ballon d'eau chaude, la mise à niveau des installations de ventilation, ainsi que des travaux de plomberie dans les salles de bain (partie immeuble). L'ensemble a été réalisé en site occupé, avec une coordination rigoureuse des interventions.",
+    challenges: [
+      "Intervention dans un immeuble collectif occupé",
+      "Respect des délais imposés par le programme de réhabilitation",
+      "Coordination avec les autres corps de métier",
+      "Fiabilité des installations sur le long terme"
+    ],
+    solutions: [
+      "Expertise en réhabilitation énergétique de logements collectifs",
+      "Capacité à intervenir sur des projets techniques à forts enjeux",
+      "Solutions durables, conformes aux normes en vigueur",
+      "Chantier maîtrisé, avec un impact limité pour les occupants"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop", caption: "Intervention sur les installations de ventilation" },
+      { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&auto=format&fit=crop", caption: "Remplacement des chauffe-eau" },
+      { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop", caption: "Travaux de plomberie en parties communes" }
+    ]
+  },
+  {
+    id: 8,
+    title: "Plomberie, chauffage & tuyauterie – Logements collectifs",
+    category: "plomberie",
+    location: "Le Blanc-Mesnil (93)",
+    client: "Immobilière 3F",
+    duration: "Plusieurs mois",
+    description: "Création complète des réseaux de plomberie, tuyauterie et chauffage pour un immeuble de logements neufs issu de la transformation de 4 pavillons.",
+    fullDescription: "Paris Tout Services est intervenu sur un projet immobilier porté par Immobilière 3F, dans un immeuble HLM situé au 23 avenue du Gouverneur Félix Eboué au Blanc-Mesnil (Seine-Saint-Denis). Le chantier concernait la transformation d'un lotissement de 4 pavillons en un immeuble de logements neufs. Les travaux ont inclus la création et l'installation complète des réseaux de plomberie, la mise en place de la tuyauterie pour logements collectifs, l'installation du système de chauffage avec pose de radiateurs, et la vérification de la conformité et des performances de l'ensemble des installations.",
+    challenges: [
+      "Projet de restructuration lourde",
+      "Transformation d'un bâti existant en immeuble collectif",
+      "Exigences élevées liées au logement social",
+      "Respect strict des normes techniques et de sécurité"
+    ],
+    solutions: [
+      "Maîtrise des projets de logement social et immobilier collectif",
+      "Savoir-faire en plomberie, chauffage et réseaux",
+      "Capacité à intervenir sur des projets complexes de transformation",
+      "Partenaire fiable pour les bailleurs et promoteurs"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop", caption: "Installation des réseaux de plomberie" },
+      { url: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&auto=format&fit=crop", caption: "Mise en place de la tuyauterie" },
+      { url: "https://images.unsplash.com/photo-1631545806609-35d4ae440431?w=800&auto=format&fit=crop", caption: "Installation du système de chauffage" }
+    ]
+  },
 ];
 
 const testimonials = [
