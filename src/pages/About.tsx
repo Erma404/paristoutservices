@@ -28,16 +28,28 @@ const values = [
 
 const certifications = [
   {
-    name: "RGE",
-    description: "Reconnu Garant de l'Environnement - Qualification pour travaux d'efficacité énergétique",
+    name: "Amiante",
+    description: "Habilité au diagnostic et au retrait amiante",
   },
   {
-    name: "PG",
-    description: "Professionnel du Gaz - Certification pour l'installation et la maintenance gaz",
+    name: "RGE Chauffage+\nVentilation+",
+    description: "Reconnu Garant de l'Environnement",
+  },
+  {
+    name: "Plomb",
+    description: "Habilité diagnostic et traitement plomb",
   },
   {
     name: "HandiBat",
-    description: "Qualification pour l'installation de pompes à chaleur et systèmes aérothermiques",
+    description: "Accessibilité et adaptation des logements PMR",
+  },
+  {
+    name: "PG Gaz",
+    description: "Professionnel du Gaz certifié",
+  },
+  {
+    name: "Silver Bat",
+    description: "Adaptation des logements seniors",
   },
 ];
 
@@ -272,7 +284,7 @@ const About = () => {
               </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {certifications.map((cert, index) => (
                 <CertificationBadge key={cert.name} {...cert} delay={index * 0.1} />
               ))}
