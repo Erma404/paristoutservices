@@ -86,7 +86,7 @@ const certifications = [{
   name: "Amiante",
   description: "Habilité au diagnostic et au retrait amiante"
 }, {
-  name: "RGE Chauffage+",
+  name: "RGE Chauffage+\nVentilation+",
   description: "Reconnu Garant de l'Environnement"
 }, {
   name: "Plomb",
@@ -335,7 +335,7 @@ const Index = () => {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mb-3 shadow-md">
                     <ShieldCheck className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-sm font-semibold text-slate-900 mb-1">{cert.name}</h3>
+                  <h3 className="text-sm font-semibold text-slate-900 mb-1 whitespace-pre-line">{cert.name}</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">{cert.description}</p>
                 </motion.div>)}
             </div>
