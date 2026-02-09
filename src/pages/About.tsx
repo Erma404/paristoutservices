@@ -193,10 +193,11 @@ const About = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { count: "6", role: "Chefs d'équipe", desc: "Coordination des chantiers" },
-                { count: "12", role: "Techniciens plombiers", desc: "Installation et maintenance" },
+                { count: "4", role: "Chefs d'équipe", desc: "Coordination des chantiers" },
+                { count: "4", role: "Techniciens polyvalents", desc: "Multi-compétences terrain" },
+                { count: "8", role: "Techniciens plombiers", desc: "Installation et maintenance" },
                 { count: "2", role: "Spécialistes gaz", desc: "Installations certifiées PG" },
               ].map((item, index) => (
                 <motion.div
