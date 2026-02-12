@@ -73,7 +73,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed inset-4 md:inset-6 lg:inset-8 bg-white rounded-3xl z-50 overflow-hidden flex flex-col"
+            className="fixed inset-4 md:inset-y-8 md:left-[50%] md:-translate-x-[50%] md:w-[520px] lg:w-[580px] bg-white rounded-3xl z-50 overflow-hidden flex flex-col"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-slate-100">
