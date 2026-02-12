@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { AuthProvider } from "./hooks/useAuth";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -32,37 +33,39 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            {/* Public routes */}
-            <Route path="/" element={<Index />} />
-            <Route path="/a-propos" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/realisations" element={<Realisations />} />
-            <Route path="/contact" element={<Contact />} />
-            
-            {/* Admin routes */}
-            <Route path="/admin/login" element={<AdminLogin />} />
-            <Route
-              path="/admin"
-              element={
-                <AdminProtectedRoute>
-                  <AdminLayout />
-                </AdminProtectedRoute>
-              }
-            >
-              <Route index element={<AdminDashboard />} />
-              <Route path="contenu" element={<AdminContent />} />
-              <Route path="projets" element={<AdminProjects />} />
-              <Route path="services" element={<AdminServices />} />
-              <Route path="contact" element={<AdminContact />} />
-              <Route path="medias" element={<AdminMedia />} />
-              <Route path="utilisateurs" element={<AdminUsers />} />
-              <Route path="parametres" element={<AdminSettings />} />
-            </Route>
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AuthProvider>
+            <ScrollToTop />
+            <Routes>
+              {/* Public routes */}
+              <Route path="/" element={<Index />} />
+              <Route path="/a-propos" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/realisations" element={<Realisations />} />
+              <Route path="/contact" element={<Contact />} />
+              
+              {/* Admin routes */}
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route
+                path="/admin"
+                element={
+                  <AdminProtectedRoute>
+                    <AdminLayout />
+                  </AdminProtectedRoute>
+                }
+              >
+                <Route index element={<AdminDashboard />} />
+                <Route path="contenu" element={<AdminContent />} />
+                <Route path="projets" element={<AdminProjects />} />
+                <Route path="services" element={<AdminServices />} />
+                <Route path="contact" element={<AdminContact />} />
+                <Route path="medias" element={<AdminMedia />} />
+                <Route path="utilisateurs" element={<AdminUsers />} />
+                <Route path="parametres" element={<AdminSettings />} />
+              </Route>
+              
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </AuthProvider>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
