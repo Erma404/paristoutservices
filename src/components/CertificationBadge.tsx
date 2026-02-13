@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Award } from 'lucide-react';
 
 interface CertificationBadgeProps {
   name: string;
@@ -13,13 +14,16 @@ const CertificationBadge = ({ name, description, delay = 0 }: CertificationBadge
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay }}
-      whileHover={{ scale: 1.05 }}
-      className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-card border border-slate-100"
+      whileHover={{ scale: 1.05, y: -4 }}
+      className="flex flex-col items-center text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/15 hover:bg-white/15 transition-colors duration-300"
     >
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mb-4 shadow-lg">
-        <span className="text-white font-bold text-lg">{name}</span>
+      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mb-4 shadow-lg">
+        <Award className="w-6 h-6 text-white" />
       </div>
-      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+      <h3 className="text-white font-semibold text-sm leading-tight mb-2 whitespace-pre-line">
+        {name}
+      </h3>
+      <p className="text-sm text-slate-300 leading-relaxed">{description}</p>
     </motion.div>
   );
 };
