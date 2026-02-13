@@ -129,13 +129,13 @@ const Contact = () => {
                         <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">06 01 16 72 40</div>
                       </div>
                     </a>
-                    <a href="mailto:contact@paristoutservices.fr" className="flex items-start gap-4 group">
+                    <a href="mailto:paristoutservices@gmail.com" className="flex items-start gap-4 group">
                       <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center flex-shrink-0">
                         <Mail className="w-5 h-5 text-orange-600" />
                       </div>
                       <div className="pt-1">
                         <div className="text-sm text-slate-500">Email</div>
-                        <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">contact@paristoutservices.fr</div>
+                        <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">paristoutservices@gmail.com</div>
                       </div>
                     </a>
                     <div className="flex items-start gap-4">

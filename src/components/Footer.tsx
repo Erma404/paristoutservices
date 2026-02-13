@@ -94,9 +94,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@paristoutservices.fr" className="flex items-start gap-3 text-white/60 hover:text-white transition-colors text-sm">
+                <a href="mailto:paristoutservices@gmail.com" className="flex items-start gap-3 text-white/60 hover:text-white transition-colors text-sm">
                   <Mail className="w-4 h-4 mt-0.5 text-orange-500" />
-                  <span>contact@paristoutservices.fr</span>
+                  <span>paristoutservices@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/60 text-sm">
