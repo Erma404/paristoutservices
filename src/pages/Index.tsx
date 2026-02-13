@@ -850,7 +850,7 @@ const Index = () => {
         </section>
 
         {/* CTA Section */}
-        <CTASection title="Un projet en tête ?" subtitle="Devis gratuit et personnalisé sous 24h. Nos 4 techniciens polyvalents sont à votre service." ctaText="Contactez-nous" ctaLink="/contact" variant="dark" />
+        <CTASection title="Un projet en tête ?" subtitle="Devis gratuit et personnalisé sous 24h. Nos techniciens polyvalents sont à votre service." ctaText="Contactez-nous" ctaLink="/contact" variant="dark" />
       </main>
 
       <Footer />
