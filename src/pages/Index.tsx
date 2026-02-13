@@ -733,7 +733,7 @@ const Index = () => {
             }, {
               step: "02",
               title: "Visite technique",
-              description: "Un de nos 4 techniciens se déplace sur site pour évaluer les travaux et établir un devis détaillé gratuit."
+              description: "Un de nos techniciens se déplace sur site pour évaluer les travaux et établir un devis détaillé gratuit."
             }, {
               step: "03",
               title: "Réalisation",
