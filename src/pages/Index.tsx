@@ -194,7 +194,7 @@ const Index = () => {
             }} className="max-w-xl">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 mb-8">
                   <span className="w-2 h-2 rounded-full bg-blue-500" />
-                  <span className="text-sm font-medium">Île-de-France • 4 techniciens polyvalents</span>
+                  <span className="text-sm font-medium">Île-de-France • 18 techniciens polyvalents</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-6 text-slate-900">
@@ -609,7 +609,7 @@ const Index = () => {
                 }, {
                   icon: Zap,
                   text: "Intervention rapide"
-                }].map(item => <div key={item.text} className="flex items-center gap-3">
+                }].map((item) => <div key={item.text} className="flex items-center gap-3">
                       <item.icon className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span className="text-sm text-slate-700">{item.text}</span>
                     </div>)}
