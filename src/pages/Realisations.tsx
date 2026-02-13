@@ -74,7 +74,7 @@ const projects: Project[] = [
     title: "Réhabilitation énergétique – Ventilation & chauffe-eau",
     category: "ventilation",
     location: "Aubergenville (78)",
-    client: "Programme de réhabilitation",
+    client: "GECop",
     duration: "Plusieurs mois",
     description: "Remplacement des chauffe-eau et mise à niveau de la ventilation dans un ensemble immobilier collectif à Aubergenville.",
     fullDescription: "Dans le cadre d'un programme de réhabilitation énergétique et thermique, Paris Tout Services est intervenu sur un ensemble immobilier collectif situé 1 à 23 place Jacques Brel à Aubergenville (Yvelines). Le projet visait à améliorer les performances énergétiques du bâtiment tout en garantissant le confort des occupants. Les travaux ont porté sur le remplacement des chauffe-eau à ballon d'eau chaude, la mise à niveau des installations de ventilation, ainsi que des travaux de plomberie dans les salles de bain (partie immeuble). L'ensemble a été réalisé en site occupé, avec une coordination rigoureuse des interventions.",
@@ -91,9 +91,9 @@ const projects: Project[] = [
       "Chantier maîtrisé, avec un impact limité pour les occupants"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop", caption: "Intervention sur les installations de ventilation" },
-      { url: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop", caption: "Remplacement des chauffe-eau" },
-      { url: "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=800&auto=format&fit=crop", caption: "Travaux de plomberie en parties communes" }
+      { url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop", caption: "Lotissement résidentiel à Aubergenville" },
+      { url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&auto=format&fit=crop", caption: "Ensemble immobilier collectif" },
+      { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop", caption: "Réhabilitation énergétique des logements" }
     ]
   },
   {
