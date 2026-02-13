@@ -40,7 +40,7 @@ const reassuranceItems = [{
   value: "Rapide"
 }, {
   icon: Users,
-  label: "4 techniciens polyvalents",
+  label: "Techniciens polyvalents",
   value: "Équipe dédiée"
 }];
 const services = [{
@@ -403,8 +403,8 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {[{
               icon: Users,
-              title: "4 techniciens polyvalents",
-              description: "Une équipe de 4 techniciens qualifiés et polyvalents, formés en plomberie sanitaire, gaz, ventilation et rénovation de salle de bain."
+              title: "Techniciens polyvalents",
+              description: "Une équipe de techniciens qualifiés et polyvalents, formés en plomberie sanitaire, gaz, ventilation et rénovation de salle de bain."
             }, {
               icon: Shield,
               title: "6 certifications reconnues",
@@ -585,7 +585,7 @@ const Index = () => {
                   Un partenaire de confiance pour vos chantiers
                 </h3>
                 <p className="text-slate-500 leading-relaxed">
-                  Depuis 2016, notre équipe de <strong>4 techniciens polyvalents</strong> accompagne les professionnels du bâtiment dans leurs projets 
+                  Depuis 2016, notre équipe de <strong>techniciens polyvalents</strong> accompagne les professionnels du bâtiment dans leurs projets 
                   de plomberie sanitaire, d'installation gaz et de systèmes de ventilation. Notre expertise 
                   couvre le soudage, le brasage, le travail sur tuyaux galvanisés, PVC et fonte, 
                   ainsi que l'évacuation et le débouchage professionnel.
@@ -605,7 +605,7 @@ const Index = () => {
                   text: "Travaux garantis 10 ans"
                 }, {
                   icon: HardHat,
-                  text: "4 techniciens certifiés"
+                  text: "Techniciens certifiés"
                 }, {
                   icon: Zap,
                   text: "Intervention rapide"
@@ -806,7 +806,7 @@ const Index = () => {
                 answer: "Oui, tous nos travaux bénéficient de la garantie décennale. Nous fournissons également les certificats de conformité gaz (CCGP) et les attestations de fin de travaux."
               }, {
                 question: "Quel est le délai pour obtenir un devis ?",
-                answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique par l'un de nos 4 techniciens polyvalents, généralement sous 48 à 72h."
+                answer: "Nous nous engageons à vous recontacter sous 24h pour une première évaluation. Le devis détaillé est fourni après visite technique par l'un de nos techniciens polyvalents, généralement sous 48 à 72h."
               }].map((faq, index) => <motion.div key={index} initial={{
                 opacity: 0,
                 y: 20
