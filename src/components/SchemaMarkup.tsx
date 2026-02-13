@@ -5,7 +5,7 @@ const localBusinessSchema = {
   "@id": "https://paristoutservices.fr",
   "url": "https://paristoutservices.fr",
   "telephone": "+33-6-01-16-72-40",
-  "email": "contact@paristoutservices.fr",
+  "email": "paristoutservices@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "25 Rue Henri Rouanet",
