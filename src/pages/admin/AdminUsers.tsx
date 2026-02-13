@@ -54,35 +54,48 @@ const AdminUsers = () => {
       return;
     }
 
-    setCreating(true);
-
-    // Create user via Supabase Auth
-    const { data: authData, error: authError } = await supabase.auth.signUp({
-      email: newEmail,
-      password: newPassword,
-    });
-
-    if (authError || !authData.user) {
-      toast({ title: 'Erreur', description: authError?.message || 'Erreur lors de la création.', variant: 'destructive' });
-      setCreating(false);
+    if (newPassword.length < 8) {
+      toast({ title: 'Erreur', description: 'Le mot de passe doit contenir au moins 8 caractères.', variant: 'destructive' });
       return;
     }
 
-    // Assign role
-    const { error: roleError } = await supabase.from('user_roles').insert({
-      user_id: authData.user.id,
-      role: newRole,
-    });
+    setCreating(true);
 
-    if (roleError) {
-      toast({ title: 'Erreur', description: roleError.message, variant: 'destructive' });
-    } else {
-      toast({ title: 'Succès', description: 'Utilisateur créé.' });
-      setIsDialogOpen(false);
-      setNewEmail('');
-      setNewPassword('');
-      setNewRole('editor');
-      fetchUsers();
+    try {
+      const session = await supabase.auth.getSession();
+      const token = session.data.session?.access_token;
+
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-admin-user`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+            'apikey': import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+          },
+          body: JSON.stringify({
+            email: newEmail,
+            password: newPassword,
+            role: newRole,
+          }),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        toast({ title: 'Erreur', description: result.error || 'Erreur lors de la création.', variant: 'destructive' });
+      } else {
+        toast({ title: 'Succès', description: 'Utilisateur créé.' });
+        setIsDialogOpen(false);
+        setNewEmail('');
+        setNewPassword('');
+        setNewRole('editor');
+        fetchUsers();
+      }
+    } catch {
+      toast({ title: 'Erreur', description: 'Une erreur est survenue.', variant: 'destructive' });
     }
 
     setCreating(false);
