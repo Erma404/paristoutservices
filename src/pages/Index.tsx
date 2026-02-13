@@ -17,6 +17,9 @@ import logoBouygues from "@/assets/partners/bouygues.png";
 import logoERI from "@/assets/partners/eri.png";
 import logoAcorus from "@/assets/partners/acorus.png";
 import logoGecop from "@/assets/partners/gecop.png";
+import logoRIVP from "@/assets/partners/rivp.webp";
+import logo3F from "@/assets/partners/3f.jpeg";
+import logoInli from "@/assets/partners/inli.png";
 
 // Realisations images
 import realisationSalleDeBain from "@/assets/realisations/salle-de-bain-1.jpg";
@@ -78,6 +81,15 @@ const partners = [{
 }, {
   name: "Gecop",
   logo: logoGecop
+}, {
+  name: "RIVP",
+  logo: logoRIVP
+}, {
+  name: "3F",
+  logo: logo3F
+}, {
+  name: "IN'LI",
+  logo: logoInli
 }];
 const certifications = [{
   name: "Amiante",
