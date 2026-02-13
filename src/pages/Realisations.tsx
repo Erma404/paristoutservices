@@ -101,7 +101,7 @@ const projects: Project[] = [
     title: "Plomberie, chauffage & tuyauterie – Logements collectifs",
     category: "plomberie",
     location: "Le Blanc-Mesnil (93)",
-    client: "Immobilière 3F",
+    client: "GECop",
     duration: "Plusieurs mois",
     description: "Création complète des réseaux de plomberie, tuyauterie et chauffage pour un immeuble de logements neufs issu de la transformation de 4 pavillons.",
     fullDescription: "Paris Tout Services est intervenu sur un projet immobilier porté par Immobilière 3F, dans un immeuble HLM situé au 23 avenue du Gouverneur Félix Eboué au Blanc-Mesnil (Seine-Saint-Denis). Le chantier concernait la transformation d'un lotissement de 4 pavillons en un immeuble de logements neufs. Les travaux ont inclus la création et l'installation complète des réseaux de plomberie, la mise en place de la tuyauterie pour logements collectifs, l'installation du système de chauffage avec pose de radiateurs, et la vérification de la conformité et des performances de l'ensemble des installations.",
@@ -118,9 +118,9 @@ const projects: Project[] = [
       "Partenaire fiable pour les bailleurs et promoteurs"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&auto=format&fit=crop", caption: "Installation des réseaux de plomberie" },
-      { url: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&auto=format&fit=crop", caption: "Mise en place de la tuyauterie" },
-      { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop", caption: "Installation du système de chauffage" }
+      { url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop", caption: "Immeuble de logements neufs" },
+      { url: "https://images.unsplash.com/photo-1585128903994-9788298932a4?w=800&auto=format&fit=crop", caption: "Installation du système de chauffage" },
+      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop", caption: "Pose de radiateurs collectifs" }
     ]
   },
 ];
