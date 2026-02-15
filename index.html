@@ -15,6 +15,90 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Silktide Cookie Consent -->
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="https://app.silktide.com/cookiemanager/silktide-consent-manager.css">
+    <script src="https://app.silktide.com/cookiemanager/silktide-consent-manager.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        if (typeof silktideCookieBannerManager !== 'undefined') {
+          silktideCookieBannerManager.updateCookieBannerConfig({
+            background: {
+              showBackground: true
+            },
+            cookieIcon: {
+              position: "bottomLeft"
+            },
+            cookieTypes: [
+              {
+                id: "necessary",
+                name: "Necessary",
+                description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+                required: true,
+                onAccept: function() {
+                  console.log('Necessary cookies accepted');
+                }
+              },
+              {
+                id: "analytics",
+                name: "Analytics",
+                description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+                defaultValue: true,
+                onAccept: function() {
+                  if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', { analytics_storage: 'granted' });
+                  }
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({ 'event': 'consent_accepted_analytics' });
+                },
+                onReject: function() {
+                  if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', { analytics_storage: 'denied' });
+                  }
+                }
+              },
+              {
+                id: "advertising",
+                name: "Advertising",
+                description: "<p>Ces cookies offrent des fonctionnalités supplémentaires et une personnalisation pour améliorer votre expérience. Ils peuvent être installés par nous ou par des partenaires dont nous utilisons les services.</p>",
+                onAccept: function() {
+                  if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+                  }
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({ 'event': 'consent_accepted_advertising' });
+                },
+                onReject: function() {
+                  if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+                  }
+                }
+              }
+            ],
+            text: {
+              banner: {
+                description: "<p><span style=\"color: rgb(0, 0, 0);\">Nous utilisons des cookies pour améliorer votre expérience, mesurer l'audience et proposer des contenus adaptés. Vous pouvez accepter tous les cookies, les refuser ou personnaliser vos choix à tout moment.</span> <a href=\"https://paristoutservices.com/politique-confidentialite\" target=\"_blank\">Politique de confidentialité.</a></p>",
+                acceptAllButtonText: "Accepter",
+                acceptAllButtonAccessibleLabel: "Accept all cookies",
+                rejectNonEssentialButtonText: "Refuser",
+                rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+                preferencesButtonText: "Paramètres",
+                preferencesButtonAccessibleLabel: "Toggle preferences"
+              },
+              preferences: {
+                title: "Customize your cookie preferences",
+                description: "<p>Nous respectons votre droit à la vie privée. Vous pouvez refuser certains types de cookies. Vos préférences en matière de cookies s'appliqueront à l'ensemble de notre site web.</p>",
+                creditLinkText: "Get this banner for free",
+                creditLinkAccessibleLabel: "Get this banner for free"
+              }
+            },
+            position: {
+              banner: "bottomLeft"
+            }
+          });
+        }
+      });
+    </script>
   </head>
 
   <body>
