@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { ChevronRight, Phone, Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -115,52 +115,29 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Contact Info */}
+              {/* CTA */}
               <div className="space-y-6">
-                <div className="bg-[#F8F7F4] rounded-3xl p-8">
-                  <h3 className="font-semibold text-slate-900 text-xl mb-6">Nos Coordonnées</h3>
-                  <div className="space-y-5">
-                    <a href="tel:+33601167240" className="flex items-start gap-4 group">
-                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div className="pt-1">
-                        <div className="text-sm text-slate-500">Téléphone</div>
-                        <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">06 01 16 72 40</div>
-                      </div>
+                <div className="bg-[#F8F7F4] rounded-3xl p-8 text-center">
+                  <h3 className="font-semibold text-slate-900 text-xl mb-4">Obtenir un devis</h3>
+                  <p className="text-slate-500 text-sm mb-6">Contactez-nous directement pour un devis gratuit et personnalisé.</p>
+                  <div className="space-y-3">
+                    <a href="mailto:paristoutservices@gmail.com" className="block">
+                      <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white rounded-full px-6 py-5 text-sm font-medium">
+                        <Mail className="w-4 h-4 mr-2" />
+                        Envoyer un email
+                      </Button>
                     </a>
-                    <a href="mailto:paristoutservices@gmail.com" className="flex items-start gap-4 group">
-                      <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-orange-600" />
-                      </div>
-                      <div className="pt-1">
-                        <div className="text-sm text-slate-500">Email</div>
-                        <div className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">paristoutservices@gmail.com</div>
-                      </div>
+                    <a href="tel:+33601167240" className="block">
+                      <Button variant="outline" className="w-full rounded-full px-6 py-5 text-sm font-medium border-slate-300 hover:bg-slate-50">
+                        <Phone className="w-4 h-4 mr-2" />
+                        Appeler maintenant
+                      </Button>
                     </a>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-5 h-5 text-slate-600" />
-                      </div>
-                      <div className="pt-1">
-                        <div className="text-sm text-slate-500">Adresse</div>
-                        <div className="font-semibold text-slate-900">25 Rue Henri Rouanet<br/>93700 Drancy</div>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
-                        <Clock className="w-5 h-5 text-slate-600" />
-                      </div>
-                      <div className="pt-1">
-                        <div className="text-sm text-slate-500">Horaires</div>
-                        <div className="font-semibold text-slate-900">Lun - Ven : 8h - 18h</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
-                <div className="bg-blue-600 rounded-3xl p-8 text-white">
+                <div className="bg-blue-600 rounded-3xl p-8 text-white text-center">
                   <h3 className="font-semibold text-xl mb-2">Réponse sous 24h</h3>
-                  <p className="text-white/80">Notre équipe s'engage à vous recontacter rapidement.</p>
+                  <p className="text-white/80 text-sm">Notre équipe s'engage à vous recontacter rapidement.</p>
                 </div>
               </div>
             </div>

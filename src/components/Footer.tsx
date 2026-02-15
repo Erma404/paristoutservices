@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, ChevronRight } from 'lucide-react';
+import { Phone, Mail, ChevronRight } from 'lucide-react';
 import logoPts from '@/assets/logo-pts-new.png';
 
 const Footer = () => {
@@ -83,31 +83,26 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* CTA */}
           <div>
-            <h4 className="font-semibold text-lg mb-5">Contact</h4>
-            <ul className="space-y-4">
-              <li>
-                <a href="tel:+33601167240" className="flex items-start gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                  <Phone className="w-4 h-4 mt-0.5 text-orange-500" />
-                  <span>06 01 16 72 40</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:paristoutservices@gmail.com" className="flex items-start gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                  <Mail className="w-4 h-4 mt-0.5 text-orange-500" />
-                  <span>paristoutservices@gmail.com</span>
-                </a>
-              </li>
-              <li className="flex items-start gap-3 text-white/60 text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 text-orange-500" />
-                <span>25 Rue Henri Rouanet<br />93700 Drancy</span>
-              </li>
-              <li className="flex items-start gap-3 text-white/60 text-sm">
-                <Clock className="w-4 h-4 mt-0.5 text-orange-500" />
-                <span>Lun - Ven : 8h - 18h</span>
-              </li>
-            </ul>
+            <h4 className="font-semibold text-lg mb-5">Obtenir un devis</h4>
+            <p className="text-white/60 text-sm mb-5">Contactez-nous pour un devis gratuit et personnalisé.</p>
+            <div className="space-y-3">
+              <a 
+                href="mailto:paristoutservices@gmail.com"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium text-white"
+              >
+                <Mail className="w-4 h-4 text-orange-500" />
+                Envoyer un email
+              </a>
+              <a 
+                href="tel:+33601167240"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium text-white"
+              >
+                <Phone className="w-4 h-4 text-orange-500" />
+                Appeler maintenant
+              </a>
+            </div>
           </div>
         </div>
 
