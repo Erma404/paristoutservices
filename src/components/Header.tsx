@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logoPts from '@/assets/logo-pts-new.png';
 
@@ -75,13 +75,6 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
-              <a 
-                href="tel:+33601167240"
-                className="flex items-center gap-2 text-sm font-medium text-slate-600"
-              >
-                <Phone className="w-4 h-4" />
-                06 01 16 72 40
-              </a>
               <Link to="/contact">
                 <Button className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-6 text-sm">
                   Devis gratuit
@@ -126,14 +119,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-muted">
-                <a 
-                  href="tel:+33601167240"
-                  className="flex items-center gap-2 px-4 py-3 text-navy font-medium"
-                >
-                  <Phone className="w-5 h-5 text-secondary" />
-                  06 01 16 72 40
-                </a>
-                <Link to="/contact" className="block mt-2">
+                <Link to="/contact" className="block">
                   <Button variant="hero" size="lg" className="w-full">
                     Devis gratuit
                     <ChevronRight className="w-4 h-4" />
