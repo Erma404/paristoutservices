@@ -11,6 +11,8 @@ import Services from "./pages/Services";
 import Realisations from "./pages/Realisations";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminLayout from "./pages/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -42,6 +44,8 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/realisations" element={<Realisations />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/mentions-legales" element={<MentionsLegales />} />
+              <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
               
               {/* Admin routes */}
               <Route path="/admin/login" element={<AdminLogin />} />
