@@ -21,63 +21,121 @@ const categories = [
 const projects: Project[] = [
   {
     id: 1,
-    title: "Rénovation salles de bain - EHPAD",
-    category: "salle-de-bain",
-    location: "Créteil (94)",
-    client: "Acorus",
-    duration: "6 semaines",
-    description: "Rénovation de 15 salles de bain adaptées aux personnes à mobilité réduite.",
-    fullDescription: "Rénovation complète de 15 salles de bain dans un EHPAD, avec adaptation aux normes d'accessibilité PMR.",
+    title: "Plomberie, chauffage & ventilation – Logements collectifs Paris 13e",
+    category: "plomberie",
+    location: "1 rue Jules Romains, Paris 13e",
+    client: "CDC Habitat",
+    duration: "Plusieurs mois",
+    description: "Travaux de plomberie, chauffage et ventilation : neutralisation, dépose et dévoiement des réseaux EF/ECS, EU/EV, mise en œuvre de canalisations PVC et installation VMC.",
+    fullDescription: "Paris Tout Services est intervenu sur un chantier d'envergure situé 1 rue Jules Romains à Paris 13e pour le compte de CDC Habitat. Les travaux ont porté sur la plomberie sanitaire, le chauffage et la ventilation de logements collectifs. Le projet comprenait la neutralisation, la dépose et le dévoiement des réseaux d'eau froide (EF), d'eau chaude sanitaire (ECS), ainsi que des eaux usées (EU) et eaux vannes (EV). L'ensemble des appareils sanitaires existants a été déposé et évacué. De nouvelles canalisations en tube PVC ont été mises en œuvre, accompagnées de la réfection complète des réseaux en pièces humides. Enfin, l'installation de caissons VMC dans les logements a permis d'assurer une ventilation mécanique contrôlée conforme aux normes en vigueur.",
     challenges: [
-      "Intervention sans perturber le quotidien des résidents",
-      "Respect strict des normes PMR d'accessibilité",
-      "Délais serrés pour limiter la durée des travaux"
+      "Neutralisation et dévoiement des réseaux existants EF/ECS et EU/EV",
+      "Dépose et évacuation de l'ensemble des appareils sanitaires",
+      "Intervention en site occupé avec coordination rigoureuse",
+      "Respect des normes de ventilation et de plomberie sanitaire"
     ],
     solutions: [
-      "Travaux réalisés salle par salle avec relogement temporaire",
-      "Installation de douches à l'italienne avec sièges rabattables",
-      "Pose de barres d'appui et équipements anti-glisse"
+      "Mise en œuvre de canalisations et tubes PVC conformes aux DTU",
+      "Réfection intégrale des réseaux en pièces humides",
+      "Installation de caissons VMC pour une ventilation mécanique contrôlée optimale",
+      "Expertise en réhabilitation de logements collectifs pour bailleurs sociaux"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&auto=format&fit=crop", caption: "Salle de bain PMR terminée" },
-      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop", caption: "Douche à l'italienne accessible" },
-      { url: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&auto=format&fit=crop", caption: "Équipements de sécurité installés" }
+      { url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop", caption: "Immeuble collectif Paris 13e" },
+      { url: "https://images.unsplash.com/photo-1585128903994-9788298932a4?w=800&auto=format&fit=crop", caption: "Installation réseau plomberie sanitaire" },
+      { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop", caption: "Mise en œuvre canalisations PVC" }
     ]
   },
   {
     id: 2,
-    title: "Mise en conformité gaz copropriété",
+    title: "Réhabilitation plomberie, chauffage gaz & faïence – Paris 11e",
     category: "gaz",
-    location: "Versailles (78)",
-    client: "Acorus",
-    duration: "2 mois",
-    description: "Remplacement des colonnes gaz et mise en conformité de 32 logements.",
-    fullDescription: "Suite à un diagnostic de sécurité, cette copropriété de 32 logements nécessitait une mise en conformité urgente.",
+    location: "111 rue d'Oberkampf, Paris 11e",
+    client: "GECop",
+    duration: "Plusieurs mois",
+    description: "Travaux de réhabilitation de plomberie, chauffage gaz, faïence et revêtement de sol dans un immeuble collectif à Paris 11e.",
+    fullDescription: "Paris Tout Services a réalisé des travaux de réhabilitation complète au 111 rue d'Oberkampf à Paris 11e, pour le compte de GECop. Le chantier comprenait la rénovation intégrale des installations de plomberie sanitaire, la mise en conformité du chauffage gaz, ainsi que la pose de faïence et de revêtements de sol dans les pièces humides. Ces travaux de réhabilitation thermique et sanitaire s'inscrivent dans une démarche d'amélioration du confort et de la performance énergétique des logements collectifs parisiens.",
     challenges: [
-      "Urgence de la mise en conformité pour la sécurité des résidents",
-      "Coordination avec GRDF pour les coupures de gaz",
-      "Interventions dans les parties privatives"
+      "Réhabilitation complète en immeuble parisien ancien",
+      "Mise en conformité du chauffage gaz selon les normes en vigueur",
+      "Coordination des corps de métier : plomberie, carrelage, revêtement",
+      "Intervention en site occupé avec maintien du confort des résidents"
     ],
     solutions: [
-      "Planning d'intervention optimisé pour réduire les coupures",
-      "Remplacement intégral des colonnes en acier galvanisé",
-      "Délivrance des certificats de conformité pour chaque logement"
+      "Rénovation intégrale des réseaux de plomberie sanitaire",
+      "Installation et mise en conformité du chauffage gaz",
+      "Pose de faïence et revêtement de sol dans les pièces humides",
+      "Gestion de chantier optimisée pour limiter les nuisances"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&auto=format&fit=crop", caption: "Colonnes gaz en acier galvanisé" },
-      { url: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop", caption: "Compteur gaz après intervention" },
-      { url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop", caption: "Immeuble après mise en conformité" }
+      { url: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&auto=format&fit=crop", caption: "Réhabilitation plomberie Paris 11e" },
+      { url: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop", caption: "Installation chauffage gaz" },
+      { url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop", caption: "Immeuble rue d'Oberkampf" }
     ]
   },
   {
     id: 3,
+    title: "Réhabilitation plomberie & chauffage gaz – Paris 18e",
+    category: "gaz",
+    location: "121 bis rue de Clignancourt, Paris 18e",
+    client: "GECop",
+    duration: "Plusieurs mois",
+    description: "Réhabilitation de plomberie, chauffage gaz, faïence et revêtement de sol dans un immeuble collectif à Paris 18e.",
+    fullDescription: "Paris Tout Services est intervenu au 121 bis rue de Clignancourt à Paris 18e, pour le compte de GECop, dans le cadre de travaux de réhabilitation de grande envergure. Le chantier portait sur la rénovation complète des installations de plomberie sanitaire et de chauffage gaz, ainsi que sur la pose de faïence murale et de revêtements de sol. Ce projet de réhabilitation thermique visait à moderniser les équipements existants tout en garantissant la conformité aux normes de sécurité gaz et aux réglementations en vigueur.",
+    challenges: [
+      "Réhabilitation dans un immeuble ancien du 18e arrondissement",
+      "Remplacement complet des réseaux de plomberie vétustes",
+      "Mise aux normes du chauffage gaz pour la sécurité des occupants",
+      "Travaux de finition : faïence et revêtement de sol"
+    ],
+    solutions: [
+      "Dépose et remplacement des canalisations en plomberie sanitaire",
+      "Mise en conformité et sécurisation du chauffage gaz",
+      "Pose soignée de faïence et revêtements de sol adaptés",
+      "Respect des délais et coordination efficace sur chantier"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop", caption: "Immeuble rue de Clignancourt" },
+      { url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&auto=format&fit=crop", caption: "Travaux de réhabilitation plomberie" },
+      { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop", caption: "Rénovation chauffage gaz" }
+    ]
+  },
+  {
+    id: 4,
+    title: "Rénovation salles de bain PMR – Paris 14e",
+    category: "salle-de-bain",
+    location: "Paris 14e",
+    client: "Acorus",
+    duration: "Plusieurs semaines",
+    description: "Campagne de rénovation de salles de bain adaptées aux personnes à mobilité réduite (PMR) dans le cadre d'un programme de mise en accessibilité.",
+    fullDescription: "Dans le cadre d'une campagne de rénovation menée pour le compte d'Acorus, Paris Tout Services a réalisé la rénovation complète de salles de bain aux normes PMR (Personnes à Mobilité Réduite) dans des logements situés dans le 14e arrondissement de Paris. Les travaux ont inclus la dépose des installations existantes, la création de douches à l'italienne accessibles, l'installation de barres d'appui et d'équipements anti-glisse, ainsi que la mise en conformité de l'ensemble des réseaux de plomberie sanitaire. Chaque salle de bain a été repensée pour garantir accessibilité, sécurité et confort au quotidien.",
+    challenges: [
+      "Adaptation stricte aux normes d'accessibilité PMR",
+      "Rénovation en logements occupés avec relogement temporaire",
+      "Création de douches à l'italienne dans des espaces contraints",
+      "Conformité des réseaux de plomberie sanitaire et évacuation"
+    ],
+    solutions: [
+      "Installation de douches à l'italienne avec sièges rabattables et siphons de sol",
+      "Pose de barres d'appui, revêtements anti-glisse et équipements PMR certifiés",
+      "Réfection complète des réseaux d'eau froide, eau chaude et évacuation",
+      "Travaux réalisés salle par salle pour limiter l'impact sur les résidents"
+    ],
+    images: [
+      { url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&auto=format&fit=crop", caption: "Salle de bain PMR rénovée" },
+      { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop", caption: "Douche à l'italienne accessible" },
+      { url: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&auto=format&fit=crop", caption: "Équipements PMR installés" }
+    ]
+  },
+  {
+    id: 5,
     title: "Réhabilitation énergétique – Ventilation & chauffe-eau",
     category: "ventilation",
     location: "Aubergenville (78)",
     client: "GECop",
     duration: "Plusieurs mois",
     description: "Remplacement des chauffe-eau et mise à niveau de la ventilation dans un ensemble immobilier collectif à Aubergenville.",
-    fullDescription: "Dans le cadre d'un programme de réhabilitation énergétique et thermique, Paris Tout Services est intervenu sur un ensemble immobilier collectif situé 1 à 23 place Jacques Brel à Aubergenville (Yvelines). Le projet visait à améliorer les performances énergétiques du bâtiment tout en garantissant le confort des occupants. Les travaux ont porté sur le remplacement des chauffe-eau à ballon d'eau chaude, la mise à niveau des installations de ventilation, ainsi que des travaux de plomberie dans les salles de bain (partie immeuble). L'ensemble a été réalisé en site occupé, avec une coordination rigoureuse des interventions.",
+    fullDescription: "Dans le cadre d'un programme de réhabilitation énergétique et thermique, Paris Tout Services est intervenu sur un ensemble immobilier collectif situé 1 à 23 place Jacques Brel à Aubergenville (Yvelines). Le projet visait à améliorer les performances énergétiques du bâtiment tout en garantissant le confort des occupants. Les travaux ont porté sur le remplacement des chauffe-eau à ballon d'eau chaude, la mise à niveau des installations de ventilation, ainsi que des travaux de plomberie dans les salles de bain.",
     challenges: [
       "Intervention dans un immeuble collectif occupé",
       "Respect des délais imposés par le programme de réhabilitation",
@@ -97,14 +155,14 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 4,
-    title: "Plomberie, chauffage & tuyauterie – Logements collectifs",
+    id: 6,
+    title: "Plomberie, chauffage & tuyauterie – Le Blanc-Mesnil (93)",
     category: "plomberie",
     location: "Le Blanc-Mesnil (93)",
     client: "GECop",
     duration: "Plusieurs mois",
     description: "Création complète des réseaux de plomberie, tuyauterie et chauffage pour un immeuble de logements neufs issu de la transformation de 4 pavillons.",
-    fullDescription: "Paris Tout Services est intervenu sur un projet immobilier porté par Immobilière 3F, dans un immeuble HLM situé au 23 avenue du Gouverneur Félix Eboué au Blanc-Mesnil (Seine-Saint-Denis). Le chantier concernait la transformation d'un lotissement de 4 pavillons en un immeuble de logements neufs. Les travaux ont inclus la création et l'installation complète des réseaux de plomberie, la mise en place de la tuyauterie pour logements collectifs, l'installation du système de chauffage avec pose de radiateurs, et la vérification de la conformité et des performances de l'ensemble des installations.",
+    fullDescription: "Paris Tout Services est intervenu sur un projet immobilier porté par Immobilière 3F, dans un immeuble HLM situé au 23 avenue du Gouverneur Félix Eboué au Blanc-Mesnil (Seine-Saint-Denis). Le chantier concernait la transformation d'un lotissement de 4 pavillons en un immeuble de logements neufs avec création complète des réseaux de plomberie, tuyauterie et chauffage.",
     challenges: [
       "Projet de restructuration lourde",
       "Transformation d'un bâti existant en immeuble collectif",
