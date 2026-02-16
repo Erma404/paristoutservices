@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, MapPin, Building, Eye } from 'lucide-react';
 import parisHaussmann from '@/assets/realisations/paris-13-haussmann.jpg';
+import plomberieParis11 from '@/assets/realisations/plomberie-paris-11.jpg';
+import plomberieParis18 from '@/assets/realisations/plomberie-paris-18.jpg';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -69,7 +71,7 @@ const projects: Project[] = [
       "Gestion de chantier optimisée pour limiter les nuisances"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&auto=format&fit=crop", caption: "Réhabilitation plomberie Paris 11e" },
+      { url: plomberieParis11, caption: "Réhabilitation plomberie Paris 11e" },
       { url: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=800&auto=format&fit=crop", caption: "Installation chauffage gaz" },
       { url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop", caption: "Immeuble rue d'Oberkampf" }
     ]
@@ -96,7 +98,7 @@ const projects: Project[] = [
       "Respect des délais et coordination efficace sur chantier"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop", caption: "Immeuble rue de Clignancourt" },
+      { url: plomberieParis18, caption: "Installation chauffage gaz Paris 18e" },
       { url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&auto=format&fit=crop", caption: "Travaux de réhabilitation plomberie" },
       { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop", caption: "Rénovation chauffage gaz" }
     ]
