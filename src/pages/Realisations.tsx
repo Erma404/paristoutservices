@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, MapPin, Building, Eye } from 'lucide-react';
+import parisHaussmann from '@/assets/realisations/paris-13-haussmann.jpg';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -41,7 +42,7 @@ const projects: Project[] = [
       "Expertise en réhabilitation de logements collectifs pour bailleurs sociaux"
     ],
     images: [
-      { url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop", caption: "Immeuble collectif Paris 13e" },
+      { url: parisHaussmann, caption: "Appartement haussmannien Paris 13e" },
       { url: "https://images.unsplash.com/photo-1585128903994-9788298932a4?w=800&auto=format&fit=crop", caption: "Installation réseau plomberie sanitaire" },
       { url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop", caption: "Mise en œuvre canalisations PVC" }
     ]
