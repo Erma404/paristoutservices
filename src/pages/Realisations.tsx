@@ -233,8 +233,8 @@ const Realisations = () => {
   return (
     <>
       <SEOHead 
-        title="Réalisations Plomberie & Gaz Professionnels IDF | Paris Tout Services"
-        description="Découvrez nos projets de plomberie, gaz et ventilation pour promoteurs et gestionnaires en Île-de-France."
+        title="Nos réalisations plomberie & gaz Paris IDF | +300 projets – Paris Tout Services"
+        description="Découvrez nos chantiers de plomberie, chauffage gaz, ventilation et rénovation salle de bain PMR pour promoteurs et bailleurs sociaux en Île-de-France. Photos et détails."
         canonical="/realisations"
       />
       <SchemaMarkup type="localBusiness" />

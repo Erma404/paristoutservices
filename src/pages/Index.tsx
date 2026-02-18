@@ -162,7 +162,7 @@ const departments = [{
 }];
 const Index = () => {
   return <>
-      <SEOHead title="Plomberie sanitaire, Gaz & Rénovation salle de bain | Paris Tout Services" description="Expert en plomberie sanitaire, installation gaz certifiée PG, rénovation salle de bain avec pose de carrelage en Île-de-France. Tuyaux galva, PVC, fonte, soudage, brasage, débouchage. Certifié RGE, Amiante, Plomb, HandiBat. Devis gratuit." canonical="/" />
+      <SEOHead title="Plombier Paris | Urgence plomberie & gaz Île-de-France – Paris Tout Services" description="Expert plombier à Paris et Île-de-France. Dépannage plomberie, installation gaz certifiée PG, rénovation salle de bain PMR. Certifié RGE. Devis gratuit sous 24h. ☎ 06 01 16 72 40" canonical="/" />
       <SchemaMarkup type="localBusiness" />
 
       <Header />

@@ -6,8 +6,8 @@ const PolitiqueConfidentialite = () => {
   return (
     <>
       <SEOHead
-        title="Politique de confidentialité | Paris Tout Services"
-        description="Politique de confidentialité du site paristoutservices.com"
+        title="Politique de confidentialité | Paris Tout Services – Plombier Paris"
+        description="Politique de confidentialité et protection des données personnelles (RGPD) du site paristoutservices.fr."
         canonical="/politique-confidentialite"
       />
       <Header />

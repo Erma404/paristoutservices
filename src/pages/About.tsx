@@ -70,8 +70,8 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="Entreprise de Plomberie & Gaz Île-de-France | À Propos - Paris Tout Services"
-        description="Paris Tout Services : plus de 10 ans d'expertise en plomberie et gaz pour professionnels. Équipe certifiée RGE, PG, HandiBat en Île-de-France."
+        title="Entreprise plomberie Paris & IDF depuis 2016 | Paris Tout Services"
+        description="Découvrez Paris Tout Services : 18 techniciens certifiés RGE, PG, HandiBat. +300 projets réalisés en plomberie, gaz et ventilation pour professionnels en Île-de-France."
         canonical="/a-propos"
       />
       <SchemaMarkup type="localBusiness" />

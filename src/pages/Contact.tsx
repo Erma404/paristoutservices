@@ -33,8 +33,8 @@ const Contact = () => {
   return (
     <>
       <SEOHead 
-        title="Devis Gratuit Plomberie & Gaz IDF | Contact Paris Tout Services"
-        description="Demandez votre devis gratuit pour vos travaux de plomberie, gaz ou ventilation en Île-de-France."
+        title="Devis gratuit plombier Paris & IDF | Contactez Paris Tout Services"
+        description="Demandez votre devis gratuit sous 24h pour vos travaux de plomberie, gaz ou ventilation en Île-de-France. Réponse rapide garantie. ☎ 06 01 16 72 40."
         canonical="/contact"
       />
       <SchemaMarkup type="localBusiness" />
