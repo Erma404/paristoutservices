@@ -74,11 +74,10 @@
               icon: 'bottomLeft'
             },
             onConsentChange: function() {
-              // Force hide the banner after consent is given
+              // Force hide the banner AND the cookie icon after consent is given
               var wrapper = document.getElementById('stcm-wrapper');
               if (wrapper) {
-                var prompt = wrapper.querySelector('[class*="prompt"]');
-                if (prompt) prompt.style.display = 'none';
+                wrapper.style.display = 'none';
               }
             }
           });
@@ -89,8 +88,8 @@
           var target = e.target;
           if (target && (target.closest('[data-stcm-accept-all]') || target.closest('[data-stcm-reject-non-essential]'))) {
             setTimeout(function() {
-              var prompt = document.querySelector('#stcm-wrapper .stcm-prompt, #stcm-wrapper [class*="prompt-wrapper"]');
-              if (prompt) prompt.style.display = 'none';
+              var wrapper = document.getElementById('stcm-wrapper');
+              if (wrapper) wrapper.style.display = 'none';
             }, 300);
           }
         }, true);
