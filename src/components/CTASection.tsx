@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -13,13 +13,13 @@ interface CTASectionProps {
   children?: ReactNode;
 }
 
-const CTASection = ({ 
+const CTASection = forwardRef<HTMLElement, CTASectionProps>(({ 
   title, 
   subtitle, 
   ctaText, 
   ctaLink, 
   children 
-}: CTASectionProps) => {
+}, ref) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#FDF8F3] via-[#F5F3F0] to-[#E8EBF4]">
       {/* Subtle decorative elements */}
@@ -55,6 +55,8 @@ const CTASection = ({
       </div>
     </section>
   );
-};
+});
+
+CTASection.displayName = 'CTASection';
 
 export default CTASection;
