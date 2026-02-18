@@ -56,7 +56,7 @@
             ],
             text: {
               prompt: {
-                description: '<p>Nous utilisons des cookies pour améliorer votre expérience, mesurer l\'audience et proposer des contenus adaptés. <a href="https://paristoutservices.com/politique-confidentialite" target="_blank">Politique de confidentialité.</a></p>',
+                description: '<p>Nous utilisons des cookies pour améliorer votre expérience, mesurer l\'audience et proposer des contenus adaptés. <a href="https://www.paristoutservices.com/politique-confidentialite" target="_blank">Politique de confidentialité.</a></p>',
                 acceptAllButtonText: 'Accepter',
                 acceptAllButtonAccessibleLabel: 'Accepter tous les cookies',
                 rejectNonEssentialButtonText: 'Refuser',
@@ -72,9 +72,28 @@
             position: {
               prompt: 'bottomLeft',
               icon: 'bottomLeft'
+            },
+            onConsentChange: function() {
+              // Force hide the banner after consent is given
+              var wrapper = document.getElementById('stcm-wrapper');
+              if (wrapper) {
+                var prompt = wrapper.querySelector('[class*="prompt"]');
+                if (prompt) prompt.style.display = 'none';
+              }
             }
           });
         }
+
+        // Fallback: observe clicks on accept/reject buttons and hide banner
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if (target && (target.closest('[data-stcm-accept-all]') || target.closest('[data-stcm-reject-non-essential]'))) {
+            setTimeout(function() {
+              var prompt = document.querySelector('#stcm-wrapper .stcm-prompt, #stcm-wrapper [class*="prompt-wrapper"]');
+              if (prompt) prompt.style.display = 'none';
+            }, 300);
+          }
+        }, true);
       });
     </script>
   </head>
