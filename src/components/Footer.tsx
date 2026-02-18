@@ -1,8 +1,9 @@
+import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, ChevronRight } from 'lucide-react';
 import logoPts from '@/assets/logo-pts-new.png';
 
-const Footer = () => {
+const Footer = forwardRef<HTMLElement>((_, ref) => {
   const currentYear = new Date().getFullYear();
 
   const departments = [
@@ -135,6 +136,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

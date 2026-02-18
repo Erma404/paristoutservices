@@ -75,10 +75,13 @@
             },
             onConsentChange: function() {
               // Force hide the banner AND the cookie icon after consent is given
-              var wrapper = document.getElementById('stcm-wrapper');
-              if (wrapper) {
-                wrapper.style.display = 'none';
-              }
+              setTimeout(function() {
+                var wrapper = document.getElementById('stcm-wrapper');
+                if (wrapper) {
+                  wrapper.style.setProperty('display', 'none', 'important');
+                  wrapper.remove();
+                }
+              }, 100);
             }
           });
         }
@@ -89,7 +92,10 @@
           if (target && (target.closest('[data-stcm-accept-all]') || target.closest('[data-stcm-reject-non-essential]'))) {
             setTimeout(function() {
               var wrapper = document.getElementById('stcm-wrapper');
-              if (wrapper) wrapper.style.display = 'none';
+              if (wrapper) {
+                wrapper.style.setProperty('display', 'none', 'important');
+                wrapper.remove();
+              }
             }, 300);
           }
         }, true);
