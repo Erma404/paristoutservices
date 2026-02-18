@@ -8,7 +8,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ title, description, canonical = "", ogImage = "/og-image.jpg" }: SEOHeadProps) => {
-  const siteUrl = "https://paristoutservices.fr";
+  const siteUrl = "https://www.paristoutservices.com";
   const fullUrl = `${siteUrl}${canonical}`;
 
   return (

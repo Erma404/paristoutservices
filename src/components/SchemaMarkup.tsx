@@ -2,8 +2,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["Plumber", "LocalBusiness"],
   "name": "Paris Tout Services",
-  "@id": "https://paristoutservices.fr",
-  "url": "https://paristoutservices.fr",
+  "@id": "https://www.paristoutservices.com",
+  "url": "https://www.paristoutservices.com",
   "telephone": "+33-6-01-16-72-40",
   "email": "paristoutservices@gmail.com",
   "address": {
@@ -64,7 +64,7 @@ const SchemaMarkup = ({ type = 'localBusiness', breadcrumbItems }: SchemaMarkupP
         "@type": "ListItem",
         "position": index + 1,
         "name": item.name,
-        "item": `https://paristoutservices.fr${item.url}`
+        "item": `https://www.paristoutservices.com${item.url}`
       }))
     } as any;
   }
