@@ -6,8 +6,8 @@ const MentionsLegales = () => {
   return (
     <>
       <SEOHead
-        title="Mentions légales | Paris Tout Services"
-        description="Mentions légales du site paristoutservices.com"
+        title="Mentions légales | Paris Tout Services – Plombier Paris IDF"
+        description="Mentions légales du site paristoutservices.fr. Informations sur l'éditeur, l'hébergement et la propriété intellectuelle."
         canonical="/mentions-legales"
       />
       <Header />

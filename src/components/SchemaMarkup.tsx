@@ -1,6 +1,6 @@
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["Plumber", "LocalBusiness"],
   "name": "Paris Tout Services",
   "@id": "https://paristoutservices.fr",
   "url": "https://paristoutservices.fr",

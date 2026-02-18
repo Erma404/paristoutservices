@@ -149,8 +149,8 @@ const Services = () => {
   return (
     <>
       <SEOHead 
-        title="Services Plomberie, Gaz, Ventilation pour Pros | Paris Tout Services IDF"
-        description="Installation plomberie, rénovation salle de bain, gaz, ventilation, chauffe-eau en Île-de-France."
+        title="Plombier d'urgence Paris 24h/24 – Dépannage plomberie & gaz IDF"
+        description="Services de plomberie, installation gaz certifiée PG, rénovation salle de bain PMR, ventilation VMC et chauffe-eau en Île-de-France. Intervention sous 48h. Devis gratuit."
         canonical="/services"
       />
       <SchemaMarkup type="localBusiness" />
