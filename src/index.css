@@ -266,7 +266,7 @@
   }
   
   .animate-scroll {
-    animation: scroll 3s linear infinite;
+    animation: scroll 8s linear infinite;
   }
 
   /* Animated gradient background */
