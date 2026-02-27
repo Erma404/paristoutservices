@@ -1,6 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Prerender.io - Serve pre-rendered HTML to bots
+  RewriteCond %{HTTP_USER_AGENT} googlebot|bingbot|yandex|baiduspider|twitterbot|facebookexternalhit|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator [NC,OR]
+  RewriteCond %{QUERY_STRING} _escaped_fragment_
+  RewriteCond %{REQUEST_URI} !^/sitemap\.xml$ [NC]
+  RewriteCond %{REQUEST_URI} !^/robots\.txt$ [NC]
+  RewriteRule ^(.*)$ https://service.prerender.io/https://www.paristoutservices.com/$1 [P,L]
+
+  # SPA fallback - redirect all routes to index.html
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
