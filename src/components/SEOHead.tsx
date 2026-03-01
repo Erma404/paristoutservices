@@ -7,9 +7,10 @@ interface SEOHeadProps {
   ogImage?: string;
 }
 
-const SEOHead = ({ title, description, canonical = "", ogImage = "/og-image.jpg" }: SEOHeadProps) => {
+const SEOHead = ({ title, description, canonical = "/", ogImage = "/og-image.png" }: SEOHeadProps) => {
   const siteUrl = "https://www.paristoutservices.com";
-  const fullUrl = `${siteUrl}${canonical}`;
+  const normalizedCanonical = canonical === "/" ? "/" : canonical.replace(/\/+$/, "");
+  const fullUrl = `${siteUrl}${normalizedCanonical}`;
 
   return (
     <Helmet>
