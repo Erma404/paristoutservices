@@ -162,7 +162,7 @@ const departments = [{
 }];
 const Index = () => {
   return <>
-      <SEOHead title="Plombier Paris | Urgence plomberie & gaz Île-de-France – Paris Tout Services" description="Expert plombier à Paris et Île-de-France. Dépannage plomberie, installation gaz certifiée PG, rénovation salle de bain PMR. Certifié RGE. Devis gratuit sous 24h. ☎ 06 01 16 72 40" canonical="/" />
+      <SEOHead title="Paris Tout Services | Plomberie & Gaz Île-de-France | Certifié RGE, PG" description="Paris Tout Services – Expert plomberie et gaz certifié RGE, PG en Île-de-France. Dépannage, installation gaz, rénovation salle de bain PMR. Devis gratuit sous 24h. ☎ 06 01 16 72 40" canonical="/" />
       <SchemaMarkup type="localBusiness" />
 
       <Header />

@@ -28,7 +28,7 @@ const localBusinessSchema = {
     }
   ],
   "priceRange": "€€",
-  "image": "https://paristoutservices.fr/logo.png",
+  "image": "https://www.paristoutservices.com/favicon.png",
   "description": "Expert en plomberie et installation gaz pour professionnels en Île-de-France depuis 2016. Certifié RGE, PG, Qualipac.",
   "areaServed": [
     { "@type": "City", "name": "Paris" },
