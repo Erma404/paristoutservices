@@ -106,7 +106,8 @@ p:last-child { margin-bottom: 0; }
   border: 2px solid var(--white);
 }
 .btn-secondary:hover {
-  background: rgba(255,255,255,.15);
+  background: var(--white);
+  color: var(--navy);
   text-decoration: none;
 }
 
