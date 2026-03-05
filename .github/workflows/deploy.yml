@@ -21,10 +21,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /public_html/
+          server-dir: public_html/
           exclude: |
             **/.git*
             **/.git*/**
             **/.DS_Store
-          log-level: standard
+          log-level: verbose
           dangerous-clean-slate: true
