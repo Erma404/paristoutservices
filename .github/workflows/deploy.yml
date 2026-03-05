@@ -27,4 +27,4 @@ jobs:
             **/.git*/**
             **/.DS_Store
           log-level: standard
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
