@@ -1,701 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1BP5D2RNH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S1BP5D2RNH');
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paris Tout Services | Plomberie Gaz Île-de-France | Certifié RGE, PG</title>
-  <meta name="description" content="Paris Tout Services – Expert en plomberie et gaz certifié RGE et PG en Île-de-France. Plomberie, salle de bain PMR, installations gaz, VMC. Devis gratuit. ☎ 06 01 16 72 40">
-  <meta name="keywords" content="plomberie gaz ile de france, Paris Tout Services, plombier Paris, plomberie Île-de-France, certifié RGE, PG gaz, salle de bain PMR, VMC, devis gratuit plombier">
-  <link rel="canonical" href="https://www.paristoutservices.com/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="fragment" content="!">
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <title>Plombier Paris | Urgence plomberie & gaz Île-de-France – Paris Tout Services</title>
+    <meta name="description" content="Expert plombier à Paris et Île-de-France. Dépannage plomberie, installation gaz certifiée PG, rénovation salle de bain. Devis gratuit. ☎ 06 01 16 72 40" />
+    <meta name="author" content="Paris Tout Services" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Paris Tout Services | Plombier Paris &amp; Île-de-France">
-  <meta property="og:description" content="Expert plombier certifié RGE et PG Gaz en Île-de-France. Devis gratuit. ☎ 06 01 16 72 40">
-  <meta property="og:url" content="https://www.paristoutservices.com/">
-  <meta property="og:image" content="https://www.paristoutservices.com/assets/logo-pts-new.png">
-  <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Plombier Paris | Urgence plomberie & gaz Île-de-France – Paris Tout Services" />
+    <meta property="og:description" content="Expert plombier à Paris et Île-de-France. Dépannage plomberie, installation gaz, rénovation salle de bain. Devis gratuit." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Paris Tout Services | Plombier certifié RGE, PG">
-  <meta name="twitter:description" content="Expert plombier en Île-de-France. Certifié RGE, PG Gaz. Devis gratuit.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og-image.png" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="assets/logo-pts-new.png">
+    <!-- Pages du site -->
+    <link rel="canonical" href="https://www.paristoutservices.com/" />
+    <link rel="alternate" hreflang="fr" href="https://www.paristoutservices.com/" />
+    <link rel="prefetch" href="/a-propos" />
+    <link rel="prefetch" href="/services" />
+    <link rel="prefetch" href="/realisations" />
+    <link rel="prefetch" href="/contact" />
+    <link rel="prefetch" href="/mentions-legales" />
+    <link rel="prefetch" href="/politique-confidentialite" />
 
-  <link rel="stylesheet" href="css/style.css?v=20260305c">
-
-  <!-- Schema.org LocalBusiness + Service + FAQPage -->
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "Plumber",
-      "name": "Paris Tout Services",
-      "alternateName": "PTS",
-      "telephone": "+33601167240",
-      "email": "paristoutservices@gmail.com",
-      "url": "https://www.paristoutservices.com",
-      "logo": "https://www.paristoutservices.com/assets/logo-pts-new.png",
-      "image": "https://www.paristoutservices.com/assets/hero-plumber.jpg",
-      "foundingDate": "2016",
-      "numberOfEmployees": {"@type": "QuantitativeValue", "value": 18},
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Paris",
-        "addressRegion": "Île-de-France",
-        "addressCountry": "FR"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Île-de-France"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "08:00",
-          "closes": "18:00"
+    <!-- Silktide Cookie Consent -->
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@main/silktide-consent-manager.css">
+    <style>
+      #stcm-wrapper {
+        --primaryColor: #2563EB !important;
+        --iconBackgroundColor: #2563EB !important;
+        --backgroundColor: #ffffff !important;
+        --textColor: #000000 !important;
+        --buttonTextColor: #ffffff !important;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@main/silktide-consent-manager.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        if (typeof window.silktideConsentManager !== 'undefined') {
+          window.silktideConsentManager.init({
+            consentTypes: [
+              {
+                id: 'essential',
+                label: 'Nécessaires',
+                description: 'Ces cookies sont nécessaires au bon fonctionnement du site et ne peuvent pas être désactivés.',
+                required: true
+              },
+              {
+                id: 'analytics',
+                label: 'Analytiques',
+                description: 'Ces cookies nous aident à améliorer le site en suivant les pages les plus populaires et la façon dont les visiteurs naviguent.',
+                defaultValue: true,
+                gtag: 'analytics_storage'
+              },
+              {
+                id: 'advertising',
+                label: 'Publicité',
+                description: 'Ces cookies offrent des fonctionnalités supplémentaires et une personnalisation pour améliorer votre expérience.',
+                defaultValue: false,
+                gtag: ['ad_storage', 'ad_user_data', 'ad_personalization']
+              }
+            ],
+            text: {
+              prompt: {
+                description: '<p>Nous utilisons des cookies pour améliorer votre expérience, mesurer l\'audience et proposer des contenus adaptés. <a href="https://www.paristoutservices.com/politique-confidentialite" target="_blank">Politique de confidentialité.</a></p>',
+                acceptAllButtonText: 'Accepter',
+                acceptAllButtonAccessibleLabel: 'Accepter tous les cookies',
+                rejectNonEssentialButtonText: 'Refuser',
+                rejectNonEssentialButtonAccessibleLabel: 'Refuser les cookies non essentiels',
+                preferencesButtonText: 'Paramètres',
+                preferencesButtonAccessibleLabel: 'Gérer les préférences de cookies'
+              },
+              preferences: {
+                title: 'Personnalisez vos préférences de cookies',
+                description: '<p>Nous respectons votre droit à la vie privée. Vous pouvez refuser certains types de cookies. Vos préférences s\'appliqueront à l\'ensemble de notre site web.</p>'
+              }
+            },
+            position: {
+              prompt: 'bottomLeft',
+              icon: 'bottomLeft'
+            },
+            onConsentChange: function() {
+              // Force hide the banner AND the cookie icon after consent is given
+              setTimeout(function() {
+                var wrapper = document.getElementById('stcm-wrapper');
+                if (wrapper) {
+                  wrapper.style.setProperty('display', 'none', 'important');
+                  wrapper.remove();
+                }
+              }, 100);
+            }
+          });
         }
-      ],
-      "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "name": "Certification RGE"},
-        {"@type": "EducationalOccupationalCredential", "name": "Certification PG Gaz"},
-        {"@type": "EducationalOccupationalCredential", "name": "HandiBat"},
-        {"@type": "EducationalOccupationalCredential", "name": "Certification Amiante"},
-        {"@type": "EducationalOccupationalCredential", "name": "Certification Plomb"},
-        {"@type": "EducationalOccupationalCredential", "name": "Silver Bat"}
-      ],
-      "sameAs": []
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Paris Tout Services est-il certifié RGE ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, Paris Tout Services est certifié RGE (Reconnu Garant de l'Environnement), ce qui vous permet de bénéficier des aides de l'État (MaPrimeRénov', CEE) pour vos travaux d'économies d'énergie."
+
+        // Fallback: observe clicks on accept/reject buttons and hide banner
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if (target && (target.closest('[data-stcm-accept-all]') || target.closest('[data-stcm-reject-non-essential]'))) {
+            setTimeout(function() {
+              var wrapper = document.getElementById('stcm-wrapper');
+              if (wrapper) {
+                wrapper.style.setProperty('display', 'none', 'important');
+                wrapper.remove();
+              }
+            }, 300);
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelles zones d'intervention pour Paris Tout Services ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nous intervenons dans tout Paris (tous arrondissements) et en Île-de-France : Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Val-d'Oise (95)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment obtenir un devis gratuit ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Appelez-nous au 06 01 16 72 40 ou remplissez notre formulaire en ligne sur la page Contact. Nous vous répondons dans les 24h ouvrées."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Paris Tout Services intervient-il pour les travaux PMR ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, nous sommes certifiés HandiBat et réalisons l'aménagement de salles de bain adaptées aux personnes à mobilité réduite (PMR), incluant douches à l'italienne, barres d'appui, et équipements spécifiques."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Peut-on bénéficier d'aides pour les travaux de plomberie ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Grâce à notre certification RGE, vous pouvez accéder à MaPrimeRénov', aux Certificats d'Économies d'Énergie (CEE), et aux aides locales de la Ville de Paris pour vos travaux d'économies d'énergie et d'accessibilité."
-          }
-        }
-      ]
-    }
-  ]
-  </script>
-</head>
-<body>
+        }, true);
+      });
+    </script>
+  </head>
 
-<!-- ======== HEADER ======== -->
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="Paris Tout Services - Accueil">
-      <img src="assets/logo-pts-new.png" alt="Logo Paris Tout Services" class="logo-img" width="48" height="48">
-      <span class="logo-text">
-        <span class="logo-name">Paris Tout Services</span>
-        <span class="logo-tagline">Plombier certifié RGE · PG</span>
-      </span>
-    </a>
-
-    <nav class="nav-main" id="main-nav" role="navigation" aria-label="Navigation principale">
-      <ul>
-        <li><a href="/" class="active" aria-current="page">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="realisations.html">Réalisations</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="nav-cta">
-      <a href="tel:+33601167240" class="phone-link" aria-label="Appeler Paris Tout Services">
-        📞 <span>06 01 16 72 40</span>
-      </a>
-      <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
-    </div>
-
-    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<!-- ======== HERO ======== -->
-<main>
-<section class="hero" aria-label="Présentation">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">🏆 Certifié RGE · PG Gaz · HandiBat</div>
-      <h1>Paris Tout Services — <span class="text-orange">Plomberie &amp; Gaz</span> en Île-de-France</h1>
-      <p class="lead">18 techniciens qualifiés depuis 2016. Plomberie, installations gaz certifié PG, salle de bain PMR, VMC — partout dans Paris et la grande couronne d'Île-de-France.</p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">📋 Devis gratuit</a>
-        <a href="tel:+33601167240" class="btn btn-secondary">📞 06 01 16 72 40</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item"><span class="icon">✓</span> Devis sous 24h</div>
-        <div class="trust-item"><span class="icon">✓</span> 18 techniciens</div>
-        <div class="trust-item"><span class="icon">✓</span> Certifié RGE</div>
-        <div class="trust-item"><span class="icon">✓</span> Depuis 2016</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======== STATS ======== -->
-<section class="stats-bar" aria-label="Chiffres clés">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="number">18</div>
-        <div class="label">Techniciens certifiés</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">8+</div>
-        <div class="label">Ans d'expérience</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">6</div>
-        <div class="label">Certifications</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">500+</div>
-        <div class="label">Chantiers réalisés</div>
-      </div>
-      <div class="stat-item">
-        <div class="number">100%</div>
-        <div class="label">Satisfaction client</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======== SERVICES ======== -->
-<section id="services" aria-labelledby="services-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Nos prestations</div>
-      <h2 id="services-title">Services de Plomberie &amp; Installations</h2>
-      <p>Une offre complète pour particuliers, bailleurs sociaux et entreprises en Île-de-France.</p>
-    </div>
-    <div class="services-grid">
-
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">🔧</span>
-          <h3>Plomberie Générale</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Dépannage, rénovation et installation complète de réseaux de plomberie.</p>
+  <body>
+    <noscript>
+      <main>
+        <h1>Paris Tout Services – Plombier Paris et Île-de-France</h1>
+        <p>Site de plomberie, gaz, ventilation et rénovation de salle de bain en Île-de-France.</p>
+        <nav aria-label="Liens principaux">
           <ul>
-            <li>Réparation fuites et canalisations</li>
-            <li>Remplacement robinetterie</li>
-            <li>Installation chauffe-eau</li>
-            <li>Mise aux normes</li>
+            <li><a href="https://www.paristoutservices.com/">Accueil</a></li>
+            <li><a href="https://www.paristoutservices.com/a-propos">Qui sommes-nous</a></li>
+            <li><a href="https://www.paristoutservices.com/services">Nos services</a></li>
+            <li><a href="https://www.paristoutservices.com/realisations">Réalisations</a></li>
+            <li><a href="https://www.paristoutservices.com/contact">Contact</a></li>
+            <li><a href="https://www.paristoutservices.com/mentions-legales">Mentions légales</a></li>
+            <li><a href="https://www.paristoutservices.com/politique-confidentialite">Politique de confidentialité</a></li>
           </ul>
-          <a href="services.html#plomberie" class="btn btn-outline mt-3">En savoir plus</a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">🛁</span>
-          <h3>Salle de Bain PMR</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Conception et réalisation de salles de bain adaptées aux personnes à mobilité réduite.</p>
-          <ul>
-            <li>Douche à l'italienne</li>
-            <li>Barres d'appui et sécurité</li>
-            <li>Certification HandiBat</li>
-            <li>Éligible MaPrimeRénov'</li>
-          </ul>
-          <a href="services.html#pmr" class="btn btn-outline mt-3">En savoir plus</a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">🔥</span>
-          <h3>Gaz Certifié PG</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Installations et raccordements gaz réalisés par nos techniciens certifiés PG.</p>
-          <ul>
-            <li>Pose et remplacement chaudière</li>
-            <li>Raccordement appareils gaz</li>
-            <li>Contrôle et mise en conformité</li>
-            <li>Attestation de conformité</li>
-          </ul>
-          <a href="services.html#gaz" class="btn btn-outline mt-3">En savoir plus</a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">💨</span>
-          <h3>VMC &amp; Ventilation</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Installation et entretien de VMC simple et double flux pour une meilleure qualité de l'air.</p>
-          <ul>
-            <li>VMC simple flux hygro</li>
-            <li>VMC double flux</li>
-            <li>Nettoyage et maintenance</li>
-            <li>Certification RGE</li>
-          </ul>
-          <a href="services.html#vmc" class="btn btn-outline mt-3">En savoir plus</a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">♨️</span>
-          <h3>Chauffe-eau &amp; Ballon</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Remplacement et installation de chauffe-eau électrique, gaz, et thermodynamique.</p>
-          <ul>
-            <li>Chauffe-eau électrique</li>
-            <li>Chauffe-eau gaz instantané</li>
-            <li>Chauffe-eau thermodynamique</li>
-            <li>Aides CEE disponibles</li>
-          </ul>
-          <a href="services.html#chauffe-eau" class="btn btn-outline mt-3">En savoir plus</a>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">🏗️</span>
-          <h3>Réhabilitation &amp; Marchés Publics</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Partenaire de confiance pour bailleurs sociaux, promoteurs et collectivités.</p>
-          <ul>
-            <li>Réhabilitation de logements</li>
-            <li>Marchés publics RIVP, 3F</li>
-            <li>Coordination de chantiers</li>
-            <li>Rapports et documentations</li>
-          </ul>
-          <a href="services.html#marches" class="btn btn-outline mt-3">En savoir plus</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ======== CERTIFICATIONS ======== -->
-<section id="certifications" aria-labelledby="certs-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Qualifications</div>
-      <h2 id="certs-title">Nos Certifications &amp; Habilitations</h2>
-      <p>Des certifications qui garantissent qualité, sécurité et éligibilité aux aides de l'État.</p>
-    </div>
-    <div class="certs-grid">
-      <div class="cert-item">
-        <div class="cert-badge cert-rge" aria-hidden="true">⭐</div>
-        <h4>Certification RGE</h4>
-        <p>Reconnu Garant de l'Environnement — accès aux aides MaPrimeRénov' et CEE</p>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge cert-pg" aria-hidden="true">🔥</div>
-        <h4>PG Gaz</h4>
-        <p>Habilitation officielle pour toutes installations et interventions gaz</p>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge cert-hand" aria-hidden="true">♿</div>
-        <h4>HandiBat</h4>
-        <p>Spécialiste accessibilité PMR — adaptation logements pour personnes handicapées</p>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge cert-plomb" aria-hidden="true">🔑</div>
-        <h4>Diagnostic Plomb</h4>
-        <p>Habilitation détection et traitement du plomb dans les installations anciennes</p>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge cert-amiante" aria-hidden="true">🛡️</div>
-        <h4>Amiante SS4</h4>
-        <p>Intervention en sous-section 4 — travaux à proximité de matériaux amiantés</p>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge cert-silver" aria-hidden="true">🏅</div>
-        <h4>Silver Bat</h4>
-        <p>Certification adaptation du logement pour le bien-vieillir à domicile</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======== PROCESS ======== -->
-<section id="process" aria-labelledby="process-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Notre méthode</div>
-      <h2 id="process-title">Comment nous travaillons</h2>
-      <p>Un processus clair et transparent pour chaque intervention.</p>
-    </div>
-    <div class="process-steps">
-      <div class="process-step">
-        <div class="step-number">1</div>
-        <h3>Prise de contact</h3>
-        <p>Appelez-nous ou remplissez le formulaire. Réponse garantie sous 24h ouvrées.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-number">2</div>
-        <h3>Diagnostic &amp; Devis</h3>
-        <p>Visite technique gratuite. Devis détaillé et transparent, sans surprise.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-number">3</div>
-        <h3>Réalisation</h3>
-        <p>Nos techniciens certifiés interviennent dans les délais convenus, avec soin.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-number">4</div>
-        <h3>Réception &amp; Garanties</h3>
-        <p>Livraison avec attestations de conformité et garanties sur nos travaux.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======== REALISATIONS MINI ======== -->
-<section id="realisations" aria-labelledby="real-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Références</div>
-      <h2 id="real-title">Quelques Réalisations Récentes</h2>
-      <p>Des chantiers variés dans Paris et la grande couronne.</p>
-    </div>
-    <div class="realisations-grid">
-      <article class="realisation-card">
-        <div class="realisation-img" aria-hidden="true">🛁</div>
-        <div class="realisation-body">
-          <div class="realisation-tags">
-            <span class="tag">PMR</span><span class="tag">Paris 13e</span>
-          </div>
-          <h3>Réhabilitation salle de bain PMR</h3>
-          <p>Transformation complète pour locataire en fauteuil roulant — bailleur RIVP.</p>
-        </div>
-      </article>
-      <article class="realisation-card">
-        <div class="realisation-img" aria-hidden="true">🔧</div>
-        <div class="realisation-body">
-          <div class="realisation-tags">
-            <span class="tag">Plomberie</span><span class="tag">Paris 11e</span>
-          </div>
-          <h3>Rénovation réseau plomberie immeuble</h3>
-          <p>Remplacement complet colonnes montantes, 18 appartements, Paris 11e.</p>
-        </div>
-      </article>
-      <article class="realisation-card">
-        <div class="realisation-img" aria-hidden="true">♨️</div>
-        <div class="realisation-body">
-          <div class="realisation-tags">
-            <span class="tag">Gaz</span><span class="tag">Paris 18e</span>
-          </div>
-          <h3>Installation chaudières gaz — Immeuble haussmannien</h3>
-          <p>Remplacement 12 chaudières individuelles, mise en conformité PG Gaz.</p>
-        </div>
-      </article>
-    </div>
-    <div class="text-center mt-3">
-      <a href="realisations.html" class="btn btn-outline">Voir toutes nos réalisations</a>
-    </div>
-  </div>
-</section>
-
-<!-- ======== TESTIMONIALS ======== -->
-<section id="temoignages" aria-labelledby="temoignages-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Avis clients</div>
-      <h2 id="temoignages-title">Ce que disent nos clients</h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-text">Intervention rapide et soignée pour notre salle de bain PMR. L'équipe a été professionnelle du début à la fin. Je recommande vivement.</p>
-        <div class="testimonial-author">Marie-Hélène D.</div>
-        <div class="testimonial-location">Paris 14e</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-text">Chantier de réhabilitation de 20 logements géré avec efficacité. Respect des délais, qualité des travaux, et suivi administratif irréprochable.</p>
-        <div class="testimonial-author">Responsable patrimoine</div>
-        <div class="testimonial-location">Bailleur social, Seine-Saint-Denis</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-text">Remplacement de ma chaudière gaz dans les règles. Certification PG, attestation fournie, travail propre. Tarif compétitif. Très satisfait.</p>
-        <div class="testimonial-author">Jean-Pierre L.</div>
-        <div class="testimonial-location">Paris 18e</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======== ZONES ======== -->
-<section id="zones" aria-labelledby="zones-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Interventions</div>
-      <h2 id="zones-title">Zones d'intervention en Île-de-France</h2>
-      <p>Nous couvrons Paris et tous les départements d'Île-de-France.</p>
-    </div>
-    <div class="zones-grid">
-      <div class="zone-tag">Paris 1er–4e</div>
-      <div class="zone-tag">Paris 5e–8e</div>
-      <div class="zone-tag">Paris 9e–12e</div>
-      <div class="zone-tag">Paris 13e–16e</div>
-      <div class="zone-tag">Paris 17e–20e</div>
-      <div class="zone-tag">Seine-et-Marne (77)</div>
-      <div class="zone-tag">Yvelines (78)</div>
-      <div class="zone-tag">Essonne (91)</div>
-      <div class="zone-tag">Hauts-de-Seine (92)</div>
-      <div class="zone-tag">Seine-Saint-Denis (93)</div>
-      <div class="zone-tag">Val-de-Marne (94)</div>
-      <div class="zone-tag">Val-d'Oise (95)</div>
-    </div>
-  </div>
-</section>
-
-<!-- ======== PLOMBERIE GAZ IDF ======== -->
-<section id="plomberie-gaz-idf" aria-labelledby="gaz-idf-title">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Expertise</div>
-      <h2 id="gaz-idf-title">Plomberie &amp; Gaz en Île-de-France</h2>
-      <p>Spécialiste reconnu en plomberie et installations gaz pour toute l'Île-de-France, Paris Tout Services intervient chez les particuliers, bailleurs sociaux et entreprises.</p>
-    </div>
-    <div class="services-grid" style="margin-top:2rem;">
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">🔥</span>
-          <h3>Installations Gaz — Certifié PG</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Nos techniciens certifiés <strong>PG Gaz</strong> réalisent toutes vos installations gaz dans les règles de l'art et en conformité avec la réglementation en Île-de-France.</p>
-          <ul>
-            <li>Pose et remplacement chaudière gaz</li>
-            <li>Raccordement gazinières et appareils</li>
-            <li>Mise en conformité et attestation</li>
-            <li>Contrôle sécurité installation gaz</li>
-          </ul>
-          <a href="services.html#gaz" class="btn btn-outline mt-3">Voir le service gaz</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-card-header">
-          <span aria-hidden="true">🔧</span>
-          <h3>Plomberie Paris &amp; Grande Couronne</h3>
-        </div>
-        <div class="service-card-body">
-          <p>De Paris à la grande couronne, nos <strong>18 plombiers certifiés RGE</strong> interviennent rapidement pour tous vos travaux de plomberie, du dépannage à la rénovation complète.</p>
-          <ul>
-            <li>Réparation fuites et canalisations</li>
-            <li>Rénovation salle de bain et cuisine</li>
-            <li>Installation chauffe-eau et ballon</li>
-            <li>Réhabilitation réseaux d'immeubles</li>
-          </ul>
-          <a href="services.html#plomberie" class="btn btn-outline mt-3">Voir la plomberie</a>
-        </div>
-      </article>
-    </div>
-    <div class="text-center" style="margin-top:2rem;">
-      <p style="font-size:1rem;color:var(--grey-700);">Intervention rapide sur tout le territoire francilien : Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Val-d'Oise (95).</p>
-    </div>
-  </div>
-</section>
-
-<!-- ======== FAQ ======== -->
-<section id="faq" aria-labelledby="faq-title">
-  <div class="container container--narrow">
-    <div class="section-header">
-      <div class="section-tag">FAQ</div>
-      <h2 id="faq-title">Questions fréquentes</h2>
-    </div>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Paris Tout Services est-il certifié RGE ?
-        </button>
-        <div class="faq-answer">
-          Oui, Paris Tout Services est certifié RGE (Reconnu Garant de l'Environnement), ce qui vous permet de bénéficier des aides de l'État (<strong>MaPrimeRénov'</strong>, CEE) pour vos travaux d'économies d'énergie.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Quelles zones d'intervention pour Paris Tout Services ?
-        </button>
-        <div class="faq-answer">
-          Nous intervenons dans <strong>tout Paris</strong> (tous arrondissements) et en <strong>Île-de-France</strong> : Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Val-d'Oise (95).
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Comment obtenir un devis gratuit ?
-        </button>
-        <div class="faq-answer">
-          Appelez-nous au <strong>06 01 16 72 40</strong> ou remplissez notre <a href="contact.html">formulaire en ligne</a>. Nous vous répondons dans les <strong>24h ouvrées</strong>.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Paris Tout Services intervient-il pour les travaux PMR ?
-        </button>
-        <div class="faq-answer">
-          Oui, nous sommes certifiés <strong>HandiBat</strong> et réalisons l'aménagement de salles de bain adaptées aux personnes à mobilité réduite (PMR), incluant douches à l'italienne, barres d'appui, et équipements spécifiques.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Peut-on bénéficier d'aides pour les travaux de plomberie ?
-        </button>
-        <div class="faq-answer">
-          Grâce à notre certification RGE, vous pouvez accéder à <strong>MaPrimeRénov'</strong>, aux Certificats d'Économies d'Énergie (CEE), et aux aides locales de la Ville de Paris pour vos travaux d'économies d'énergie et d'accessibilité.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ======== CTA BANNER ======== -->
-<section class="cta-banner" aria-label="Appel à l'action">
-  <div class="container">
-    <h2>Prêt à démarrer votre projet ?</h2>
-    <p>Obtenez votre devis gratuit en moins de 24h. Nos experts certifiés sont à votre service.</p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">📋 Demander un devis</a>
-      <a href="tel:+33601167240" class="btn btn-secondary">📞 06 01 16 72 40</a>
-    </div>
-  </div>
-</section>
-
-<!-- ======== PARTNERS ======== -->
-<div class="partners-strip" aria-label="Nos partenaires">
-  <div class="container">
-    <p class="text-center" style="color:var(--grey-600);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.25rem;">Ils nous font confiance</p>
-    <div class="partners-grid">
-      <div class="partner-item">Bouygues Bâtiment</div>
-      <div class="partner-item">Acorus</div>
-      <div class="partner-item">3F</div>
-      <div class="partner-item">RIVP</div>
-      <div class="partner-item">Paris Habitat</div>
-      <div class="partner-item">Eiffage</div>
-    </div>
-  </div>
-</div>
-
-</main>
-
-<!-- ======== FOOTER ======== -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="logo" aria-label="Paris Tout Services">
-          <img src="assets/logo-pts-new.png" alt="Logo Paris Tout Services" width="40" height="40">
-          <span class="logo-text">
-            <span class="logo-name">Paris Tout Services</span>
-          </span>
-        </a>
-        <p style="margin-top:1rem;">Expert plombier certifié RGE, PG Gaz et HandiBat depuis 2016 en Île-de-France.</p>
-        <p>📞 <a href="tel:+33601167240" style="color:var(--orange);">06 01 16 72 40</a></p>
-        <p>✉️ <a href="mailto:paristoutservices@gmail.com" style="color:rgba(255,255,255,.6);">paristoutservices@gmail.com</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html#plomberie">Plomberie générale</a></li>
-          <li><a href="services.html#pmr">Salle de bain PMR</a></li>
-          <li><a href="services.html#gaz">Gaz certifié PG</a></li>
-          <li><a href="services.html#vmc">VMC &amp; Ventilation</a></li>
-          <li><a href="services.html#chauffe-eau">Chauffe-eau</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Entreprise</h4>
-        <ul>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="realisations.html">Réalisations</a></li>
-          <li><a href="a-propos.html#certifications">Certifications</a></li>
-          <li><a href="contact.html">Contact &amp; Devis</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Zones</h4>
-        <ul>
-          <li><a href="contact.html">Paris (tous arr.)</a></li>
-          <li><a href="contact.html">Seine-Saint-Denis (93)</a></li>
-          <li><a href="contact.html">Val-de-Marne (94)</a></li>
-          <li><a href="contact.html">Hauts-de-Seine (92)</a></li>
-          <li><a href="contact.html">Et toute l'IDF</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>© 2016–2026 Paris Tout Services. Tous droits réservés.</div>
-      <nav class="footer-legal" aria-label="Liens légaux">
-        <a href="mentions-legales.html">Mentions légales</a>
-        <a href="politique-confidentialite.html">Politique de confidentialité</a>
-        <a href="sitemap.xml">Plan du site</a>
-      </nav>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
+        </nav>
+      </main>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
