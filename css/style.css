@@ -84,45 +84,49 @@ p:last-child { margin-bottom: 0; }
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition);
-  text-decoration: none;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  text-decoration: none !important;
   white-space: nowrap;
 }
+.btn:hover { text-decoration: none !important; }
 
 .btn-primary {
-  background: var(--orange);
-  color: var(--white);
+  background: #f97316;
+  color: #ffffff !important;
+  border: 2px solid #f97316;
 }
 .btn-primary:hover {
-  background: var(--orange-dark);
+  background: #ea6c0a !important;
+  color: #ffffff !important;
+  border-color: #ea6c0a;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
 }
 .btn-secondary:hover {
-  background: var(--white);
-  color: var(--navy);
-  text-decoration: none;
+  background: #ffffff !important;
+  color: #1a2e4a !important;
+  border-color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--navy);
-  border: 2px solid var(--navy);
+  color: #1a2e4a !important;
+  border: 2px solid #1a2e4a;
 }
 .btn-outline:hover {
-  background: var(--navy);
-  color: var(--white) !important;
-  border-color: var(--navy);
+  background: #1a2e4a !important;
+  color: #ffffff !important;
+  border-color: #1a2e4a;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+  text-decoration: none !important;
 }
 
 /* ---------- Header / Nav ---------- */
