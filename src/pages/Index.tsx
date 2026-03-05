@@ -216,7 +216,7 @@ const Index = () => {
                     </Button>
                   </Link>
                   <Link to="/realisations">
-                    <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-slate-100">
+                    <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white">
                       Nos réalisations
                     </Button>
                   </Link>
@@ -540,7 +540,7 @@ const Index = () => {
             once: true
           }} className="text-center mt-10">
               <Link to="/realisations">
-                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-white">
+                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white">
                   Voir toutes nos réalisations
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -840,7 +840,7 @@ const Index = () => {
             once: true
           }} className="text-center mt-10">
               <Link to="/services">
-                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-300 hover:bg-white">
+                <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-medium border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white">
                   Voir tous nos services
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>

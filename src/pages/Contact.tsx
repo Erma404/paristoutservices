@@ -128,7 +128,7 @@ const Contact = () => {
                       </Button>
                     </a>
                     <a href="tel:+33601167240" className="block">
-                      <Button variant="outline" className="w-full rounded-full px-6 py-5 text-sm font-medium border-slate-300 hover:bg-slate-50">
+                      <Button variant="outline" className="w-full rounded-full px-6 py-5 text-sm font-medium border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white">
                         <Phone className="w-4 h-4 mr-2" />
                         Appeler maintenant
                       </Button>
