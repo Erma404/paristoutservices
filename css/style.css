@@ -113,12 +113,15 @@ p:last-child { margin-bottom: 0; }
 
 .btn-outline {
   background: transparent;
-  color: var(--blue);
-  border: 2px solid var(--blue);
+  color: var(--navy);
+  border: 2px solid var(--navy);
 }
 .btn-outline:hover {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--navy);
+  color: var(--white) !important;
+  border-color: var(--navy);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
   text-decoration: none;
 }
 
