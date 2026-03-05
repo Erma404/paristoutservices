@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.paristoutservices.com/sitemap.xml
+
+# Disallow admin/private paths (none currently, placeholder)
+# Disallow: /admin/
