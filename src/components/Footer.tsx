@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, ChevronRight } from 'lucide-react';
-import logoPts from '@/assets/logo-pts-new.png';
+import logoPts from '@/assets/logo-pts-icon.png';
 
 const Footer = forwardRef<HTMLElement>((_, ref) => {
   const currentYear = new Date().getFullYear();
